@@ -1,0 +1,123 @@
+body{
+    background-color: rgb(238, 245, 244);
+    margin: 0;
+}
+.cabecalho{
+    background-color: #fff;            
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;                                                    
+}       
+.logo img{            
+    height: 60px;
+    width: 380px;
+    margin-left: 20px;
+}
+.lateral ul {
+    list-style: none;
+    margin: 0 0 0 20px;
+    padding: 0; 
+    display: flex;
+} 
+.lateral li{            
+    padding: 0 15px;
+}                 
+.lateral a {
+    text-decoration: none;                     
+}
+.busca{            
+    flex-grow: 2;                        
+    display: flex;
+    justify-content: flex-end;    
+}      
+.menu{
+    background-color: rgb(20, 72, 131);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;                                       
+}
+.menu ul{
+    list-style: none;            
+    width: 100%;
+    display: flex;            
+    padding: 0; 
+    margin: 0 0 0 20px;                                   
+}
+.menu a{
+    text-decoration: none;            
+    color: rgb(245, 241, 241);
+    padding: 10px;                      
+}
+.menu li{
+    display: inline-block;            
+    flex-grow: 1;                                                 
+}
+.menu a:hover {
+    background-color: #4faddb;
+    color: #000;
+    width: 100px;            
+}
+.rodape{            
+    bottom: 0;
+    background-color: rgb(14, 48, 87);
+    height: 80px;
+    width: 98.8vw;
+}
+.carrossel{
+   border: solid 1px red;
+   margin: 5vh 5vw;
+   height: 200px;
+   border-radius: 10px;
+   width: 1295px;                  
+   overflow: hidden;   
+}
+.vitrine{
+    border: solid 1px red;
+    margin: 5vh 5vw;
+    height: 200px;
+    border-radius: 10px;
+    width: 90vw;                                 
+    overflow: hidden;           
+
+ }
+.vitrine p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%; 
+}
+.vitrine img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%; 
+    display: none;
+    box-sizing: border-box;                                           
+}
+.vitrine img:nth-child(1){
+    display: block;
+}
+.categoria{
+border: solid 1px rgb(27, 27, 27, 0.5);
+margin: 5vh 5vw;
+height: 200px;
+border-radius: 10px;
+width: 90vw;
+}
+.mover {
+    animation: slidein 3s;            
+}   
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+  
