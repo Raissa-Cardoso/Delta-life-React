@@ -9,9 +9,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />,
-    <Menu/>, 
-    <Main/>,
+    <Header />
+    <Menu/> 
+    <Main/>
     <Footer/>
   </React.StrictMode>,
   
