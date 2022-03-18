@@ -1,30 +1,36 @@
 body{
   background-color: rgb(238, 245, 244);
   margin: 0;
-}
-.cabecalho{
-  background-color: #fff;            
   display: flex;
-  flex-direction: row;
-  height: 80px;
+  flex-direction: column;
+}
+.header{
+  overflow: hidden; 
+  height: 400px;
+  width: 100%;         
+}
+.header img{  
+  height: 100%;
+  width: 100%;           
+}
+.header img:nth-child(1){
+  display: block;
+  animation: slidein 3s;
+  animation-delay: 2s; 
+}
+.cabecalho{            
+  display: flex;
+  flex-direction: row;  
+  height: 400px;
   align-items: center;                                                    
-}       
+}
+.container{
+  display: flex;
+}      
 .logo img{            
   height: 60px;
   width: 380px;
   margin-left: 20px;
-}
-.lateral ul {
-  list-style: none;
-  margin: 0 0 0 20px;
-  padding: 0; 
-  display: flex;
-} 
-.lateral li{            
-  padding: 0 15px;
-}                 
-.lateral a {
-  text-decoration: none;                     
 }
 .busca{            
   flex-grow: 2;                        
@@ -38,26 +44,47 @@ body{
   align-items: center;
   justify-content: space-around;                                       
 }
-.menu ul{
+
+.navegacao{
   list-style: none;            
   width: 100%;
   display: flex;            
   padding: 0; 
-  margin: 0 0 0 20px;                                   
+  margin: 0 0 0 0;
+  align-self: flex-end;                                   
 }
-.menu a{
+.navegacao a{
   text-decoration: none;            
   color: rgb(245, 241, 241);
   padding: 10px;                      
 }
-.menu li{
+.navegacao li{
   display: inline-block;            
-  flex-grow: 1;                                                 
+  flex-grow: 1;                                                   
 }
-.menu a:hover {
+.navegacao a:hover {
   background-color: #4faddb;
   color: #000;
   width: 100px;            
+}
+.menu-toggle{
+  display:none;   
+  margin-right: 20px;
+  background-color: rgba(12, 29, 187, 0);
+  color: #fff;
+  width: 30px;           
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  align-self: flex-end;
+}
+.menu-toggle:hover{
+  background-color: rgba(20, 72, 131, 0.5);
+}
+@media(max-width:412px){
+  .navegacao{border:solid 2px red;}
+  .container{flex-direction: column;}  
+  .menu-toggle{display:block;}
 }
 .rodape{            
   bottom: 0;
@@ -66,12 +93,12 @@ body{
   width: 98.8vw;
 }
 .carrossel{
- border: solid 1px red;
- margin: 5vh 5vw;
- height: 200px;
- border-radius: 10px;
- width: 1295px;                  
- overflow: hidden;   
+  border: solid 1px red;
+  margin: 5vh 5vw;
+  height: 200px;
+  border-radius: 10px;
+  width: 1295px;                  
+  overflow: hidden;   
 }
 .vitrine{
   border: solid 1px red;
@@ -100,11 +127,11 @@ body{
   display: block;
 }
 .categoria{
-border: solid 1px rgb(27, 27, 27, 0.5);
-margin: 5vh 5vw;
-height: 200px;
-border-radius: 10px;
-width: 90vw;
+  border: solid 1px rgb(27, 27, 27, 0.5);
+  margin: 5vh 5vw;
+  height: 200px;
+  border-radius: 10px;
+  width: 90vw;
 }
 .mover {
   animation: slidein 3s;            
@@ -119,5 +146,17 @@ width: 90vw;
       margin-left: 0%;
       width: 100%;
   }
+}
+.rodape{      
+  align-self: flex-end;
+  background-color: rgb(238, 245, 244);;
+  height: 140px;
+  width: 100%;
+  border-top: solid 1px black ;    
+  
+}
+.rodape p{
+  color: #000;
+  margin-left: 20px;
 }
 

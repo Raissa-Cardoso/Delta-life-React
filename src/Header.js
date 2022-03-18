@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 
 const logo = require('./assets/logo.jpg');
 const bannerFundo1=require('./assets/bannerFundo.jpg');
@@ -19,12 +19,12 @@ function Header() {
                 <button type="submit">OK</button>
             </div>            
             <nav class="menu">
-                <ul>
+                <ul class="navegacao">
                     <li>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#produtos" target="_self">Produtos</a>                
+                        <a href="#produtos" target="_self">Produtos</a>              
                     </li>
                     <li>
                         <a href="#minhaDelta">Minha Delta</a>
@@ -37,7 +37,10 @@ function Header() {
                     </li>               
                 </ul>
             </nav>
-        </div>        
+            <button class="menu-toggle">
+                <i class="fa fa-lg fa-bars"></i>
+            </button>
+        </div>       
     </header>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 
 const linha700 = require('./assets/vet6.png');
 const linha900 = require('./assets/vet7.png');
