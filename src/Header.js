@@ -2,23 +2,28 @@ import React from 'react';
 import './index.css';
 
 const logo = require('./assets/logo.jpg');
-const bannerFundo1=require('./assets/bannerFundo.jpg');
-const bannerFundo2=require('./assets/bannerFundo2.jpg');
+const bannerFundo1=require('./assets/hospitalar.png');
+const bannerFundo2=require('./assets/veterinário.png');
+const bannerFundo3=require('./assets/laudos.png');
 
 function Header() {
   return (
-    <header class="cabecalho"> 
-        <div class="header" wm-slider>
-            <p><img class="cabecalhoFundo" src={bannerFundo1}  alt="banner inicial"/></p>
-            <p><img class="cabecalhoFundo" src={bannerFundo2}  alt="banner inicial"/></p>            
-        </div>     
+    <header class="header"> 
+        <div class="headerFundo" wm-slider>
+            <p>
+                <img  src={bannerFundo1}  alt="banner inicial"/>
+                <img  src={bannerFundo2}  alt="banner inicial"/> 
+                <img  src={bannerFundo3}  alt="banner inicial"/>
+            </p>           
+        </div>        
         <div class="container">
-            <img id="logo" src={logo} alt="logo da Delta Life"/>
+            <div class="logo">
+                <img src={logo} alt="logo da Delta Life"/>
+            </div>
             <div class="busca">
-                <input type="text" placeholder="Pesquisa"/>
-                <button type="submit">OK</button>
-            </div>            
-            <nav class="menu">
+                <input type="text" placeholder="Pesquisa"/>                
+            </div>          
+           <nav class="menu">
                 <ul class="navegacao">
                     <li>
                         <a href="index.html">Home</a>
@@ -40,7 +45,7 @@ function Header() {
             <button class="menu-toggle">
                 <i class="fa fa-lg fa-bars"></i>
             </button>
-        </div>       
+        </div>      
     </header>
   );
 }

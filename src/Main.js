@@ -1,34 +1,28 @@
 import React from 'react';
 import './index.css';
 
-const linha700 = require('./assets/vet6.png');
-const linha900 = require('./assets/vet7.png');
-const linha4000 = require('./assets/vet8.png');
-const linha1000 = require('./assets/vet9.png');
-const linha400 = require('./assets/vet10.png');
-const linha600 = require('./assets/vet11.png');
+const linha700 = require('./assets/vet8.jpeg');
+const hosp1000 = require('./assets/hosp1.jpeg');
+const linha1000 = require('./assets/vet1.jpeg');
+const linha4000 = require('./assets/vet2.jpeg');
 
 function Main() {
   return (
     <section class="home">
         <main class="principal">            
               <div class="produto">
-                  <img src={linha700}  alt="linha 700"/>
+                  <img src={linha1000}  alt="DL1000-Monitor Multiparametros Vet"/>
               </div> 
               <div class="produto">
-                <img src={linha900}  alt="linha 900"/>
+                <img src={linha700}  alt="Dl740-Monitor Multiparametros Vet"/>
               </div>
               <div class="produto">
-                <img src={linha4000}  alt="linha 4000"/>
+                <img src={hosp1000}  alt="Life 1000-Monitor Multiparametros médico-hospitalar humano"/>
               </div>
               <div class="produto">
-                <img src={linha1000}  alt="linha 1000"/></div> 
-              <div class="produto">
-                <img src={linha400}  alt="linha 400"/>
-              </div>
-              <div class="produto">
-                <img src={linha600}  alt="linha 600"/>
-              </div>               
+                <img src={linha4000}  alt="DL4000 - Foco 24 LEDs de pedestal"/>
+              </div> 
+                       
         </main>
     </section>
         );
