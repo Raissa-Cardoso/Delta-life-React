@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
+import Calculator from './main/Calculator';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Header /> 
-    <Main/> 
-    <Footer/>
-  </React.StrictMode>,
-  
+ReactDOM.render( 
+  <div>
+     <h1>Calculadora</h1>
+     <Calculator />
+  </div>,
+   
+
   document.getElementById('root')
 );
 

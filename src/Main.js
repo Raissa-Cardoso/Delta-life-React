@@ -9,20 +9,17 @@ const linha4000 = require('./assets/vet2.jpeg');
 function Main() {
   return (
     <section class="home">
+        <h1 id="maisVendidos">Mais Vendidos</h1>
         <main class="principal">            
               <div class="produto">
                   <img src={linha1000}  alt="DL1000-Monitor Multiparametros Vet"/>
               </div> 
               <div class="produto">
-                <img src={linha700}  alt="Dl740-Monitor Multiparametros Vet"/>
+                <img src={linha700}  alt="DL740-Monitor Multiparametros Vet"/>
               </div>
               <div class="produto">
                 <img src={hosp1000}  alt="Life 1000-Monitor Multiparametros médico-hospitalar humano"/>
-              </div>
-              <div class="produto">
-                <img src={linha4000}  alt="DL4000 - Foco 24 LEDs de pedestal"/>
-              </div> 
-                       
+              </div>                   
         </main>
     </section>
         );

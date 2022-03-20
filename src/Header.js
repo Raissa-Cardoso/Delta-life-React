@@ -3,6 +3,7 @@ import './index.css';
 
 const logo = require('./assets/logo.jpg');
 const bannerFundo1=require('./assets/hospitalar.png');
+const bannerFundo320=require('./assets/hospitalar320.png');
 const bannerFundo2=require('./assets/veterinário.png');
 const bannerFundo3=require('./assets/laudos.png');
 
@@ -11,15 +12,19 @@ function Header() {
     <header class="header"> 
         <div class="headerFundo" wm-slider>
             <p>
-                <img  src={bannerFundo1}  alt="banner inicial"/>
+                <img  srcSet={`${bannerFundo320} 300w,${bannerFundo320} 768w,${bannerFundo1} 1280w`}  alt="banner inicial"/>                
                 <img  src={bannerFundo2}  alt="banner inicial"/> 
                 <img  src={bannerFundo3}  alt="banner inicial"/>
-            </p>           
+            </p> 
+            <button type='submit'>Veja mais</button>          
         </div>        
         <div class="container">
             <div class="logo">
-                <img src={logo} alt="logo da Delta Life"/>
-            </div>
+                <img src={logo} alt="logo da Delta Life"/>                
+                <button class="menu-toggle">
+                    <i class="fa fa-lg fa-bars"></i>
+                </button>
+            </div>            
             <div class="busca">
                 <input type="text" placeholder="Pesquisa"/>                
             </div>          
@@ -27,9 +32,9 @@ function Header() {
                 <ul class="navegacao">
                     <li>
                         <a href="index.html">Home</a>
-                    </li>
+                    </li>                    
                     <li>
-                        <a href="#produtos" target="_self">Produtos</a>              
+                        <a href="#produtos">Produtos</a>              
                     </li>
                     <li>
                         <a href="#minhaDelta">Minha Delta</a>
@@ -39,12 +44,12 @@ function Header() {
                     </li>
                     <li>
                         <a href="#contato">Contato</a>
-                    </li>               
+                    </li>
+                    <li>
+                        <a href="#login">Login</a>
+                    </li>
                 </ul>
-            </nav>
-            <button class="menu-toggle">
-                <i class="fa fa-lg fa-bars"></i>
-            </button>
+            </nav>            
         </div>      
     </header>
   );
