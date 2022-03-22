@@ -1,0 +1,30 @@
+.logo{
+    position: absolute;
+    top:0;    
+    height: 35px;
+    width: 200px;
+    margin-top:50px;
+    margin-left: 100px; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+.logo img{
+    height: 35px;
+    width: 50px;
+    filter: brightness(100%);
+    border-radius: 100%;
+}
+.logo p{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    align-self: flex-end;    
+    font-size: 1.4rem;
+    height: 25px;    
+    width: 120px;
+    color: #fff;
+    text-shadow: 10px 5px 5px black ;  
+}

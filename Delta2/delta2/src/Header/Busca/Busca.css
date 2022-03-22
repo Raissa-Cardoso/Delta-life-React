@@ -1,0 +1,17 @@
+.busca{   
+    position: absolute;
+    top: 50px;
+    margin-left: 400px;        
+    height: 35px;
+    display: flex;   
+    align-self: center;
+    margin-right: 20px;
+    box-sizing: content-box;      
+  }
+  .busca input{  
+    margin: 0; 
+    padding: 0;
+    width: 250px;
+    height: 100%;
+    border-radius: 10px;    
+  }      

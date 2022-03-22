@@ -1,0 +1,30 @@
+#maisVendidos{
+    text-align: center;
+    color: rgb(61, 59, 59);
+    padding-top: 30px;
+    font-size: 1.8rem;
+    text-shadow: 10px 5px 5px rgb(207, 207, 207) ;
+  }
+.principal{  
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;    
+    justify-content: flex-start;    
+}
+.produto{  
+    border-radius:0px 50px 0px 20px;
+    box-shadow: 10px 5px 5px rgb(110, 110, 110);  
+    width: 300px;
+    height: 300px;
+    margin: 60px;
+}
+.produto:hover{
+    /*-moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);*/
+    transform: scale(1.1);  
+}
+.produto img{
+    border-radius:0px 50px 0px 20px;   
+    width: 300px;
+    height: 300px;
+}

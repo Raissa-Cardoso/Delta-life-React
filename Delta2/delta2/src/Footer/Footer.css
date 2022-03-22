@@ -1,0 +1,39 @@
+.rodape{ 
+    margin-top: 80px;
+    background-color: rgb(235, 226, 226); 
+    color: rgb(3, 10, 24);    
+    align-self: flex-end;
+    height: 200px;
+    width: 100%;     
+    box-sizing:border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+}
+.rodape h2{  
+    font-size: 1rem;
+}
+.logoMarca{  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logoMarca img{
+    border-radius: 100%;
+    height: 35px;
+    width: 50px;
+}
+.logoMarca p{    
+    font-size: 0.8em;
+    align-self: center;
+}
+.contato{   
+    align-self:center; 
+}
+.localização{  
+    align-self:center;
+    width: 300px;
+}
+.contato p, .localização p{
+    font-size: 0.9rem;
+}
