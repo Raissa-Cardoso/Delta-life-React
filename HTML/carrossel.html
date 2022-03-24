@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            overflow: hidden;
+        }
+        p{
+            margin:0;
+            padding: 0;
+           
+            height: 400px;
+        }        
+        div{
+            margin:0;
+            padding: 0;
+            display: flex;           
+            height: 400px;
+        }
+        div p img{
+            margin:0;
+            padding: 0;
+            width: 100vw;
+            height: 400px;
+        }
+        .botões{
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width:100%;
+        }
+        #setaDireita, #setaEsquerda{            
+            align-self: center; 
+            opacity: 0.2;        
+            border: none;
+        }
+        #setaDireita:hover, #setaEsquerda:hover{
+            opacity:0.5;
+        } 
+
+    </style>
+</head>
+<body>
+    <div wm-slider>
+        <p>
+            <img src="../Delta/src/assets/bannerHospitalar.png">
+        </p>
+        <p>
+            <img src="../Delta/src/assets/bannerLaudos.png">
+        </p>
+        <p>
+            <img src="../Delta/src/assets/bannerVeterinario.png">
+        </p>
+        <div class="botões">
+            <button id="setaEsquerda">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+            </button>
+            <button id="setaDireita" onclick="teste()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>           
+            
+        </div>
+       
+        
+    </div>
+    <script>
+        function teste(){
+        }
+        function mover(elem, inicio, fim, passo, callback){
+            const novoInicio=inicio-passo
+            if(novoInicio>=fim){
+                elem.style.left=novoInicio + "px"
+                setTimeout(()=>mover(elem, novoInicio, fim, passo, callback), 30)
+            }else{
+                callback()
+            }
+        }
+        function slider(){
+            const elementos = document.querySelectorAll("[wm-slider] > p")            
+            const slides=Array.from(elementos)
+            exibirSlide(slides,slides[0])
+        }
+        function exibirSlide(slides,slide){
+            slide.style.display="block"
+            const inicio=320            
+            const fim=-320            
+            slide.style.left=`${inicio}px`
+            mover(slide,inicio,fim,5,()=>{
+                slide.style.display="none"
+                exibirSlide(slides,getProximo(slides,slide))
+            })
+        }
+        function getProximo(lista,atual){
+            const i=lista.indexOf(atual)+1
+            return i<lista.length?lista[i]:lista[0]
+        }
+        slider()
+    </script>
+    
+</body>
+</html>

@@ -65,11 +65,12 @@
             padding: 25px;
         }
         .menu a:hover, .menu a.selected{
+
             background-color: #4faddb;
             color: #000;
         }
         .botao{
-            border-radius: 30px;
+            border-radius: 30px; 
             padding: 10px 25px;
             margin: 10px;
         }
@@ -108,7 +109,7 @@
         <nav class="menu">
             <ul>
                 <li>
-                    <a href="#inicio">Início</a>
+                    <a href="#inicio" id="inicio" class="selected">Início</a>
                 </li>
                 <li>
                     <a href="#cursos">Cursos</a>
@@ -128,7 +129,7 @@
     </header>
 
     <script>
-        window.onhashchange=function(e){
+        window.onhashchange=function(e){ 
             const oldURL=e.oldURL.split('#')[1]
             const newURL=e.newURL.split('#')[1]
             const oldMenu=document.querySelector(`.menu a[href='#${oldURL}']`)

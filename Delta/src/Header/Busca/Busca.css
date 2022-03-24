@@ -1,0 +1,17 @@
+.busca{   
+    height: 6vh;
+    box-sizing: content-box;      
+  }
+  .busca input{  
+    margin: 0; 
+    padding: 0;    
+    width: 18vw;
+    height: 100%;
+    border-radius: 1.5vh;    
+  }     
+
+@media (max-width:1024px) {
+    .busca, .busca input{
+      width: 35vw;
+    }
+}

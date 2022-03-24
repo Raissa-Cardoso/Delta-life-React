@@ -1,0 +1,60 @@
+#maisVendidos{
+    text-align: center;
+    color: rgb(61, 59, 59);
+    padding-top: 4vh;
+    font-size: 1.8rem;
+    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ; 
+}
+.principal{  
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;    
+    justify-content: space-around; 
+    width: 98%;     
+}
+.produto{  
+    border-radius: 0 4vw 0 2vw;
+    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110);  
+    width: 22vw;
+    height: 45vh;
+
+}
+.produto:hover{
+    transform: scale(1.1);  
+}
+.produto img{
+    border-radius: 0 4vw 0 2vw;  
+    width: 22vw;
+    height: 45vh;
+}
+
+@media (max-width:1024px){
+    .produto, .produto img{
+        height: 35vh;
+    }
+}
+@media (max-width:639px){
+    .principal{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .produto, .produto img{
+        width: 40vw;
+        height: 35vh;       
+    }
+    .produto{
+        margin: 4vh;
+    }
+}
+@media (max-width:450px){    
+    .produto, .produto img{
+        width: 35vw;
+        height: 28vh;       
+    }
+}
+@media (min-height:1024px){    
+    .produto, .produto img{        
+        height: 24vh;       
+    }
+}

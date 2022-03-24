@@ -1,22 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
-import reportWebVitals from './reportWebVitals';
+import './index.css'
+import ReactDOM from 'react-dom'
+import React from 'react'
+import Banner from './Header/bannerImagem/BannerImagem'
+import Logo from './Header/Logo/Logo'
+import Busca from './Header/Busca/Busca'
+import Menu from './Header/Menu/Menu'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Header /> 
-    <Main/> 
-    <Footer/>
-  </React.StrictMode>,
+import BannerTexto from './Header/bannerTexto/BannerTexto'
+import Main from './Main/Main'
+import Footer from './Footer/Footer'
+
+
+ReactDOM.render(  
   
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <div>
+        <Banner>
+            <Logo/>
+            <Busca/>             
+            <Menu/>           
+            <BannerTexto/>
+        </Banner>        
+        <Main/>
+        <Footer/>
+       
+    </div>,
+    document.getElementById("root")
+)

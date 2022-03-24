@@ -1,0 +1,70 @@
+.bannerTexto{   
+    align-self: center;
+    margin-left: 5vw;     
+}
+.bannerTexto h2{    
+    color: #fff;
+    text-shadow: 1vh 0.5vh 0.5vh black;  
+    font-size: 2rem; 
+    padding: 0;
+    margin: 0;    
+    display: none;
+}
+.bannerTexto h2:nth-child(1){
+    display:block;
+}
+.bannerBotão{  
+    margin-left: 0;  
+    height: 3vh;
+    width: 7vw;
+    padding-top: 2vh;   
+}    
+.botão{     
+    border-radius: 1vh;
+    background-color: #3048a1; 
+    color: #fff;  
+    font-size: 0.9rem;
+    border: none;
+}
+.botão:hover{
+    background-color: #3a58c5;
+}
+@media (max-width:688px) {
+    .bannerTexto h2{
+        font-size: 1.8rem; 
+    }
+    .botão{
+        font-size: 0.7rem; 
+    }
+}
+@media (max-width:639px) {
+    .bannerTexto h2{
+        font-size: 1.6rem; 
+    }
+    .botão{
+        font-size: 0.5rem; 
+    }
+}
+
+@media (min-width:279px) {
+    .bannerBotão{
+        height: 5vh;
+        width: 12vw;
+    }
+    .botão{
+        height: 5vh;
+        width: 12vw;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 677px){
+    .bannerBotão{
+        height: 5vh;
+        width: 14vw;
+    }
+    .botão{
+        height: 5vh;
+        width: 14vw;
+        font-size: 1rem;
+    }
+}
