@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+    <title> Desafio Lista Aninhada</title>
+</head>
+<body>
+    <h1>Projeto</h1>
+    <ul class="tree">
+        <li>
+            <span id="backend" onclick="clicou(this.id)">backend</span>
+            <ul id="backendDentro" hidden>
+                <li>
+                    <span id="app" onclick="clicou(this.id)">app</span>
+                    <ul id="appDentro" hidden>
+                        <li>produto.js</li>
+                        <li>usuario.js</li>
+                        <li>vendas.js</li>
+                    </ul>
+                </li>
+                <li>
+                    <span id="config" onclick="clicou(this.id)">config</span>
+                    <ul id="configDentro" hidden>
+                        <li>banco.js</li>
+                        <li>rotas.js</li>
+                        <li>servidor.js</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span id="frontend" onclick="clicou(this.id)">frontend</span>
+            <ul>
+                <li id="frontendDentro" hidden>
+                    <span id="public" onclick="clicou(this.id)">public</span>
+                    <ul id="publicDentro" hidden>
+                        <li>app.css</li>
+                        <li>app.js</li>
+                        <li>index.html</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+<script>
+    //let clicks=0 
+    function clicou(id){
+        //if(clicks===0||(clicks%2===0)){
+            //clicks++        
+            if(id==="backend"){document.getElementById("backendDentro").removeAttribute("hidden")}
+            if(id==="app"){document.getElementById("appDentro").removeAttribute("hidden")}
+            if(id==="config"){document.getElementById("configDentro").removeAttribute("hidden")}
+            if(id==="frontend"){document.getElementById("frontendDentro").removeAttribute("hidden")}
+            if(id==="public"){document.getElementById("publicDentro").removeAttribute("hidden")} 
+        /*}else{
+            clicks++        
+            if(id==="backend"){document.getElementById("backendDentro").setAttribute("hidden","hidden")}
+            if(id==="app"){document.getElementById("appDentro").setAttribute("hidden","hidden")}
+            if(id==="config"){document.getElementById("configDentro").setAttribute("hidden","hidden")}
+            if(id==="frontend"){document.getElementById("frontendDentro").setAttribute("hidden","hidden")}
+            if(id==="public"){document.getElementById("publicDentro").setAttribute("hidden","hidden")}
+        }*/        
+    }
+</script>
+    
+</body>
+</html>
