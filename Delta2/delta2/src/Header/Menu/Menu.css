@@ -1,11 +1,12 @@
 .menu{
-    position: absolute;           
-    top: 50px;
-    right: 0;
-    height: 40px;
+               
+ /*   top: 50px;
+    right: 0;*/
+    height: 4vh;
     display: flex;
     align-items: center;
     justify-content: space-around; 
+   /* border:solid 1px green;*/
 }
 .navegacao{  
     list-style: none;            
@@ -20,30 +21,46 @@
     font-weight: bold;
     text-decoration: none;            
     color: #fff;
-    padding: 10px;
-    text-shadow: 8px 5px 5px black ; 
+    padding: 0.7vw;
+    text-shadow: 1vh 0.5vh 0.5vh black;  
 }
 .navegacao li{
     display: inline-block;
-    padding: 10px;            
+    padding: 0.7vw;            
 }
 .navegacao a:hover {
     background-color: #3048a1;
     color: #fff;
-    width: 100px;  
-    border-radius: 10px;             
+    width: 10vw;  
+    border-radius: 1.5vh;             
 }
 .menu-toggle{
+    position: absolute;
     display:none; 
     background-color: rgba(12, 29, 187, 0);
     color: #fff;
     font-size: 1.2em;
-    text-shadow: 10px 5px 5px black ;
-    height: 50px;
-    width: 50px;
-    border-radius: 5px;
-    border: none;     
+    text-shadow: 1vh 0.5vh 0.5vh black;  
+    height: 5vh;
+    width: 5vw;
+    border-radius: 0.5vh;
+    border: none; 
+    border: solid 1px red;    
 }
 .menu-toggle:hover{
     background-color: rgba(20, 72, 131, 0.5);
 }
+@media (max-width:1069px) {
+    .navegacao a, .navegacao li{
+        padding: 0.4vw;
+    }
+}
+@media (max-width:768px) {
+    .menu nav{
+        display: none;   
+    }
+    .menu-toggle{
+        display:block; 
+    }
+  
+  }

@@ -25,8 +25,11 @@ export default function Menu(props){
                         <a href="#login">Login</a>
                     </li>
                 </ul>
-            </nav>            
-            
+            </nav> 
+            <button className="menu-toggle">
+                <i className="fa fa-lg fa-bars"></i>
+            </button>         
+
         </div>
     )
 }
