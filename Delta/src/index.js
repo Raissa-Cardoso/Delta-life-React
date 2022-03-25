@@ -1,7 +1,7 @@
 import './index.css'
 import ReactDOM from 'react-dom'
 import React from 'react'
-import Banner from './Header/bannerImagem/BannerImagem'
+import Header from './Header/bannerImagem/BannerImagem'
 import Logo from './Header/Logo/Logo'
 import Busca from './Header/Busca/Busca'
 import Menu from './Header/Menu/Menu'
@@ -14,12 +14,12 @@ import Footer from './Footer/Footer'
 ReactDOM.render(  
   
     <div>
-        <Banner>
+        <Header>
             <Logo/>
             <Busca/>             
             <Menu/>           
-            <BannerTexto/>
-        </Banner>        
+            <BannerTexto/>            
+        </Header>        
         <Main/>
         <Footer/>
        

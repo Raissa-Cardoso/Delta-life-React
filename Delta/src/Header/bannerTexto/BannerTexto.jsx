@@ -6,7 +6,7 @@ import './BannerTexto.css'
 export default function BannerTexto(props){   
     
     return (
-        <div className="bannerTexto" wmslider="true">
+        <div className="bannerTexto" slider="true">
             <h2>Soluções em <br/>equipamentos hospitalares</h2>  
             <h2>Soluções em <br/>equipamentos veterinários</h2>
             <h2>Laudos a distância<br/> Especialistas ao seu dispor</h2>

@@ -1,9 +1,8 @@
 window.onload=function(e){
-    const elementos = document.querySelectorAll("[wm-slider] > p") 
-    const frases = document.querySelectorAll("[wm-slider] h2")       
+    const elementos = document.querySelectorAll("[slider] > p") 
+    const frases = document.querySelectorAll("[slider] h2")       
     const slides= Array.from(elementos)
-    const conjuntoFrases= Array.from(frases)
-    console.log(conjuntoFrases)
+    const conjuntoFrases= Array.from(frases)    
     exibirSlide(slides,slides[0], conjuntoFrases, conjuntoFrases[0])
 }
 function exibirSlide(slides,slide, frases, frase){

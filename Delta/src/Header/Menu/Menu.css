@@ -1,8 +1,9 @@
 .menu{
     height: 6vh;
+    width:40vw;
     display: flex;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-between;       
 }
 .navegacao{  
     list-style: none;            
@@ -30,15 +31,35 @@
     width: 10vw;  
     border-radius: 1.5vh;             
 }
+.subProdutos{
+    display: none;
+    position: absolute;
+    height: 40vh;
+    width: 30vw;
+    border: solid 1px white;
+    border-radius: 1.5vh; 
+    margin: 1.4vh;
+       
+}
+.subProdutos ul{
+    margin:0;
+    padding: 0;
+    list-style: none; 
+}
+.subProdutos li{
+    display: list-item;   
+}
+#linhaVet a:hover{
+    background-color: #2a8631;
+}
 .menu-toggle{
-    
     display:none; 
     background-color: rgba(12, 29, 187, 0);
     color: #fff;
     font-size: 1.2em;
     text-shadow: 1vh 0.5vh 0.5vh black;  
     height: 5vh;
-    width: 5vw;
+    width: 100%;
     border-radius: 0.5vh;
     border: none;        
 }
@@ -51,8 +72,45 @@
         display: none;
     }
     .menu-toggle{
-        display: block;       
-        
+        display: block;
     }
+    .menu{
+        height: 6vh;
+        width: 5vw;
+    }
+}
+@media (min-height:1180px){
+    .menu-toggle, .menu{
+        font-size: 1.5em;
+        height: 6vh;
+        width: 10vw;
+    }
+} 
 
+@media (max-width:768px) {
+    .menu-toggle{
+        font-size: 1.4em;
+        height: 6vh;
+        width: 6vw;
+    }
+}
+@media (max-width:700px){
+    .menu, .menu-toggle{
+        width: 8vw;
+    }
+}
+@media (max-width:490px){
+    .menu, .menu-toggle{
+        width: 10vw;
+    }
+}
+@media (max-width:390px){
+    .menu, .menu-toggle{
+        width: 11vw;
+    }
+}
+@media (max-width:350px){
+    .menu, .menu-toggle{
+        width: 12vw;
+    }
 }

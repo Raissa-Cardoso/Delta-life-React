@@ -34,8 +34,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
-    /*border:solid 2px yellow;*/
+    flex-wrap: wrap;    
 }
 
 @media (max-width:420px) {
@@ -50,9 +49,8 @@ header{
 }
 @media (max-width:768px){
     .agrupar{
-        margin-left:0;
-    }
-    
+        margin-left:0;        
+    }    
 }
 
 

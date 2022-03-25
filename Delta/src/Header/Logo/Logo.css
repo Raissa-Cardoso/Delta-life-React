@@ -4,7 +4,7 @@
     display: flex; 
     flex-direction: row; 
     justify-content: space-around;
-    align-items: center;       
+    align-items: center;          
 }
 .logo a{
     text-decoration: none; 
@@ -13,7 +13,7 @@
     height: 6vh;
     width: 3vw;   
     filter: brightness(100%);
-    border-radius: 100%;   
+    border-radius: 100%;       
 }
 .logo p{ 
     margin: 0;
@@ -22,7 +22,7 @@
     height: 4vh;   
     width: 100%;
     color: #fff;
-    text-shadow: 10px 5px 5px black ;   
+    text-shadow: 10px 5px 5px black ;  
 }
 
 @media (max-width:1024px){
@@ -33,14 +33,27 @@
         height: 5vh;
     }
 }
+@media (min-height:1180px){
+    .logo p{
+        display: none;
+    }
+    .logo{
+        justify-content: center;
+        height: 7vh; 
+    }
+    .logo img{
+        height: 100%;
+        width: 7vw; 
+    }
+}
+
 @media (max-width:768px) {
     .logo p{
         display: none;
     }
     .logo{
         justify-content: center;
-        height: 7vh;
-         
+        height: 7vh; 
     }
     .logo img{
         height: 100%;
