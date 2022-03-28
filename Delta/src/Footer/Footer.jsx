@@ -5,6 +5,10 @@ import './Footer.css';
 const logo=require('../assets/logo.jpg');
 
 export default function Footer(props){
+    function pageUp(){
+        window.scrollTo(0,0)
+    }
+
     return (
         <div>
             <footer className="rodape">
@@ -23,7 +27,10 @@ export default function Footer(props){
                     <p> Rua Salviano José da Silva, 445 </p>
                     <p>Centro Industrial e Empresarial Eldorado</p>
                     <p>São José dos Campos/SP</p>
-                </div>        
+                </div> 
+                <div>
+                    <button className="botaoUp" onClick={pageUp}>^</button>
+                </div>       
             </footer>
         </div>
     )

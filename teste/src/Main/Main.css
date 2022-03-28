@@ -1,0 +1,96 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#maisVendidos{
+    text-align: center;
+    color: rgb(61, 59, 59);
+    padding: 4vh 0;
+    font-size: 1.8rem;
+    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ; 
+}
+.principal{  
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;    
+    justify-content: space-around; 
+    width: 98%;  
+    align-self: center;   
+}
+.produto{      
+    display: flex;
+    flex-direction: column;
+}
+.produto img:hover{
+    transform: scale(1.1);  
+}
+.produto img{
+    border-radius: 0 4vw 0 2vw;  
+    width: 22vw;
+    height: 45vh;
+    border-radius: 0 4vw 0 2vw;
+    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110); 
+}
+.produto h2{
+    font-size: 1.2rem;
+    color: #1b2a5f;
+    margin: 0;
+    padding: 3vh 2vh 2vh 2vh;
+}
+.produto h3{
+    margin:0;
+    font-size: 1rem;
+    padding-left: 2vh;
+    width: 22vw;
+}
+
+@media (max-width:1024px){
+    .produto img{
+        height: 35vh;
+    }
+    .produto h2{
+        font-size:1rem;
+    }
+    .produto h3{
+        font-size:0.8rem;
+    }
+}
+@media (max-width:639px){
+    .principal{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .produto img{
+        width: 40vw;
+        height: 35vh;       
+    }
+    .produto{
+        margin: 4vh;
+    }
+    .produto h2{
+        font-size:1rem;
+    }
+    .produto h3{
+        font-size:0.8rem;
+        width: 35vw;
+    }
+}
+@media (max-width:450px){    
+    .produto img{
+        width: 35vw;
+        height: 28vh;       
+    }
+}
+@media (min-height:1024px){ 
+    .produto img{        
+        height: 22vh;       
+    }
+    .produto h2{
+        font-size:1.4rem;
+    }
+    .produto h3{
+        font-size:1.3rem;        
+    }
+}

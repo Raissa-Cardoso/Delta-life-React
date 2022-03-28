@@ -1,8 +1,6 @@
 import React from "react";
 import './BannerTexto.css'
 
-/*import '../../Actions/carrossel.js'*/
-
 export default function BannerTexto(props){   
     
     return (

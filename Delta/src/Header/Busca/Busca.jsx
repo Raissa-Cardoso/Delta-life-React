@@ -1,5 +1,5 @@
 import React from "react";
-import './Busca.css'
+import './Busca.css';
 
 export default function Busca(props){    
     return (

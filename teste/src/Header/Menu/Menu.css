@@ -1,0 +1,142 @@
+.menu{
+    height: 6vh;
+    width:40vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;               
+}
+.navegacao{  
+    list-style: none;            
+    width: 100%;
+    display: flex;            
+    padding: 0; 
+    margin: 0 0 0 0;  
+    justify-content:center;                                  
+}
+.navegacao a{
+    font-size:1.2rem;
+    font-weight: bold;
+    text-decoration: none;            
+    color: #fff;
+    padding: 0.7vw;
+    text-shadow: 1vh 0.5vh 0.5vh black;  
+}
+.navegacao li{
+    display: inline-block;
+    padding: 0.7vw;            
+}
+.navegacao a:hover, .navegacao a.selected {
+    background-color: #3048a1;
+    color: #fff;
+    width: 10vw;  
+    border-radius: 1.5vh;                 
+}
+.subProdutos{
+    display: none;
+    position: absolute;
+    height: 40vh;
+    width: 32vw;
+    border: 0;
+    border-radius: 1.2vh; 
+    margin-top: 1.4vh;
+    box-shadow: 0.5vh 0.5vh 0.5vh rgb(34, 34, 34); 
+    background-color: white;
+    flex-direction: column; 
+    padding-top: 2vw;         
+}
+.subProdutos ul{
+    margin:0;
+    padding: 0;
+    list-style: none; 
+}
+.subProdutos li{
+    display: list-item;   
+}
+.subProdutos li a{
+    color: rgb(85, 82, 82);
+    text-shadow: 1vh 0.5vh 0.5vh rgb(247, 246, 246);  
+}
+#linhaVet a:hover{
+    background-color: #2a8631;
+    color: #fff;
+    text-shadow: 0.5vh 0.5vh 0.5vh black; 
+}
+#linhaHosp a:hover{
+    color: #fff;
+    text-shadow: 0.5vh 0.5vh 0.5vh black; 
+}
+.demonstrativo {   
+    height: 22vh;
+    width: 12vw;
+    position: absolute;
+    border-radius: 1.2vh;
+    padding: 2vw;  
+    align-self: flex-end; 
+}
+.demonstrativo img{
+    height: 22vh;
+    width: 12vw;
+    border-radius: 1.2vh;
+    box-shadow: 0.5vh 0.5vh 0.5vh rgb(80, 78, 78);  
+}
+.menu-toggle{
+    display:none; 
+    background-color: rgba(12, 29, 187, 0);
+    color: #fff;
+    font-size: 1.2em;
+    text-shadow: 1vh 0.5vh 0.5vh black;  
+    height: 5vh;
+    width: 100%;
+    border-radius: 0.5vh;
+    border: none;        
+}
+.menu-toggle:hover{
+    background-color: rgba(20, 72, 131, 0.5);
+}
+
+@media (max-width:1024px) {
+    .menu nav{
+        display: none;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    .menu{
+        height: 6vh;
+        width: 5vw;
+    }
+}
+@media (min-height:1180px){
+    .menu-toggle, .menu{
+        font-size: 1.5em;
+        height: 6vh;
+        width: 10vw;
+    }
+} 
+@media (max-width:768px) {
+    .menu-toggle{
+        font-size: 1.4em;
+        height: 6vh;
+        width: 6vw;
+    }
+}
+@media (max-width:700px){
+    .menu, .menu-toggle{
+        width: 8vw;
+    }
+}
+@media (max-width:490px){
+    .menu, .menu-toggle{
+        width: 10vw;
+    }
+}
+@media (max-width:390px){
+    .menu, .menu-toggle{
+        width: 11vw;
+    }
+}
+@media (max-width:350px){
+    .menu, .menu-toggle{
+        width: 12vw;
+    }
+}

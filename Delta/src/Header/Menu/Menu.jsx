@@ -1,6 +1,8 @@
 import React from "react";
 import './Menu.css';
 
+const linha1000 = require('../../assets/vet1.jpeg');
+
 export default function Menu(props){
 
     window.onhashchange=function(e){                
@@ -11,42 +13,50 @@ export default function Menu(props){
         oldMenu && oldMenu.classList.remove('selected') 
         newMenu && newMenu.classList.add('selected')
         if(newMenu===document.querySelector(`.menu a[href='#produtos']`)){
-            document.querySelector(`.subProdutos`).style.display="block"
+            document.querySelector(`.subProdutos`).style.display="flex"
         }else{
             document.querySelector(`.subProdutos`).style.display="none"
         }
     } 
            
     function clicou(){        
-        const inicio=document.querySelector(`.menu a[href='#inicio']`)       
+        const inicio=document.querySelector(`.menu a[href='index.html']`)  
+        const produtos=document.querySelector(`.menu a[href='#produtos']`)       
         if(inicio.classList.contains('selected')){
             inicio.classList.remove('selected')
         }
+        produtos.addEventListener('click', (e)=>{
+            document.querySelector(`.subProdutos`).style.display="flex"
+        });   
     }
 
     return (
         <div className="menu">
              <nav>
                 <ul className="navegacao">
-                    <li>
-                        <a href="#inicio" className="selected" onClick={clicou}>Home</a>
+                    <li>                        
+                        <a href="index.html" className="selected" onClick={clicou}>Home</a>                        
                     </li>                    
                     <li>
                         <a href="#produtos" onClick={clicou}>Produtos</a>
                         <div className="subProdutos">
                             <ul>
                                 <li id="linhaVet">
-                                    <a href="http://">Linha Veterinária</a>
+                                    <a href="#linhaVeterinária">Linha Veterinária</a>
                                 </li>
-                                <li>
-                                    <a href="http://">Linha Hospitalar</a>
+                                <li id="linhaHosp">
+                                    <a href="#linhaHospitalar">Linha Hospitalar</a>
                                 </li>
-                            </ul>
-
+                            </ul>                               
+                            <div className="demonstrativo">
+                                <img src={linha1000}  alt="DL1000-Monitor Multiparametros Vet"/>
+                            </div>                             
                         </div>
                     </li>
                     <li>
+                        
                         <a href="#assinaturas" onClick={clicou}>Assinaturas</a>
+                        
                     </li>
                     <li>
                         <a href="#contato" onClick={clicou}>Contato</a>

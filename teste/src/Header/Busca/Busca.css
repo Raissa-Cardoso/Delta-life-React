@@ -1,0 +1,85 @@
+.busca{   
+    height: 6vh;
+    width: 20vw;
+    box-sizing: border-box;  
+    display: flex; 
+    align-self: flex-start;      
+    justify-content: flex-end;                 
+}
+.busca input{  
+  margin: 0; 
+  padding: 0;    
+  width: 20vw;
+  height: 100%;
+  border-radius: 1.5vh;  
+  box-sizing: border-box;  
+} 
+.lupa{
+  align-self: center;
+  display:none; 
+  background-color: rgba(12, 29, 187, 0);
+  color: #fff;
+  font-size: 1.6em;
+  text-shadow: 1vh 0.5vh 0.5vh black;  
+  height: 100%;
+  width: 6vw;
+  border-radius: 0.5vh;
+  border: none; 
+}
+.lupa:hover{
+  background-color: rgba(20, 72, 131, 0.5);
+}
+  
+@media (max-width:1024px) {
+    .busca, .busca input{
+      width: 35vw;
+    }
+}
+@media (min-height:1180px){
+  .busca input{
+    display: none;
+  }
+  .lupa{
+    display: block; 
+    font-size: 2em;
+    height: 6vh;
+    width: 10vw;
+}
+  .busca{
+    width: 60vw;
+  }
+}
+@media (max-width:768px) {
+  .busca input{
+    display: none;
+  }
+  .lupa{
+    display: block;       
+  }
+  .busca{
+    width: 60vw;
+  }
+}
+@media (max-width:700px){
+  .lupa{
+    width: 8vw;
+  }
+}
+@media (max-width:490px){
+  .lupa{
+    width: 10vw;
+  }
+}
+@media (max-width:390px){
+  .lupa{
+    width: 11vw;
+  }
+}
+@media (max-width:350px){
+  .lupa{
+    width: 12vw;  
+  }
+  .busca{
+    width: 40vw;
+  }
+}

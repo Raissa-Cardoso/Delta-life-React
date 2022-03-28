@@ -11,13 +11,20 @@ export default function Main(props){
             <h1 id="maisVendidos">Mais Vendidos</h1>
             <main className="principal">            
                 <div className="produto">
-                    <img src={linha1000}  alt="DL1000-Monitor Multiparametros Vet"/>
+                    <img src={linha1000}  alt="DL1000"/>  
+                    <h2>DL1000</h2>
+                    <h3>Monitor multiparamétrico veterinário (touch screen) </h3>                  
                 </div> 
+                
                 <div className="produto">
-                    <img src={linha700}  alt="DL740-Monitor Multiparametros Vet"/>
+                    <img src={linha700}  alt="DL740"/>
+                    <h2>DL740</h2>
+                    <h3>Aparelho de anestesia inalatória veterinário com ventilação com pedestal</h3>
                 </div>
                 <div className="produto">
-                    <img src={hosp1000}  alt="Life 1000-Monitor Multiparametros médico-hospitalar humano"/>
+                    <img src={hosp1000}  alt="Life 1000"/>
+                    <h2>Life 1000</h2>
+                    <h3>Monitor multiparamétrico médico-hospitalar humano</h3>
                 </div>                 
             </main>
         </div>

@@ -1,0 +1,90 @@
+.bannerTexto{   
+    align-self: center;
+    margin-left: 5vw;         
+}
+.bannerTexto h2{    
+    color: #fff;
+    text-shadow: 1vh 0.5vh 0.5vh black;  
+    font-size: 2rem; 
+    padding: 0;
+    margin: 0;    
+    display: none;
+}
+.bannerTexto h2:nth-child(1){
+    display:block;
+}
+.bannerBotão{  
+    margin-left: 0;  
+    height: 4vh;
+    width: 7vw;
+    padding-top: 2vh;      
+}    
+.botão{     
+    border-radius: 1vh;
+    background-color: #3048a1; 
+    color: #fff;  
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+.botão:hover{
+    background-color: #3a58c5;
+}
+@media (min-height:1180px){
+    .bannerTexto h2{
+        font-size: 2.4rem; 
+    }
+    .bannerBotão{       
+        height: 5vh;
+    }
+    .botão{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:1163px){
+    .bannerBotão{        
+        width: 10vw;
+    }
+}
+@media(max-width:820px){
+    .bannerBotão{         
+        width: 12vw;
+    }
+}
+@media(max-width:680px){
+    .bannerBotão{         
+        width: 14vw;
+    }
+}
+@media(max-width:585px){
+    .bannerBotão{         
+        width: 17vw;
+    }
+}
+@media(max-width:480px){
+    .bannerBotão{         
+        width: 20vw;
+    }
+}
+@media(max-width:410px){
+    .bannerBotão{         
+        width: 22vw;
+    }
+}
+@media(max-width:375px){
+    .bannerBotão{         
+        width: 24vw;
+    }
+}
+@media(max-width:340px){
+    .bannerBotão{         
+        width: 26vw;
+    }
+}
+@media(max-width:313px){
+    .bannerBotão{         
+        width: 30vw;
+    }
+}

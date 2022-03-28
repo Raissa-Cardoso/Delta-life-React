@@ -14,10 +14,10 @@ import Footer from './Footer/Footer'
 ReactDOM.render(  
   
     <div>
-        <Header>
+        <Header>            
             <Logo/>
             <Busca/>             
-            <Menu/>           
+            <Menu/>                                  
             <BannerTexto/>            
         </Header>        
         <Main/>

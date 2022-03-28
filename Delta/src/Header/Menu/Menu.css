@@ -3,7 +3,7 @@
     width:40vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;       
+    justify-content: space-between;               
 }
 .navegacao{  
     list-style: none;            
@@ -29,17 +29,20 @@
     background-color: #3048a1;
     color: #fff;
     width: 10vw;  
-    border-radius: 1.5vh;             
+    border-radius: 1.5vh;                 
 }
 .subProdutos{
     display: none;
     position: absolute;
     height: 40vh;
-    width: 30vw;
-    border: solid 1px white;
-    border-radius: 1.5vh; 
-    margin: 1.4vh;
-       
+    width: 32vw;
+    border: 0;
+    border-radius: 1.2vh; 
+    margin-top: 1.4vh;
+    box-shadow: 0.5vh 0.5vh 0.5vh rgb(34, 34, 34); 
+    background-color: white;
+    flex-direction: column; 
+    padding-top: 2vw;         
 }
 .subProdutos ul{
     margin:0;
@@ -49,8 +52,32 @@
 .subProdutos li{
     display: list-item;   
 }
+.subProdutos li a{
+    color: rgb(85, 82, 82);
+    text-shadow: 1vh 0.5vh 0.5vh rgb(247, 246, 246);  
+}
 #linhaVet a:hover{
     background-color: #2a8631;
+    color: #fff;
+    text-shadow: 0.5vh 0.5vh 0.5vh black; 
+}
+#linhaHosp a:hover{
+    color: #fff;
+    text-shadow: 0.5vh 0.5vh 0.5vh black; 
+}
+.demonstrativo {   
+    height: 22vh;
+    width: 12vw;
+    position: absolute;
+    border-radius: 1.2vh;
+    padding: 2vw;  
+    align-self: flex-end; 
+}
+.demonstrativo img{
+    height: 22vh;
+    width: 12vw;
+    border-radius: 1.2vh;
+    box-shadow: 0.5vh 0.5vh 0.5vh rgb(80, 78, 78);  
 }
 .menu-toggle{
     display:none; 
@@ -86,7 +113,6 @@
         width: 10vw;
     }
 } 
-
 @media (max-width:768px) {
     .menu-toggle{
         font-size: 1.4em;
