@@ -1,5 +1,6 @@
 import React from "react";
 import './Menu.css';
+import {Link} from 'react-router-dom'
 
 const linha1000 = require('../../assets/vet1.jpeg');
 
@@ -19,8 +20,8 @@ export default function Menu(props){
         }
     } 
            
-    function clicou(){        
-        const inicio=document.querySelector(`.menu a[href='index.html']`)  
+    function clicou(){       
+        const inicio=document.querySelector(`.menu a[href='/']`)             
         const produtos=document.querySelector(`.menu a[href='#produtos']`)       
         if(inicio.classList.contains('selected')){
             inicio.classList.remove('selected')
@@ -34,8 +35,9 @@ export default function Menu(props){
         <div className="menu">
              <nav>
                 <ul className="navegacao">
-                    <li>                        
-                        <a href="index.html" className="selected" onClick={clicou}>Home</a>                        
+                    <li className="inicio" >  
+                        <Link to="/"  className="selected" onClick={clicou}>Home</Link>                
+                                               
                     </li>                    
                     <li>
                         <a href="#produtos" onClick={clicou}>Produtos</a>
@@ -54,8 +56,7 @@ export default function Menu(props){
                         </div>
                     </li>
                     <li>
-                        
-                        <a href="#assinaturas" onClick={clicou}>Assinaturas</a>
+                        <Link to="/assinaturas" >Assinaturas</Link>                        
                         
                     </li>
                     <li>
