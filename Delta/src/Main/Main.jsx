@@ -1,32 +1,31 @@
+import "../../src/Home/Home.css"
 import React from "react";
-import './Main.css';
+import {Routes, Route } from 'react-router-dom';
 
-const linha700 = require('../assets/vet8.jpeg');
-const hosp1000 = require('../assets/hosp1.jpeg');
-const linha1000 = require('../assets/vet1.jpeg');
+import Home from "../Home/Home"
+import LinhaVeterinaria from "../Linhas/LinhaVeterinaria"
+import LinhaHospitalar from "../Linhas/LinhaHospitalar";
 
-export default function Main(props){
-    return (
-        <div className="main">            
-            <h1 id="maisVendidos">Mais Vendidos</h1>
-            <main className="principal">            
-                <div className="produto">
-                    <img src={linha1000}  alt="DL1000"/>  
-                    <h2>DL1000</h2>
-                    <h3>Monitor multiparamétrico veterinário (touch screen) </h3>                  
-                </div> 
-                
-                <div className="produto">
-                    <img src={linha700}  alt="DL740"/>
-                    <h2>DL740</h2>
-                    <h3>Aparelho de anestesia inalatória veterinário com ventilação com pedestal</h3>
-                </div>
-                <div className="produto">
-                    <img src={hosp1000}  alt="Life 1000"/>
-                    <h2>Life 1000</h2>
-                    <h3>Monitor multiparamétrico médico-hospitalar humano</h3>
-                </div>                 
-            </main>
-        </div>
-    )
-}
+import Assinaturas from "../Assinaturas/Assinaturas"
+import Contato from '../Contato/Contato'
+import Login from "../Login/Login"
+import DL1000 from "../Produtos/DL1000";
+
+const Principal = () => {
+    return(
+      <main className='Main'>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/linhaVeterinaria" element={<LinhaVeterinaria />}/>
+          <Route path="/linhaHospitalar" element={<LinhaHospitalar />}/>
+          <Route path="/assinaturas" element={<Assinaturas />}/>
+          <Route path="/contato" element={<Contato />}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/dl1000" element={<DL1000 />}/>
+      </Routes>
+        
+      </main>
+    );
+  };
+  
+  export default Principal;

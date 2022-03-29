@@ -8,6 +8,7 @@ export default function BannerTexto(props){
             <h2>Soluções em <br/>equipamentos hospitalares</h2>  
             <h2>Soluções em <br/>equipamentos veterinários</h2>
             <h2>Laudos a distância<br/> Especialistas ao seu dispor</h2>
+            <h2>Serviços de manutenções<br/> e substituições de peças</h2>
             <div className="bannerBotão">            
                 <button className="botão">Veja mais</button> 
             </div>          

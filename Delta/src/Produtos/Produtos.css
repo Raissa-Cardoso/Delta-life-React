@@ -1,0 +1,73 @@
+.DL1000ComTexto{    
+    color: rgb(61, 59, 59);
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;          
+}
+.DL1000Textos{
+    display: flex;
+    flex-direction: column;    
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;      
+    padding: 4vw;         
+}
+.DL1000Textos h1{ 
+    padding: 0;
+    margin: 0;
+    width: 70%;  
+    font-size: 1.5rem;
+    text-align: left;
+    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;
+    align-self: center;    
+}
+.DL1000Textos h2{    
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: justify;
+    width: 70%;
+    align-self: center;
+    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;         
+}
+.DL1000Textos h3{    
+    font-size: 1.1rem;
+    text-align: justify;
+    width: 70%;
+    align-self: center;
+    line-height: 1.4;
+    font-weight: 100; 
+}
+.DL1000Textos ul{
+    font-size: 1.2rem;
+    text-align: justify;
+    width: 70%;
+    align-self: center;
+    line-height: 1.4;
+}
+#caracteristicas{
+    margin-top:6vh;
+}
+.fundoFoto{    
+    background-color: #3048a1;
+    width: 50%;
+    height:60vh;;
+}
+.fotoDL1000{
+    position: absolute;
+    align-self: flex-start; 
+    width: 25vw;
+    height: 45vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center; 
+    border: solid 1px #f1ecec;  
+    margin: 4vh 0 0 12vw; 
+}
+.DL1000 img{
+    width: 15vw;
+    height: 25vh;    
+    border-radius: 1.5vh;
+    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110);
+    align-self: center;
+}

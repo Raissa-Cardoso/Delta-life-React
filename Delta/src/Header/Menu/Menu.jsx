@@ -6,7 +6,8 @@ const linha1000 = require('../../assets/vet1.jpeg');
 
 export default function Menu(props){
 
-    window.onhashchange=function(e){                
+    window.onhashchange=function(e){
+        console.log("entrou")                
         const oldURL=e.oldURL.split('#')[1]          
         const newURL=e.newURL.split('#')[1]        
         const oldMenu=document.querySelector(`.menu a[href='#${oldURL}']`)
@@ -44,10 +45,10 @@ export default function Menu(props){
                         <div className="subProdutos">
                             <ul>
                                 <li id="linhaVet">
-                                    <a href="#linhaVeterinária">Linha Veterinária</a>
+                                    <Link to="/linhaVeterinaria" >Linha Veterinária</Link> 
                                 </li>
                                 <li id="linhaHosp">
-                                    <a href="#linhaHospitalar">Linha Hospitalar</a>
+                                    <Link to="/linhaHospitalar" >Linha Hospitalar</Link> 
                                 </li>
                             </ul>                               
                             <div className="demonstrativo">
@@ -60,10 +61,10 @@ export default function Menu(props){
                         
                     </li>
                     <li>
-                        <a href="#contato" onClick={clicou}>Contato</a>
+                        <Link to="/contato" >Contato</Link> 
                     </li>
                     <li>
-                        <a href="#login" onClick={clicou}>Login</a>
+                        <Link to="/login" >Login</Link>
                     </li>
                 </ul>
             </nav> 

@@ -7,6 +7,7 @@ import '../../Actions/carrossel.js'
 const bannerFundo1=require('../../assets/bannerHospitalar.png');
 const bannerFundo2=require('../../assets/bannerVeterinario.png');
 const bannerFundo3=require('../../assets/bannerLaudos.png');
+const bannerFundo4=require('../../assets/manutencao1.png');
 
 export default function Header(props){ 
   
@@ -15,7 +16,8 @@ export default function Header(props){
             <div className="bannerImagem" slider="true">            
                 <p><img  src={bannerFundo1}  alt="banner inicial"/></p>
                 <p><img  src={bannerFundo2}  alt="banner inicial"/></p>
-                <p><img  src={bannerFundo3}  alt="banner inicial"/></p>               
+                <p><img  src={bannerFundo3}  alt="banner inicial"/></p>   
+                <p><img  src={bannerFundo4}  alt="banner inicial"/></p>             
                 <div className="agrupar">
                     {props.children} 
                 </div>               

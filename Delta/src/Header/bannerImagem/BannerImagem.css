@@ -22,7 +22,7 @@ header{
 .bannerImagem p img{ 
     height: 60vh;
     width: 100vw;
-    filter: brightness(40%);
+    filter: brightness(42%);
 }
 .agrupar{
     box-sizing: border-box;

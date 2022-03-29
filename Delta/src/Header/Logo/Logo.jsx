@@ -1,18 +1,18 @@
 import React from "react";
 import './Logo.css';
+import {Link} from 'react-router-dom';
 
 const logo=require('../../assets/logo.jpg');
 
 export default function Logo(props){
     return (
         <div className="logo">
-            <a href="index.html">
+            <Link to="/">
                 <img  src={logo}  alt="logo Delta Life"/>
-            </a>
-            <a href="index.html">
+            </Link>
+            <Link to="/">
                 <p>Delta Life</p>
-            </a>
-                       
+            </Link>                       
         </div>
     )
 }

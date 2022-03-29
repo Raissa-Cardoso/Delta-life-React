@@ -1,0 +1,67 @@
+.loginCompleto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.login{    
+    width: 60%;
+    padding: 2vw 4vw 2vw 2vw;
+    color: rgb(61, 59, 59);
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;  
+    border: solid 1px #eceaea; 
+    border-radius: 1.5vh; 
+    margin:4vh 0 0 4vh;  
+    align-items: center;
+    justify-content: flex-start;
+}
+.login p{
+    width: 20%;     
+    font-size: 1.1rem;   
+    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;
+    text-align: center;  
+}
+.login input{   
+    border-radius: 1.5vh;  
+    height: 6vh;
+    width: 60%;
+    border: solid 1px #adacac;
+}
+.login button, .novoCadastro button {
+    border-radius: 1vh;
+    background-color: #3048a1; 
+    color: #fff;  
+    font-size: 0.8rem;
+    border: none;
+} 
+.login button {
+    width: 5vw;
+    height: 5vh;      
+    margin-left:1vw;
+    align-self: center;
+}
+.login button:hover{
+    background-color: #3a58c5;
+}
+.novoCadastro {
+    display: flex;
+    flex-direction: row;    
+    margin:2vh 0 0 4vh;
+    width: 30%;
+}
+.novoCadastro p{
+    width: 35%;     
+    font-size: 1rem;   
+    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;
+    text-align: center;
+}
+.novoCadastro button{
+    width: 10vw;
+    height: 5vh;
+    align-self: center;
+    margin-left: 1vw;
+}
+.novoCadastro button:hover{
+    background-color: #3a58c5;
+}

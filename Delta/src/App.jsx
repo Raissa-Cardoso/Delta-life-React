@@ -7,7 +7,7 @@ import Logo from './Header/Logo/Logo'
 import Busca from './Header/Busca/Busca'
 import Menu from './Header/Menu/Menu'
 import BannerTexto from './Header/bannerTexto/BannerTexto'
-import Principal from "./Principal"
+import Main from "../src/Main/Main"
 import Footer from './Footer/Footer'
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
                 <Menu/>                                  
                 <BannerTexto/>            
             </Header>        
-            <Principal/>
+            <Main/>
             <Footer/>
         </Router>        
        

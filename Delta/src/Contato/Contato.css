@@ -1,57 +1,47 @@
-.assinaturasComTexto{
-    padding: 2vw 4vw 2vw 2vw;
+.vendedores{    
     color: rgb(61, 59, 59);
     display: flex;
-    flex-direction: column;
-}
-.assinaturasComTexto h1{
-    font-size: 1.5rem;
-    text-align: center;
-    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ; 
-}
-.assinaturasComTexto h2{
-    font-size: 1.2rem;
-}
-.assinaturasComTexto h3{
-    font-size: 1rem;
-    text-align: justify;
-}
-.assinaturas{
-    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 5vh;
 }
-.assinatura{
+.vendedor{
     width: 25vw;
-    height: 40vh;    
-    border-radius: 1.5vh; 
+    height: 40vh;
     background-color: #ddd;
-    margin: 4vh;        
+    margin: 4vh;
+    border-radius: 1.5vh;    
     color: rgb(80, 80, 80);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;  
     padding: 4vh;  
-    box-sizing: border-box;  
+    box-sizing: border-box;   
 }
-.assinatura h2{
+.fotoVendedor{
+    width: 10vw;
+    height: 15vh;
+    background-color: #cdcdcd;    
+}
+.vendedor h1{
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 15vw;
     height: 5vh;       
     font-size: 1.2rem;
-    text-align: center;  
+    text-align: left;        
 }
-.assinatura h3{
+.vendedor h2{    
     font-size: 1rem;
-    width: 100%;
+    width: 10vw;
     height: 15vh;
     margin: 0;
     padding-left: 1vh;
-    text-align: justify;
+    text-align: justify;      
 }
-.botaoAssinatura{
+.botaoVendedor{
     width: 10vw;
     height: 5vh;      
     border-radius: 1vh;
@@ -60,6 +50,6 @@
     font-size: 0.8rem;
     border: none;
 }
-.botaoAssinatura:hover{
+.botaoVendedor:hover{
     background-color: #3a58c5;
 }
