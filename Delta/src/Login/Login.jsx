@@ -1,5 +1,6 @@
 import React from "react";
 import './Login.css';
+import {Link} from 'react-router-dom';
 
 export default function Login(props){
     return (
@@ -9,11 +10,13 @@ export default function Login(props){
                 <input type="text" />
                 <p>Email</p>
                 <input type="text" />
-                <button>Entrar</button>
+                <Link to="/minhadelta" >
+                    <button>Entrar</button>
+                </Link>                
             </div>
             <div className="novoCadastro">
-                <p>Não possui cadastro?</p>
-                <button>Cadastre-se aqui</button>
+                <p>Não possui cadastro?</p>                
+                <button>Cadastre-se aqui</button>                
             </div>     
         </main>
     )

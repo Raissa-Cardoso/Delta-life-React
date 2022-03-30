@@ -21,14 +21,18 @@ export default function Home(props){
                     </Link>                 
                 </div>                 
                 <div className="produto">
-                    <img src={linha700}  alt="DL740"/>
-                    <h2>DL740</h2>
-                    <h3>Aparelho de anestesia inalatória veterinário com ventilação com pedestal</h3>
+                    <Link to="/dl740" >
+                        <img src={linha700}  alt="DL740"/>
+                        <h2>DL740</h2>
+                        <h3>Aparelho de anestesia inalatória veterinário com ventilação com pedestal</h3>
+                    </Link>
                 </div>
                 <div className="produto">
+                    <Link to="/life1000" >
                     <img src={hosp1000}  alt="Life 1000"/>
                     <h2>Life 1000</h2>
                     <h3>Monitor multiparamétrico médico-hospitalar humano</h3>
+                    </Link>
                 </div>                 
             </main>
             <div className="sobre">
@@ -38,8 +42,10 @@ export default function Home(props){
                     <h2>Sobre a Delta Life</h2>
                     <h3>A Delta Life surgiu com o objetivo de fornecer soluções inteligentes para área da saúde,
                          utilizando alta tecnologia no desenvolvimento de novos equipamentos médicos.</h3>
-                    <div>            
-                        <button className="botão">Saiba mais</button> 
+                    <div>
+                        <Link to="/sobre" >           
+                            <button className="botão">Saiba mais</button>
+                        </Link> 
                     </div> 
                 </div>                
             </div>

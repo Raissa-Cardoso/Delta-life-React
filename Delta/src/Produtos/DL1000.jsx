@@ -1,9 +1,11 @@
 import React from "react";
 import './Produtos.css';
 
+
 const dl1000 = require('../assets/vet1.jpeg');
 
-export default function DL1000(props){
+
+export default function DL1000(props){    
     return (
         <main className="DL1000">            
             <div className="DL1000ComTexto">
