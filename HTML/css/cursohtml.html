@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <title>Delta Life</title>        
+    <style>           
+        body{
+            background-color: rgb(238, 245, 244);
+            margin: 0;
+        }
+        .cabecalho{
+            background-color: #fff;            
+            display: flex;
+            flex-direction: row;
+            height: 80px;
+            align-items: center;                                                    
+        }       
+        .logo img{            
+            height: 60px;
+            width: 380px;
+            margin-left: 20px;
+        }
+        .lateral ul {
+            list-style: none;
+            margin: 0 0 0 20px;
+            padding: 0; 
+            display: flex;
+        } 
+        .lateral li{            
+            padding: 0 15px;
+        }                 
+        .lateral a {
+            text-decoration: none;                     
+        }
+        .busca{            
+            flex-grow: 2;                        
+            display: flex;
+            justify-content: flex-end;    
+        }      
+        .menu{
+            background-color: rgb(20, 72, 131);
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;                                       
+        }
+        .menu ul{
+            list-style: none;            
+            width: 100%;
+            display: flex;            
+            padding: 0; 
+            margin: 0 0 0 20px;                                   
+        }
+        .menu a{
+            text-decoration: none;            
+            color: rgb(245, 241, 241);
+            padding: 10px;                      
+        }
+        .menu li{
+            display: inline-block;            
+            flex-grow: 1;                                                 
+        }
+        .menu a:hover {
+            background-color: #4faddb;
+            color: #000;
+            width: 100px;            
+        }
+        .rodape{            
+            bottom: 0;
+            background-color: rgb(14, 48, 87);
+            height: 80px;
+            width: 98.8vw;
+        }
+        .vitrine{
+           border: solid 1px red;
+           margin: 5vh 5vw;
+           height: 200px;
+           border-radius: 10px;
+           width: 90vw;                      
+           display: block;
+           overflow: hidden;
+
+        }
+        .vitrine p{
+            margin: 0;
+            padding: 0;
+        }
+        .vitrine img{
+            border-radius: 10px;
+            width: 100%; 
+            display: none;                                           
+        }
+        .vitrine img:nth-child(1){
+            display: block;
+        }
+        .categoria{
+           border: solid 1px rgb(27, 27, 27, 0.5);
+           margin: 5vh 5vw;
+           height: 200px;
+           border-radius: 10px;
+           width: 90vw;
+        }
+        .mover {
+            animation: slidein 3s;
+        }   
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="cursohtml.html">
+                <img src="C:\Users\User\Desktop\Delta Life\delta.jpg"  alt="Logo da Delta Life" onclick="clicou()">
+            </a>            
+        </div>
+        <div class="busca">
+            <input type="text" placeholder="">
+            <button>Pesquisar</button>
+        </div>  
+        <aside class="lateral">                       
+            <ul> 
+                <li>Seja Bem-vindo!</li>             
+                <li><a href="">Minha conta</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Carrinho</a></li>
+            </ul>
+        </aside>        
+           
+    </header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="cursohtml.html">Página inicial</a>
+            </li>
+            <li>
+                <a href="#cursos">Sobre a Delta Life</a>
+            </li>
+            <li>
+                <a href="#sobre">Linha Veterinária</a>
+            </li>
+            <li>
+                <a href="#contato">Linha Médica</a>
+            </li>
+            <li>
+                <a href="#cursos">Acessórios</a>
+            </li>
+            <li>
+                <a href="#cursos">Seja um revendedor</a>
+            </li>
+            <li>
+                <a href="#cursos">Localização</a>
+            </li>
+            <li>
+                <a href="#cursos">Fale conosco</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="home">
+        <main class="container">
+            <div class="vitrine" wm-slider>
+                <p><img src="C:\Users\User\Desktop\Delta Life\delta.jpg" height="200" onclick="clicou()"></p>            
+                <p><img src="C:\Users\User\Desktop\Delta Life\delta2.jpg" height="200" onclick="clicou()"></p>               
+                                               
+            </div>                    
+            <div class="categoria"></div>
+            <div class="categoria"></div>
+            <div class="categoria"></div>
+            <div class="categoria"></div>
+            <div class="categoria"></div>
+            <div class="categoria"></div>
+            <div class="categoria"></div>
+            <div class="categoria"></div>
+        </main>
+    </section>
+    <footer class="rodape">
+        <div>
+            <p>Todos os direitos reservados</p>            
+        </div>        
+    </footer>
+    <script> 
+        let i=0        
+        const imagens = document.querySelectorAll("[wm-slider] > p")      
+        function clicou(){ 
+            console.log(i)                      
+            let atual= imagens[i]
+            atual.style.display="none";
+            let proxima=0
+            if(i===imagens.length-1){
+                proxima=imagens[0]
+            }else{
+                proxima=imagens[i+1]
+            }                     
+       
+            proxima.style.display="block"
+            proxima.classList.toggle('mover');
+            i++          
+   
+        }
+        
+        
+     
+    
+</script>
+    
+</body>
+</html>
