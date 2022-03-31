@@ -13,6 +13,7 @@ import DL1000 from "../Produtos/DL1000";
 import DL740 from "../Produtos/DL740";
 import Life1000 from "../Produtos/Life1000";
 import Sobre from "../Sobre/Sobre";
+import indexMinhaDelta from "../MinhaDelta/indexMinhaDelta";
 import MinhaDelta from "../MinhaDelta/MinhaDelta";
 
 const Principal = () => {
@@ -30,6 +31,7 @@ const Principal = () => {
           <Route path="/life1000" element={<Life1000 />}/>
           <Route path="/sobre" element={<Sobre />}/>
           <Route path="/minhadelta" element={<MinhaDelta />}/>
+         {/* <Route path="/minhadelta" element={<AppMinhaDelta />}/>*/}
           
       </Routes>
         

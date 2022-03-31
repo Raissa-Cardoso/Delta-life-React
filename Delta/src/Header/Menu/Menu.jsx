@@ -2,53 +2,30 @@ import React from "react";
 import './Menu.css';
 import {Link} from 'react-router-dom'
 
+import clicou from'../../Actions/menu.js'
+
 const linha1000 = require('../../assets/vet1.jpeg');
 
-export default function Menu(props){
-
-    window.onhashchange=function(e){
-        console.log("entrou")                
-        const oldURL=e.oldURL.split('#')[1]          
-        const newURL=e.newURL.split('#')[1]        
-        const oldMenu=document.querySelector(`.menu a[href='#${oldURL}']`)
-        const newMenu=document.querySelector(`.menu a[href='#${newURL}']`)
-        oldMenu && oldMenu.classList.remove('selected') 
-        newMenu && newMenu.classList.add('selected')
-        if(newMenu===document.querySelector(`.menu a[href='#produtos']`)){
-            document.querySelector(`.subProdutos`).style.display="flex"
-        }else{
-            document.querySelector(`.subProdutos`).style.display="none"
-        }
-    } 
-           
-    function clicou(){       
-        const inicio=document.querySelector(`.menu a[href='/']`)             
-        const produtos=document.querySelector(`.menu a[href='#produtos']`)       
-        if(inicio.classList.contains('selected')){
-            inicio.classList.remove('selected')
-        }
-        produtos.addEventListener('click', (e)=>{
-            document.querySelector(`.subProdutos`).style.display="flex"
-        });   
-    }
-
+export default function Menu(props){     
+    
     return (
         <div className="menu">
              <nav>
                 <ul className="navegacao">
-                    <li className="inicio" >  
-                        <Link to="/"  className="selected" onClick={clicou}>Home</Link>                
+                    <li>  
+                        <Link to="/"  className="selected" onClick={()=>clicou("/")}>Home</Link>                
                                                
                     </li>                    
                     <li>
-                        <a href="#produtos" onClick={clicou}>Produtos</a>
+                        <a id="produtos" onClick={()=>clicou("/produtos")}>Produtos</a>
+                        
                         <div className="subProdutos">
                             <ul>
                                 <li id="linhaVet">
-                                    <Link to="/linhaVeterinaria" >Linha Veterinária</Link> 
+                                    <Link to="/linhaVeterinaria" onClick={()=>clicou("/linhaVeterinaria")}>Linha Veterinária</Link> 
                                 </li>
                                 <li id="linhaHosp">
-                                    <Link to="/linhaHospitalar" >Linha Hospitalar</Link> 
+                                    <Link to="/linhaHospitalar" onClick={()=>clicou("/linhaHospitalar")}>Linha Hospitalar</Link> 
                                 </li>
                             </ul>                               
                             <div className="demonstrativo">
@@ -57,14 +34,14 @@ export default function Menu(props){
                         </div>
                     </li>
                     <li>
-                        <Link to="/assinaturas" >Assinaturas</Link>                        
+                    <Link onClick={()=>clicou("/assinaturas")} to="/assinaturas" className="">Assinaturas</Link>                        
                         
                     </li>
                     <li>
-                        <Link to="/contato" >Contato</Link> 
+                        <Link to="/contato"  onClick={()=>clicou("/contato")}>Contato</Link> 
                     </li>
                     <li>
-                        <Link to="/login" >Login</Link>
+                        <Link to="/login"  onClick={()=>clicou("/login")}>Login</Link>
                     </li>
                 </ul>
             </nav> 

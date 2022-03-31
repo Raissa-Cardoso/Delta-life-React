@@ -56,12 +56,12 @@
     color: rgb(85, 82, 82);
     text-shadow: 1vh 0.5vh 0.5vh rgb(247, 246, 246);  
 }
-#linhaVet a:hover{
+#linhaVet a:hover, #linhaVet a.selected{
     background-color: #2a8631;
     color: #fff;
     text-shadow: 0.5vh 0.5vh 0.5vh black; 
 }
-#linhaHosp a:hover{
+#linhaHosp a:hover, #linhaHosp a.selected{
     color: #fff;
     text-shadow: 0.5vh 0.5vh 0.5vh black; 
 }

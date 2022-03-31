@@ -23,11 +23,11 @@
     line-height: 1.8; 
     padding: 1vh;         
 }
-.menuMinhaDelta li a{
+.menuMinhaDelta li a,  .imagemLinks li a{
     text-decoration: none;
     color: black;
 }
-.menuMinhaDelta li:hover{
+.menuMinhaDelta li:hover, .imagemLinks li:hover, .menuMinhaDelta li.selected{
     background-color: #3a58c5;
     border-radius: 1vh;       
 }
@@ -79,4 +79,56 @@
     flex-grow: 1;     
     box-sizing: border-box;
     border-radius: 1vh;
+}
+.pedidos{
+    display: flex;
+    flex-direction: row;
+    
+}
+.pedidoPrazo{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    padding: 3vh;
+}
+.pedidoPrazo h2, .statusPedido h2{
+    font-size: 1rem;
+}
+.pedidoPrazo h3{
+    font-size: 0.8rem;
+}
+.statusPedido{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    width:25%;
+    justify-content: center;    
+}
+.imagemLinks{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.imagemPedido{    
+    height: 100%;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagemPedido img{
+    height: 15vh;
+    width: 10vw;    
+    border-radius: 1vh;    
+    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110);   
+}
+.imagemLinks ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;          
+}
+.imagemLinks li{
+    line-height: 2;
+    padding: 1vh;
 }
