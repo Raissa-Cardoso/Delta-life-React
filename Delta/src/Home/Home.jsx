@@ -50,7 +50,7 @@ export default function Home(props){
                 </div>                
             </div>
             <div className="parceirosComTexto">
-                <h2>Alguns de nossos clientes</h2>
+                <h2>Nossos clientes e parceiros</h2>
                 <div className="parceiros">
                     <div className="parceiro">
                     </div>

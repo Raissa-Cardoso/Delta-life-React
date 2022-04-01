@@ -1,13 +1,10 @@
 import React from "react";
-
-
+import "./Nest.css"
 
 const Nest2 = () => {
-  
-
   return (
-    <div>
-      <h2>Nest2</h2>
+    <div className="Nest2">
+      <h1>Nest 2 !!!</h1>
     </div>
   )
 }

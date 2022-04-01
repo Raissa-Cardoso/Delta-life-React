@@ -1,5 +1,5 @@
 import React from "react";
-import {Link,  Route, Routes} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 
@@ -9,8 +9,10 @@ const NestMenu = () => {
     <div>      
       <ul>
         <li>
-          <Link to={`/nest2`}>Nest2</Link>
-        </li>        
+          <Link to={`/nestMain`}>Nest2</Link>
+        </li>
+        <li><a href="">Teste</a></li>
+        <li><a href="">Teste2</a></li>          
       </ul>
     </div>
     

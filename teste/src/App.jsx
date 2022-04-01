@@ -2,8 +2,10 @@ import './App.css'
 import React from "react";
 import {BrowserRouter as Router} from 'react-router-dom';
 
-import Layout from "./pages/Layout";
-import Teste from "./pages/Teste"
+import Menu from "./pages/Menu";
+import Main from "./pages/Main";
+
+
 
 
 
@@ -11,8 +13,9 @@ export default function App() {
   return (
     <div className="App">
         <Router>
-          <Layout/> 
-          <Teste/> 
+          <Menu/> 
+          <Main/>
+                  
         </Router>                 
       
     </div>

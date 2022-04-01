@@ -1,0 +1,14 @@
+.Nest{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.nestMenu{
+    width: 20%;
+    border:solid 1px red;
+}
+.nestMain{
+    width: 80%;
+    border:solid 1px blue;
+}

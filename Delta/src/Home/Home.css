@@ -33,8 +33,8 @@
 }
 .produto img{
     border-radius: 0 4vw 0 2vw;  
-    width: 22vw;
-    height: 45vh;    
+    width: 20vw;
+    height: 35vh;    
     box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110); 
 }
 .produto h2{

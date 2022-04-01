@@ -7,7 +7,7 @@ const NestMain = () => {
     return(
       <main className='Main'>
         <Routes>
-          <Route path="/" element={<Nest2 />}/>         
+          <Route path="/nestMain" element={<Nest2 />}/>         
       </Routes>
         
       </main>
