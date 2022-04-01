@@ -1,26 +1,29 @@
-import './Teste.css'
+import './Main.css'
 import React from "react";
-import {Routes, Route, Router} from 'react-router-dom';
+import {Routes, Route, Router, Navigate} from 'react-router-dom';
 
 import Home from "./Home";
-import Nest from "./Nest"
-import "./IndexNest"
+import Nest from "./Nest";
+import NestMain from './NestMain';
 
-
-
-
-
-const Teste = () => {
+const Main = () => {
     return(
       <main className='Main' id="main">
         <Routes>
-          <Route path="/" element={<Home />}/>          
-          {/*<Route path="/nest2" element={<Nest />}/>          */}
-          <Route path="/indexNest" element={<IndexNest />}/>
+          <Route path="/" element={<Home />}> 
+            
+          </Route>       
+          <Route path="/nest" element={<Nest />}> 
+             
+           </Route>        
+           <Route path="/nestMain" element={<NestMain />}/> 
+             
       </Routes>
         
       </main>
     );
   };
   
-  export default Teste;
+  export default Main;
+
+

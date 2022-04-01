@@ -40,7 +40,7 @@
 .minhaDelta .kanbanConjunto{
     
     height: 15vh;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
 }
 .kanbanConjunto{
@@ -48,6 +48,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
+    align-self: center;
 }
 .kanban{
     display: flex;
@@ -61,18 +62,26 @@
     padding: 0;
     text-align: center;
 }
-.inativo{
-    background-color: rgb(107, 105, 105);
-}
+
 .ativo{
-    background-color: #3a58c5;
+    color: #3a58c5;
 }
 .inativo, .ativo{
     height: 8vh;
     width: 6vw;    
     border-radius: 1vh;
-    align-self: center;
+    align-self: center;    
 }
+.setas{
+    height: 4vh;
+    width: 2.5vw;
+    margin: 2vh 0;  
+}
+.check{
+    font-size:3.5rem;
+    margin-left: 2vh;    
+}
+
 .minhaDelta .pedidos{
     margin: 0 2vw;
     border: solid 1px #ccc;

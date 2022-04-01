@@ -1,7 +1,9 @@
 .linhaVeterinaria, .linhaHospitalar{
     display: flex;
     flex-direction: column;
-    align-items: center;       
+    align-items: center; 
+    height: 100%;     
+    width: 100%; 
 }
 .linhaVeterinaria h1, .linhaHospitalar h1{
     text-align: center;    
@@ -9,29 +11,50 @@
     font-size: 1.8rem;
     text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ; 
 }
-.linhaVeterinaria h1{
-    color:#2a8631;
+.linhaVeterinaria, .linhaVeterinaria a, .linhaVeterinaria a:visited{
+    color:#235327;
+    text-decoration: none;
 }
-.linhaHospitalar h1{
-    color: #3048a1;
+.linhaHospitalar, .linhaHospitalar a, .linhaHospitalar a:visited{
+    color: #233469;
+    text-decoration: none;
 }
-.linhaHospitalar .produtos, .linhaVeterinaria .produtos{  
+.linhasProdutos{  
     display: flex;
     flex-direction: row;  
     flex-wrap: wrap;    
     justify-content: space-around; 
-    width: 100%;  
-    align-self: center;   
+    width: 80%;       
+    height: 100%;     
+    box-sizing: border-box;    
+    align-items: flex-start;
 }
-.linhaHospitalar .produto, .linhaVeterinaria .produto{      
-    border-radius: 0 4vw 0 2vw;  
+.linhasProduto{ 
+    width: 20vw; 
+    border-radius: 0 4vw 0 2vw;
+    margin-bottom: 10vh; 
+    align-self: flex-start;    
+}
+
+.linhasProduto img{
+    border-radius: 0 4vw 0 2vw; 
+    width: 20vw;
+    height: 30vh;
+    object-fit: contain;
+    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110); 
+    background-color: rgb(247,247,247); 
+}
+.linhasProduto img:hover{
+    transform: scale(1.1);  
+}
+.linhasProduto h2{
+    font-size: 1.2rem;    
+    margin: 0;
+    padding: 3vh 2vh 2vh 2vh;
+}
+.linhasProduto h3{
+    margin:0;
+    font-size: 1rem;
+    padding-left: 2vh;
     width: 22vw;
-    height: 30vh;     
-    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110);    
-}
-.linhaVeterinaria .produto{   
-    background-color: #2a8631;
-}
-.linhaHospitalar .produto{   
-    background-color: #3048a1;
 }

@@ -1,27 +1,26 @@
-import React from 'react'
-import "./Nest.css"
-import {BrowserRouter as Router} from 'react-router-dom';
+import  "./Nest.css";
+import React from "react";
+import {BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-
-
-
+import Nest2 from "./Nest2";
+import Nest3 from "./Nest3";
 import NestMenu from "./NestMenu"
-import NestMain from "./NestMain"
+import NestMainFuncao from "./NestMainFuncao"
 
-
-export default function Nest() {    
-    return (
-      <div className="Nest">
-       {/*<Router> */}
-         <div className='nestMenu'>
-           {/* <NestMenu/>*/}
-        </div>                      
-        <div>
-           {/* <NestMain className="nestMain"/>*/}
-        </div>                  
-     {/* </Router>  */}   
-    
-       
-    </div>
-)
-}
+const NestMain = () => {
+    return(
+      <main className='Main'>
+        <div className="nestMenu">
+          <h2><NestMenu/></h2>
+        </div>
+        <div className="nestMain">
+          <h2>Nest3
+              
+              </h2>
+        </div>        
+          
+      </main>
+    );
+  };
+  
+  export default NestMain;

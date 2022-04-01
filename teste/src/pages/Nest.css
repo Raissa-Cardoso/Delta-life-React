@@ -1,4 +1,4 @@
-.Nest{
+.Nest, .Main{
     display:flex;
     flex-direction: row;
     width: 100%;
