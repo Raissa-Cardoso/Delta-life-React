@@ -1,20 +1,19 @@
+import "./MenuMinhaDelta.css"
 import React from "react";
-import './MinhaDelta';
+import './MeusPedidos';
 import {Link} from 'react-router-dom'
 
-import clicou from'../Actions/menu'
 
-export default function menuMinhaDelta(props){     
+
+export default function MenuMinhaDelta(props){   
     
     return (
-    <nav className="menuMinhaDelta">
+            <nav className="menuMinhaDelta">                
                     <ul>
-                        <li>
-                            <a href="">Meus pedidos</a>
-                        </li>
-                        <li>
-                            <a href="">Boletos</a>
-                        </li>
+                        <Link to="/minhadelta" ><li>Home</li></Link>
+                        <Link to="/minhadelta/meuspedidos" ><li>Meus Pedidos</li></Link>
+                        <Link to="/minhadelta/boletos" ><li>Boletos</li></Link> 
+                        
                         <li>
                             <a href="">Meu histórico de pedidos</a>
                         </li>

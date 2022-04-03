@@ -1,4 +1,4 @@
-export default function clicou(url){               
+export default function clicou(url){                
     const links=document.querySelectorAll(`.menu a`)          
     for(let i=0;i<links.length;i++){            
         let link=links[i]

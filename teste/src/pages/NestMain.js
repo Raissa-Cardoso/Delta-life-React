@@ -9,17 +9,18 @@ import NestMainFuncao from "./NestMainFuncao"
 
 const NestMain = () => {
     return(
-      <main className='Main'>
-        <div className="nestMenu">
-          <h2><NestMenu/></h2>
-        </div>
-        <div className="nestMain">
-          <h2><Nest2 />
-              
-              </h2>
-        </div>        
-          
-      </main>
+      <main className='NestMain'>
+      <h1> Nest Main</h1>
+      <Routes>
+        <Route path="/nest/nest2" element={<Nest2/>}/> 
+        <Route path="/nest/nest3" element={<Nest3/>}>           
+      </Route>       
+           
+    </Routes>
+    
+    
+      
+    </main>
     );
   };
   

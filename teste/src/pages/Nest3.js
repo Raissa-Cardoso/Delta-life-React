@@ -14,9 +14,7 @@ const NestMain = () => {
           <h2><NestMenu/></h2>
         </div>
         <div className="nestMain">
-          <h2>Nest3
-              
-              </h2>
+          <h2>Nest3</h2>
         </div>        
           
       </main>

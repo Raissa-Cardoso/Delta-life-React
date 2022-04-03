@@ -5,6 +5,8 @@ import {Routes, Route, Router, Navigate} from 'react-router-dom';
 import Home from "./Home";
 import Nest from "./Nest";
 import NestMain from './NestMain';
+import Nest2 from './Nest2';
+import Nest3 from './Nest3';
 
 const Main = () => {
     return(
@@ -14,10 +16,12 @@ const Main = () => {
             
           </Route>       
           <Route path="/nest" element={<Nest />}> 
-             
-           </Route>        
-           <Route path="/nestMain" element={<NestMain />}/> 
-             
+            
+           </Route>  
+          <Route path="/nest/nest2" element={<Nest2 />}/>           
+          <Route path="/nest/nest3" element={<Nest3 />}/>      
+         {/* <Route path="/nestMain" element={<NestMain />}/> 
+          <Route path="/nest2" element={<Nest2 />}/>*/}             
       </Routes>
         
       </main>

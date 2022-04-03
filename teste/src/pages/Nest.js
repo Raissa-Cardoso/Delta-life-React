@@ -5,15 +5,19 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom
 import NestMenu from "./NestMenu";
 import NestMain from "./NestMain"
 import Nest2 from "./Nest2";
+import Nest3 from "./Nest3";
 
 const Nest = () => {
   return (
     <div className="Nest">
+        <div className="nestMenu">
+        <h2><NestMenu/></h2>
+      </div>
+      <div className="nestMain">
+        <h2><NestMain/></h2>
+      </div>     
       
-        <NestMain />
-                     
-      
-   </div>
+    </div>
 
   )
 }
