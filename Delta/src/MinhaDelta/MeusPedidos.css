@@ -1,9 +1,14 @@
-.MinhaDeltaCompleto{
-    width: 100%;
+.meusPedidos{
+    
     height: 100%;
     display: flex;
     flex-direction: row;
     padding-top: 10vh;    
+}
+.divMenuMinhaDelta{
+    margin-left: 10vh;
+    width: 20vw;      
+    border-radius: 1vh;
 }
 .minhaDelta{
     display: flex;

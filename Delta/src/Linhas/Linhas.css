@@ -20,11 +20,12 @@
     text-decoration: none;
 }
 .linhasProdutos{  
+    
     display: flex;
     flex-direction: row;  
     flex-wrap: wrap;    
     justify-content: space-around; 
-    width: 80%;       
+    width: 75%;       
     height: 100%;     
     box-sizing: border-box;    
     align-items: flex-start;

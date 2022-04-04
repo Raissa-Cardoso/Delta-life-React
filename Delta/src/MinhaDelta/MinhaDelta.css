@@ -1,117 +1,15 @@
-.MinhaDeltaCompleto{
+.MinhaDelta{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    padding-top: 10vh;    
+    padding-top: 10vh;      
 }
-.minhaDelta{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 80%;      
-}
-.minhaDelta .kanbanConjunto{
-    
-    height: 15vh;
-    width: 80%;
-    box-sizing: border-box;
-}
-.kanbanConjunto{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-self: center;
-}
-.kanban{
-    display: flex;
-    flex-direction: column;
-    height: 15vh;
-    width: 8vw;    
-    box-sizing: border-box;
-}
-.kanban p{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.ativo{
-    color: #3a58c5;
-}
-.inativo, .ativo{
-    height: 8vh;
-    width: 6vw;    
-    border-radius: 1vh;
-    align-self: center;    
-}
-.setas{
-    height: 4vh;
-    width: 2.5vw;
-    margin: 2vh 0;  
-}
-.check{
-    font-size:3.5rem;
-    margin-left: 2vh;    
-}
-
-.minhaDelta .pedidos{
-    margin: 0 2vw;
-    border: solid 1px #ccc;
-    flex-grow: 1;     
-    box-sizing: border-box;
+.divMenuMinhaDelta{
+    margin-left: 10vh;
+    width: 20vw;      
     border-radius: 1vh;
 }
-.pedidos{
-    display: flex;
-    flex-direction: row;
-    
-}
-.pedidoPrazo{
-    display: flex;
-    flex-direction: column;
-    width:30%;
-    padding: 3vh;
-}
-.pedidoPrazo h2, .statusPedido h2{
-    font-size: 1rem;
-}
-.pedidoPrazo h3{
-    font-size: 0.8rem;
-}
-.statusPedido{
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
-    width:25%;
-    justify-content: center;    
-}
-.imagemLinks{
-    display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-    justify-content: center;    
-}
-.imagemPedido{    
-    height: 100%;
-    width: 15vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.imagemPedido img{
-    height: 15vh;
-    width: 10vw;    
-    border-radius: 1vh;    
-    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110);   
-}
-.imagemLinks ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;          
-}
-.imagemLinks li{
-    line-height: 2;
-    padding: 1vh;
+.MinhaDelta h1{
+    margin-left: 20vw;
 }

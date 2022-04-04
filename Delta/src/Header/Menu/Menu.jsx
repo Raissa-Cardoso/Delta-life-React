@@ -28,17 +28,19 @@ export default function Menu(props){
                                     <Link to="/linhaHospitalar" onClick={()=>clicou("/linhaHospitalar")}>Linha Hospitalar</Link> 
                                 </li>
                             </ul>                               
-                            <div className="demonstrativo">
-                                <img src={linha1000}  alt="DL1000-Monitor Multiparametros Vet"/>
+                            <div className="demonstrativo"  >
+                                <Link to="/DL1000" id="demonstrativo">
+                                    <img src={linha1000}  alt="DL1000-Monitor Multiparametros Vet"/>
+                                </Link>
                             </div>                             
                         </div>
                     </li>
                     <li>
-                    <Link onClick={()=>clicou("/assinaturas")} to="/assinaturas" className="">Assinaturas</Link>                        
+                        <Link onClick={()=>clicou("/assinaturas")} to="/assinaturas">Assinaturas</Link>                        
                         
                     </li>
                     <li>
-                        <Link to="/contato"  onClick={()=>clicou("/contato")}>Contato</Link> 
+                        <Link to="/contato"   onClick={()=>clicou("/contato")}>Contato</Link> 
                     </li>
                     <li>
                         <Link to="/login"  onClick={()=>clicou("/login")}>Login</Link>

@@ -12,6 +12,7 @@ export default function Life1000(props){
                 <div className="DL1000Textos">
                     <h1>Life1000</h1>
                     <h2>Monitor Multiparamétrico</h2>
+                    <p>Uso hospitalar humano</p>
                     <h3>O LIFE 1000 é destinado à monitorização de pacientes adultos, pediátricos e 
                         neonatais em ambiente ambulatórios de emergência ou unidades de tratamento intensivo. 
                         Equipamento deve ser operado por profissionais da saúde. Por ser um equipamento 
@@ -31,6 +32,18 @@ export default function Life1000(props){
                         <li>Possibilita a programação de aferições da PANI periodicamente</li>
                         <li>Possibilita o ajuste dos parâmetros dos alarmes conforme cada paciente</li>
                     </ul>
+                    <div className="duvidas">
+                        <h2 id="duvidas">Dúvidas frequentes</h2>
+                        <input list="listaDuvidas"/>                    
+                            <datalist id="listaDuvidas">
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                            </datalist>
+                        <button>OK</button>
+                    </div>    
                 </div>
                 <div className="fotoDL1000">
                     <img src={dl740}  alt="DL740"/> 

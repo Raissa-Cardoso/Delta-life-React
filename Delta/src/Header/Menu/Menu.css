@@ -71,13 +71,16 @@
     position: absolute;
     border-radius: 1.2vh;
     padding: 2vw;  
-    align-self: flex-end; 
+    align-self: flex-end;     
 }
 .demonstrativo img{
     height: 22vh;
     width: 12vw;
     border-radius: 1.2vh;
     box-shadow: 0.5vh 0.5vh 0.5vh rgb(80, 78, 78);  
+}
+.demonstrativo a:hover{
+    background-color: #fff;
 }
 .menu-toggle{
     display:none; 

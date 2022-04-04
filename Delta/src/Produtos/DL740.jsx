@@ -12,6 +12,7 @@ export default function DL740(props){
                 <div className="DL1000Textos">
                     <h1>DL740</h1>
                     <h2>Aparelho de anestesia inalatória com ventilação</h2>
+                    <p>Uso veterinário</p>
                     <h3>Sistema de Anestesia destinado à administração de gases e/ou vapores anestésicos 
                         através de respiração espontânea ou controlada, manual ou mecânica. Fabricado, em chapa
                         de aço carbono/alumínio e pintado com tinta a pó eletrostática híbrida e resistente a 
@@ -29,6 +30,18 @@ export default function DL740(props){
                         <li>Vaporizador universal, com ajustes para os diferentes tipos de anestésicos</li>
                         <li>Equipamento com pedestal, disponível nas opções em maleta e de bancada</li>  
                     </ul>
+                    <div className="duvidas">
+                        <h2 id="duvidas">Dúvidas frequentes</h2>
+                        <input list="listaDuvidas"/>                    
+                            <datalist id="listaDuvidas">
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                            </datalist>
+                        <button>OK</button>
+                    </div>    
                 </div>
                 <div className="fotoDL1000">
                     <img src={dl740}  alt="DL740"/> 

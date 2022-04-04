@@ -12,6 +12,7 @@ export default function DL1000(props){
                 <div className="DL1000Textos">
                     <h1>DL1000</h1>
                     <h2>Monitor Multiparamétrico Touch screen</h2>
+                    <p>Uso veterinário</p>
                     <h3>É um equipamento fundamental para clínicas
                          e hospitais veterinários. Ele detecta sinais vitais do paciente e exibe os resultados 
                          simultaneamente para a efetividade do acompanhamento cirúrgico. Como possui alarmes 
@@ -31,12 +32,23 @@ export default function DL1000(props){
                         <li>Geração de laudo eletrônico de ECG para envio ao cliente</li>
                         <li>Detector de respiração</li>
                     </ul>
+                    <div className="duvidas">
+                        <h2 id="duvidas">Dúvidas frequentes</h2>
+                        <input list="listaDuvidas"/>                    
+                            <datalist id="listaDuvidas">
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                            </datalist>
+                        <button>OK</button>
+                    </div>    
                 </div>
                 <div className="fotoDL1000">
                     <img src={dl1000}  alt="DL1000"/> 
                 </div> 
                 <div className="fundoFoto">
-
                 </div>              
 
             </div>

@@ -6,8 +6,8 @@ const DL1000 = require('../assets/vet1.jpeg');
 
 export default function MeusPedidos(props){    
     return (
-        <main className="MinhaDeltaCompleto">                        
-            < MenuMinhaDelta/> 
+        <main className="meusPedidos">                        
+            <div className="divMenuMinhaDelta">< MenuMinhaDelta/></div> 
             <div className="minhaDelta">
                 <div className="kanbanConjunto">
                     <div className="kanban">

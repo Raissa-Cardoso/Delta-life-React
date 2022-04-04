@@ -23,12 +23,21 @@
 }
 .DL1000Textos h2{    
     padding: 0;
-    margin: 0;
+    margin-top: 0;
     font-size: 1.2rem;
     text-align: justify;
     width: 70%;
     align-self: center;
     text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;         
+}
+.DL1000Textos p{
+    margin:0;
+    padding: 0;
+    text-align: justify;
+    width: 70%;
+    align-self: center;
+    color: red;
+    font-weight: bold;
 }
 .DL1000Textos h3{    
     font-size: 1.1rem;
@@ -45,7 +54,7 @@
     align-self: center;
     line-height: 1.4;
 }
-#caracteristicas{
+#caracteristicas, #duvidas{
     margin-top:6vh;
 }
 .fundoFoto{    
@@ -70,4 +79,26 @@
     border-radius: 1.5vh;
     box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110);
     align-self: center;
+    object-fit: contain;
+}
+.duvidas{    
+    align-self: center;
+    text-align: left;
+    width: 70%;    
+}
+.duvidas input{
+    width: 80%;
+    height: 4vh;
+    margin-right: 1vw;
+    border-radius: 1vh;
+}
+.duvidas button{
+    height: 5vh;
+    border-radius: 1vh;
+    background-color: #3048a1; 
+    color: #fff;
+    border: none;
+}
+.duvidas button:hover{
+    background-color: #3a58c5;
 }

@@ -49,8 +49,8 @@ export default function Home(props){
                     </div> 
                 </div>                
             </div>
-            <div className="parceirosComTexto">
-                <h2>Nossos clientes e parceiros</h2>
+            <div className="parceirosComTitulo">
+                <h2>Nossos parceiros e clientes</h2>
                 <div className="parceiros">
                     <div className="parceiro">
                     </div>
@@ -59,6 +59,39 @@ export default function Home(props){
                     <div className="parceiro">
                     </div>
                     <div className="parceiro">
+                    </div>
+                </div>
+            </div>
+            <div className="depoimentosComTitulo">
+                <h2>Depoimentos</h2>
+                <div className="depoimentos">
+                    <div className="depoimento">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Amet porro eveniet minus! Ipsa, ullam harum! Inventore quis distinctio eaque 
+                            commodi expedita, totam sunt vero minus doloribus?
+                            Magni illum asperiores molestiae?</p>
+                        <p className="assinaturaDepoimento">Sr. Fulano</p>
+                    </div>
+                    <div className="depoimento">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Amet porro eveniet minus! Ipsa, ullam harum! Inventore quis distinctio eaque 
+                            commodi expedita, totam sunt vero minus doloribus?
+                            Magni illum asperiores molestiae?</p>
+                        <p className="assinaturaDepoimento">Sr. Fulano</p>
+                    </div>
+                    <div className="depoimento">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Amet porro eveniet minus! Ipsa, ullam harum! Inventore quis distinctio eaque 
+                            commodi expedita, totam sunt vero minus doloribus?
+                            Magni illum asperiores molestiae?</p>
+                        <p className="assinaturaDepoimento">Sr. Fulano</p>
+                    </div>
+                    <div className="depoimento">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Amet porro eveniet minus! Ipsa, ullam harum! Inventore quis distinctio eaque 
+                            commodi expedita, totam sunt vero minus doloribus?
+                            Magni illum asperiores molestiae?</p>
+                        <p className="assinaturaDepoimento">Sr. Fulano</p>
                     </div>
                 </div>
             </div>
