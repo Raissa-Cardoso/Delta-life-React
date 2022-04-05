@@ -5,7 +5,6 @@ import {Routes, Route } from 'react-router-dom';
 import Home from "../Home/Home"
 import LinhaVeterinaria from "../Linhas/LinhaVeterinaria"
 import LinhaHospitalar from "../Linhas/LinhaHospitalar";
-
 import Assinaturas from "../Assinaturas/Assinaturas"
 import Contato from '../Contato/Contato'
 import Login from "../Login/Login"
@@ -13,10 +12,10 @@ import DL1000 from "../Produtos/DL1000";
 import DL740 from "../Produtos/DL740";
 import Life1000 from "../Produtos/Life1000";
 import Sobre from "../Sobre/Sobre";
-
 import MinhaDelta from "../MinhaDelta/MinhaDelta";
 import MeusPedidos from "../MinhaDelta/MeusPedidos";
 import Boletos from "../MinhaDelta/Boletos";
+import MeuHistorico from "../MinhaDelta/MeuHIstorico";
 
 const Principal = () => {
     return(
@@ -35,9 +34,7 @@ const Principal = () => {
           <Route path="/minhadelta" element={<MinhaDelta />}/>
           <Route path="/minhadelta/meuspedidos" element={<MeusPedidos />}/>
           <Route path="/minhadelta/boletos" element={<Boletos />}/>
-
-         {/* <Route path="/minhadelta" element={<AppMinhaDelta />}/>*/}
-          
+          <Route path="/minhadelta/meuhistorico" element={<MeuHistorico />}/>
       </Routes>
         
       </main>

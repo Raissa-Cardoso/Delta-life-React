@@ -1,0 +1,42 @@
+.kanbanConjunto{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-self: center;    
+}
+.kanban{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 8vw;    
+    box-sizing: border-box;
+}
+.kanban p{
+    margin: 0;
+    padding-top:1vh;
+    text-align: center;
+    height: 55%;       
+}
+.ativo{
+    color: #3a58c5;
+}
+.inativo, .ativo{
+    height: 45%;
+    width: 6vw;    
+    border-radius: 1vh;
+    align-self: center;      
+}
+.setas{
+    height: 4vh;
+    width: 2.5vw;
+    margin: 2vh 0;  
+}
+.check{
+    height: 50%;
+    font-size:250%;
+    margin-left: 2vh;    
+}

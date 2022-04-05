@@ -19,8 +19,8 @@
     text-decoration: none;
     color: black;
 }
-.menuMinhaDelta li:hover, .imagemLinks li:hover,.menuMinhaDelta li.selecionado{
+.menuMinhaDelta li:hover, .menuMinhaDelta li.selecionado{
     background-color: #3a58c5; 
     border-radius: 1vh; 
-    width: 12vw;      
+    width: 10vw;      
 }

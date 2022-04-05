@@ -2,8 +2,6 @@ import React from "react";
 import './Boletos.css';
 import MenuMinhaDelta from "./MenuMinhaDelta";
 
-const DL1000 = require('../assets/vet1.jpeg');
-
 export default function Boletos(props){    
     return (
         <main className="boletos">                        
@@ -40,8 +38,8 @@ export default function Boletos(props){
                             </tr>
                             <tr>
                                 <td>XXXX</td>
-                                <td>04/04/2022</td>
-                                <td>R$10000</td>
+                                <td>15/02/2022</td>
+                                <td>R$4000</td>
                                 <td className="tdDownloadPdf">
                                     <button className="downloadPdf">
                                         <i className="fa fa-file-pdf-o" aria-hidden="true"></i>
@@ -50,8 +48,8 @@ export default function Boletos(props){
                             </tr>
                             <tr>
                                 <td>XXXX</td>
-                                <td>04/04/2022</td>
-                                <td>R$10000</td>
+                                <td>30/11/2021</td>
+                                <td>R$8000</td>
                                 <td className="tdDownloadPdf">
                                     <button className="downloadPdf">
                                         <i className="fa fa-file-pdf-o" aria-hidden="true"></i>
@@ -60,8 +58,8 @@ export default function Boletos(props){
                             </tr>
                             <tr>
                                 <td>XXXX</td>
-                                <td>04/04/2022</td>
-                                <td>R$10000</td>
+                                <td>15/10/2020</td>
+                                <td>R$40000</td>
                                 <td className="tdDownloadPdf">
                                     <button className="downloadPdf">
                                         <i className="fa fa-file-pdf-o" aria-hidden="true"></i>
@@ -72,9 +70,9 @@ export default function Boletos(props){
                         <tfoot>
                             <tr>
                                 <td colspan="2"></td>
-                                <td>Total: R$40000</td>
+                                <td>Total: R$62000</td>
                                 <td></td>
-                            </tr>
+                            </tr> 
                         </tfoot>
                     </table>
                 </div>

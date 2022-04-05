@@ -55,8 +55,7 @@
   height: 80%;
   padding: 2vh;
   box-sizing: border-box;
-  border-radius: 1vh;
-  
+  border-radius: 1vh; 
 }
 .tabelaBoletos table{
     border-collapse: collapse;
@@ -64,7 +63,7 @@
 }
 .tabelaBoletos tbody{
     text-align: center;
-}
+} 
 .tabelaBoletos th,td{
     padding: 1vh;    
 }

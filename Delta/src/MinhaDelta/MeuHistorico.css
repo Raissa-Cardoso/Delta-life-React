@@ -1,0 +1,109 @@
+.meuHistorico{
+    flex:1;
+    height: 1;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;         
+}
+.divMenuMinhaDelta{
+    margin-left: 10vh;
+    width: 20vw;      
+    border-radius: 1vh;
+}
+.historicoPedidos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pedidoAtual{
+    height: 45vh;
+    width: 100%;
+    margin: 0 2vw;
+    padding-bottom: 0;
+    border: solid 1px #ccc;
+    flex-grow: 1;     
+    box-sizing: border-box;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dadosPedidoAtual{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh;   
+}
+.kanbanHistorico{
+    display: flex;
+    height: 12vh;
+    width: 80%;          
+}
+.historicoPedidos h2,h3{
+    margin: 0;
+    padding: 0;    
+}
+.historicoPedidos h3{
+    font-weight: normal; 
+}
+.historicoPedidos .pedidoAtual h2{     
+    font-size: 1.1rem;          
+}
+.historicoPedidos .pedidoAtual h3{
+    font-size: 1rem;
+}
+.botaoHistorico{
+    width: 15vw;    
+    display: flex; 
+    justify-content: center;            
+}
+.historicoPedidos button{
+    margin-left: 2vw;
+    border-radius: 1vh;
+    background-color: #3048a1; 
+    color: #fff;  
+    font-size: 0.9rem;
+    border: none;
+    height: 5vh;       
+}
+.historicoPedidos button:hover{
+    background-color: #3a58c5;
+}
+.dataPedido, .numeroPedido, .totalPedido, .previsaoEntrega{
+    display: flex;
+    flex-direction: column;    
+    width: 15vw;
+}
+.previsaoEntrega{
+    padding-top: 5vh;
+}
+.pedidosAnteriores{
+    width: 100%; 
+    margin-top: 2vh; 
+    flex: 1;  
+}
+.pedidoAnterior{    
+    margin: 0 2vw;
+    border: solid 1px #ccc;
+    flex-grow: 1;     
+    box-sizing: border-box;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: row;       
+    align-items: center;  
+    padding: 2vh 5vh;  
+    margin-bottom: 1vh;
+}
+.pedidoAnterior .numeroPedido, .pedidoAnterior .totalPedido, .pedidoAnterior .previsaoEntrega, .pedidoAnterior .botaoHistorico{
+    margin-left: 1.6vw;
+}
+.historicoPedidos .pedidoAnterior h2{     
+    font-size: 1rem;          
+}
+.historicoPedidos .pedidoAnterior h3{
+    font-size: 0.9rem;
+}
+
