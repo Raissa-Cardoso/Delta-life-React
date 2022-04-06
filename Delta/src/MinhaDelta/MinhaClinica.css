@@ -1,0 +1,57 @@
+.minhaClinica{
+    flex:1;
+    height: 1;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;         
+}
+.divMenuMinhaDelta{
+    margin-left: 10vh;
+    width: 20vw;      
+    border-radius: 1vh;
+}
+.divMinhaClinica{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    padding: 0 5vh;  
+}
+.divMinhaClinica h1{
+    font-size: 1.1rem;
+}
+.opçoesClinica{
+    line-height: 1.8;     
+}
+.opçoesClinica label{
+    margin-left:1vh;
+    font-size: 1rem;
+}
+.catalogos{
+    display: flex;
+    flex-direction: row;
+}
+.catalogoHospitalar, .catalogoVeterinario{
+    padding: 5vh 5vh 0 0;
+}
+.botaoCatalogoHosp, .botaoCatalogoVet{
+    width: 12vw;
+    height: 6vh;       
+    border-radius: 1vh;    
+    color: #fff;  
+    font-size: 1rem;    
+    border: none;
+}
+.botaoCatalogoHosp{
+    background-color: #3048a1; 
+}
+.botaoCatalogoHosp:hover{
+    background-color: #3a58c5;
+    text-shadow: 0.5vh 0.5vh 0.5vh black; 
+}
+.botaoCatalogoVet{
+    background-color: #1e6123;   
+}
+.botaoCatalogoVet:hover{
+    background-color: #2a8631;    
+    text-shadow: 0.5vh 0.5vh 0.5vh black; 
+}

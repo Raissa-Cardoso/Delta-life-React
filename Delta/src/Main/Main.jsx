@@ -16,6 +16,11 @@ import MinhaDelta from "../MinhaDelta/MinhaDelta";
 import MeusPedidos from "../MinhaDelta/MeusPedidos";
 import Boletos from "../MinhaDelta/Boletos";
 import MeuHistorico from "../MinhaDelta/MeuHIstorico";
+import MinhaClinica from "../MinhaDelta/MinhaClinica";
+import MinhaClinicaVeterinaria from "../MinhaDelta/MinhaClinicaVeterinaria";
+import MinhaOndontoVeterinaria from "../MinhaDelta/MinhaOdontoVeterinaria";
+import MinhaClinicaHospitalar from "../MinhaDelta/MinhaClinicaHospitalar";
+import DL4000 from "../Produtos/DL4000";
 
 const Principal = () => {
     return(
@@ -30,11 +35,18 @@ const Principal = () => {
           <Route path="/dl1000" element={<DL1000 />}/>
           <Route path="/dl740" element={<DL740 />}/>
           <Route path="/life1000" element={<Life1000 />}/>
+          <Route path="/dl4000" element={<DL4000/>}/>
           <Route path="/sobre" element={<Sobre />}/>
           <Route path="/minhadelta" element={<MinhaDelta />}/>
           <Route path="/minhadelta/meuspedidos" element={<MeusPedidos />}/>
           <Route path="/minhadelta/boletos" element={<Boletos />}/>
           <Route path="/minhadelta/meuhistorico" element={<MeuHistorico />}/>
+          <Route path="/minhadelta/minhaclinica" element={<MinhaClinica />}/>
+          <Route path="/minhadelta/minhaclinica" element={<MinhaClinica />}/>
+          <Route path="/minhadelta/minhaclinicaveterinaria" element={<MinhaClinicaVeterinaria />}/> 
+          <Route path="/minhadelta/minhaclinicaodontologiaveterinaria" element={<MinhaOndontoVeterinaria />}/>
+          <Route path="/minhadelta/minhaclinicahospitalar" element={<MinhaClinicaHospitalar />}/> 
+                 
       </Routes>
         
       </main>

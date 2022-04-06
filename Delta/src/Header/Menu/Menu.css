@@ -31,6 +31,12 @@
     width: 10vw;  
     border-radius: 1.5vh;                 
 }
+.botaoMenuCatalogoHosp:hover{
+    background-color: #3048a1;
+    border-radius: 1.5vh;
+    color: #fff;
+    text-shadow: 0.5vh 0.5vh 0.5vh black; 
+}
 .subProdutos{
     display: none;
     position: absolute;
@@ -56,7 +62,7 @@
     color: rgb(85, 82, 82);
     text-shadow: 1vh 0.5vh 0.5vh rgb(247, 246, 246);  
 }
-#linhaVet a:hover, #linhaVet a.selected{
+#linhaVet a:hover, #linhaVet a.selected, .botaoMenuCatalogoVet:hover{
     background-color: #2a8631;
     color: #fff;
     text-shadow: 0.5vh 0.5vh 0.5vh black; 
@@ -64,6 +70,29 @@
 #linhaHosp a:hover, #linhaHosp a.selected{
     color: #fff;
     text-shadow: 0.5vh 0.5vh 0.5vh black; 
+}
+.catalogosMenu{
+    display: flex;
+    flex-direction: column;
+}
+.menuCatalogoHospitalar, .menuCatalogoVeterinario{
+    padding: 2vh;
+}
+.botaoMenuCatalogoHosp, .botaoMenuCatalogoVet{
+    width: 12vw;
+    height: 6vh;       
+    border-radius: 1vh;    
+    color: rgb(85, 82, 82);
+    text-shadow: 1vh 0.5vh 0.5vh rgb(247, 246, 246);         
+    border: none;
+    font-size:1rem;
+    font-weight: bold;                               
+}
+.botaoMenuCatalogoHosp{
+    background-color: #fff;
+}
+.botaoMenuCatalogoVet{
+    background-color: #fff;   
 }
 .demonstrativo {   
     height: 22vh;

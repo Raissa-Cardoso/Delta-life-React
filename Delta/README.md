@@ -1,8 +1,12 @@
 # Projeto site da Delta life
 
-Projeto sendo realizado para a empresa Delta Life para atualizar o site da empresa, porém mantendo como objetivo, não realizar vendas diretamente pelo site. 
-O objetivo final deste projeto é criar um site que atraía mais clientes para entrarem em contato com a empresa atráves dos métodos tradicionais já implementados. 
+Projeto sendo realizado para a empresa Delta Life para atualizar o seu site, porém mantendo como objetivo, não realizar vendas diretamente por esse meio. 
+O objetivo final é criar um site que atraía mais clientes para entrarem em contato com a empresa atráves dos métodos tradicionais já implementados. 
 
-Tecnologias utilizadas até o momento: React.js, HTML5, CSS3 e Javascript ES6.
+##Tecnologias utilizadas até o momento
 
-Status do projeto: em andamento.
+**React.js, HTML5, CSS3 e Javascript ES6.**
+
+##Status do projeto
+
+**em andamento**

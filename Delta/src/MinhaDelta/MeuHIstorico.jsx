@@ -28,7 +28,7 @@ export default function MeuHistorico(props){
                         </div>
                         <div className="previsaoEntrega">
                             <h2>Previsão de entrega</h2>
-                            <h3>10/05/2022</h3>
+                            <h3>10/05/2022</h3> 
                         </div>
                     </div>
                     <div className="kanbanHistorico">

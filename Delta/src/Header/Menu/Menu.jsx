@@ -26,8 +26,16 @@ export default function Menu(props){
                                 </li>
                                 <li id="linhaHosp">
                                     <Link to="/linhaHospitalar" onClick={()=>clicou("/linhaHospitalar")}>Linha Hospitalar</Link> 
-                                </li>
-                            </ul>                               
+                                </li>                                                                
+                            </ul> 
+                            <div className="catalogosMenu">
+                                <div className="menuCatalogoHospitalar">                        
+                                    <button className="botaoMenuCatalogoHosp">Catálogo hospitalar humano</button>                        
+                                </div>
+                                <div className="menuCatalogoVeterinario">
+                                    <button className="botaoMenuCatalogoVet">Catálogo hospitalar veterinário</button>
+                                </div>
+                            </div>                             
                             <div className="demonstrativo"  >
                                 <Link to="/DL1000" id="demonstrativo">
                                     <img src={linha1000}  alt="DL1000-Monitor Multiparametros Vet"/>

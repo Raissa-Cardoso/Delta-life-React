@@ -1,0 +1,46 @@
+.minhaClinicaHospitalar{
+    flex:1;
+    height: 1;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;            
+}
+.divMenuMinhaDelta{
+    margin-left: 10vh;
+    width: 20vw;      
+    border-radius: 1vh;
+}
+.divMinhaClinicaHospitalar{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;     
+    margin-left: 5vw;         
+}
+.divMinhaClinicaHospitalar img{
+    border-radius: 0 4vw 0 2vw;  
+    width: 20vw;
+    height: 35vh;    
+    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110);
+    object-fit: contain;
+    background-color: rgb(247,247,247); 
+}
+.divMinhaClinicaHospitalar img:hover{
+    transform: scale(1.1);
+}
+.divMinhaClinicaHospitalar h2{
+    font-size: 1.2rem;
+    color: #1b2a5f;
+    margin: 0;
+    padding: 3vh 2vh 2vh 2vh;
+}
+.divMinhaClinicaHospitalar h3{
+    margin:0;
+    font-size: 1rem;
+    padding-left: 2vh;
+    width: 22vw;
+}
+.divMinhaClinicaHospitalar a, .divMinhaClinicaHospitalar a:visited{
+    text-decoration: none;
+    color: black;
+}

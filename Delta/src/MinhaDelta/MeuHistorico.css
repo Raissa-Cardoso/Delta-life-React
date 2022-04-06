@@ -38,9 +38,9 @@
     padding: 5vh;   
 }
 .kanbanHistorico{
-    display: flex;
-    height: 12vh;
-    width: 80%;          
+    width: 80%;
+    align-items: center;
+    height: 15vh;          
 }
 .historicoPedidos h2,h3{
     margin: 0;

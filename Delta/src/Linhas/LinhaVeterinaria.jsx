@@ -22,9 +22,11 @@ export default function LinhaVeterinaria(props){
                     </Link>
                 </div>
                 <div className="linhasProduto">
-                    <img src={DL4000}  alt="DL4000"/>
-                    <h2>DL4000</h2>
-                    <h3>Foco 24 LEDs de pedestal</h3> 
+                    <Link to="/dl4000" >
+                        <img src={DL4000}  alt="DL4000"/>  
+                        <h2>DL4000</h2>
+                        <h3>Foco 24 LEDs de pedestal</h3>  
+                    </Link>   
                 </div>
                 <div className="linhasProduto">
                     <img src={DL740}  alt="DL740"/>
