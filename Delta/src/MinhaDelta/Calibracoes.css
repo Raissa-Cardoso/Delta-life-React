@@ -1,0 +1,92 @@
+.calibracoes{
+    flex:1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;      
+}
+.divMenuMinhaDelta{
+    margin-left: 10vh;
+    width: 20vw;      
+    border-radius: 1vh;
+}
+.calibracoes h1{ 
+    margin: 0 0 0 10vh; 
+    height: 4vh;
+    padding: 0;
+    font-size: 1.2rem;          
+}
+.calibracoesComTitulo{    
+    display: flex;
+    width: 100%;  
+    flex-wrap: wrap;    
+}
+.calibracoesComTitulo .datas{
+    margin-top:3vh;
+    display: flex;
+    width: 80%;
+    height: 5vh;
+       
+}
+.calibracoesComTitulo .datas p{
+    margin: 0 2vw;
+    align-self: flex-end;
+}
+.calibracoesComTitulo .datas button{
+    margin-left: 2vw;
+    border-radius: 1vh;
+    background-color: #3048a1; 
+    color: #fff;  
+    font-size: 0.9rem;
+    border: none;
+}
+.calibracoesComTitulo .datas button:hover{
+    background-color: #3a58c5;
+}
+.calibracoesComTitulo .datas input{
+    border-radius: 1vh;
+}
+.tabelaCalibracoes{
+  border: solid 1px #cdcdcd;   
+  width: 100%;
+  margin: 0 10vh;
+  height: 80%;
+  padding: 2vh;
+  box-sizing: border-box;
+  border-radius: 1vh; 
+}
+.tabelaCalibracoes table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.tabelaCalibracoes tbody{
+    text-align: center;
+} 
+.tabelaCalibracoes th,td{
+    padding: 1vh;    
+}
+.tabelaCalibracoes thead tr{
+    border-bottom: solid 1px #4b4a4a;;
+}
+.tabelaCalibracoes tbody tr:nth-child(even){
+    background-color: #dedede;
+}
+.tabelaCalibracoes .downloadPdf{
+    background-color:rgba(222, 222, 222,0);
+}
+.tabelaCalibracoes .downloadPdf{    
+    height: 4vh;
+    width: 2vw;    
+    border:none;    
+   
+    font-size: 1.3rem;
+    justify-content: center;
+    border-radius: 1vh;
+}
+.tabelaCalibracoes .downloadPdf:hover{    
+    transform: scale(1.1); 
+}
+.tabelaCalibracoes .tdDownloadPdf{
+    display: flex;
+    justify-content: center;
+}

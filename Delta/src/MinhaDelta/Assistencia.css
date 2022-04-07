@@ -1,0 +1,51 @@
+.assistencia{
+    flex:1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;      
+}
+.divMenuMinhaDelta{
+    margin-left: 10vh;
+    width: 20vw;      
+    border-radius: 1vh;
+}
+.divAssistencia{     
+    display: flex;
+    flex-direction: column;
+    align-self: center;    
+}
+.divAssistenciaTitulo h1{
+    margin: 0 0 10vh 10vh;
+    height: 4vh;
+    padding: 0;
+    font-size: 1.2rem;        
+}
+.divAssistenciaContato{
+    margin: 0 0 10vh 10vh;
+    display: flex;    
+    flex-direction: row;
+    height: 4vh;     
+    justify-content: space-between;
+    width: 12vw;
+}
+.divAssistenciaContato h2{              
+    padding: 0;
+    height: 3vh;
+    font-size: 1rem;
+    align-self: center;                 
+}
+.divAssistenciaContato button{    
+    width: 2vw;
+    height: 4vh;      
+    border-radius: 1vh;
+    border: none;
+    background-color:#199d0f;
+    color:#fff;
+    margin-left: 1vw;
+    font-size: 0.8rem;
+    align-self: flex-end;   
+}
+.divAssistenciaContato button:hover{
+    background-color: #25c01a;
+}

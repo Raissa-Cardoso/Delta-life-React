@@ -5,26 +5,22 @@ import {Link} from 'react-router-dom'
 
 import clicou from "../Actions/menu"
 
-export default function MenuMinhaDelta(props){ 
+export default function MenuMinhaDelta(props){
+    console.log(props.url)    
+    const link=document.getElementById(props.url)    
 
     return (
             <nav className="menuMinhaDelta">                
-                    <ul>
-                        <Link  to="/minhadelta"  onClick={()=>clicou("/minhadelta")}>{/*<li className="selecionado">*/}<li> Home</li></Link>
-                        <Link to="/minhadelta/meuspedidos" onClick={()=>clicou("/minhadelta/meuspedidos")}><li className="">Meus Pedidos</li></Link>
-                        <Link to="/minhadelta/boletos" onClick={()=>clicou("/minhadelta/boletos")}><li className="">Boletos</li></Link>                         
-                        <Link to="/minhadelta/meuhistorico" onClick={()=>clicou("/minhadelta/meuhistorico")}><li className="">Meu histórico de pedidos</li></Link> 
-                        <Link to="/minhadelta/minhaclinica" onClick={()=>clicou("/minhadelta/minhaclinica")}><li className="">Minha clínica</li></Link>                        
-                        <li>
-                            <a href="">Calibrações</a>
-                        </li>
-                        <li>
-                            <a href="">Dúvidas frequentes</a>
-                        </li>
-                        <li>
-                            <a href="">Assistência Técnica</a>
-                        </li>
-                    </ul>
-                </nav> 
+                <ul>
+                    <li><Link className={props.classe} to="/minhadelta" onClick={()=>clicou("/minhadelta")}>Home</Link></li>
+                    <li><Link to="/minhadelta/meuspedidos" onClick={()=>clicou("/minhadelta/meuspedidos")}>Meus Pedidos</Link></li>
+                    <li><Link to="/minhadelta/boletos" onClick={()=>clicou("/minhadelta/boletos")}>Boletos</Link>  </li>                       
+                    <li><Link to="/minhadelta/meuhistorico" onClick={()=>clicou("/minhadelta/meuhistorico")}>Meu histórico de pedidos</Link></li> 
+                    <li><Link to="/minhadelta/minhaclinica" onClick={()=>clicou("/minhadelta/minhaclinica")}>Minha clínica</Link></li>                       
+                    <li><Link to="/minhadelta/calibracoes" onClick={()=>clicou("/minhadelta/calibracoes")}>Calibrações</Link></li> 
+                    <li><Link to="/minhadelta/duvidas" onClick={()=>clicou("/minhadelta/duvidas")}>Dúvidas frequentes</Link> </li>
+                    <li><Link to="/minhadelta/assistencia" onClick={()=>clicou("/minhadelta/assistencia")}>Assistência Técnica</Link></li> 
+                </ul>
+            </nav> 
     )
 }  

@@ -82,8 +82,8 @@
 .downloadPdf{    
     height: 4vh;
     width: 2vw;    
-    border:none;    
-    background-color: #eef;
+    border:none;  
+    background-color:rgba(222, 222, 222,0);
     font-size: 1.3rem;
     justify-content: center;
     border-radius: 1vh;

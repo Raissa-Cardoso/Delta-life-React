@@ -20,17 +20,19 @@ export default function clicou(url){
             const newMenu=document.querySelector(`.menu a[href='${url}']`)
             newMenu.classList.add('selected')           
         }
-    }else{               
+    }else{                 
         document.querySelector(`.menu a[href='/login']`).classList.add('selected') 
         const linksMinhaDelta=document.querySelectorAll(`.menuMinhaDelta a`)
-        const newMinhaDelta=document.querySelector(`.menuMinhaDelta a[href='${url}']`)
+        const newMinhaDelta=document.querySelector(`.menuMinhaDelta a[href='${url}']`)       
         for(let i=0;i<linksMinhaDelta.length;i++){            
-            let linkMinhaDelta=linksMinhaDelta[i]
+            let linkMinhaDelta=linksMinhaDelta[i]            
             if(linkMinhaDelta.classList.contains('selecionado')){
-                linkMinhaDelta.classList.remove('selecionado')                
-            }
+                linkMinhaDelta.classList.remove('selecionado')                                             
+            }                                    
         }
-        newMinhaDelta.classList.add('selecionado')
+        
+        newMinhaDelta.classList.add('selecionado') 
+        
           
     }
 }

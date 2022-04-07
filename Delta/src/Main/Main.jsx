@@ -21,6 +21,9 @@ import MinhaClinicaVeterinaria from "../MinhaDelta/MinhaClinicaVeterinaria";
 import MinhaOndontoVeterinaria from "../MinhaDelta/MinhaOdontoVeterinaria";
 import MinhaClinicaHospitalar from "../MinhaDelta/MinhaClinicaHospitalar";
 import DL4000 from "../Produtos/DL4000";
+import Calibracoes from "../MinhaDelta/Calibracoes";
+import Assistencia from "../MinhaDelta/Assistencia";
+import Duvidas from "../MinhaDelta/Duvidas";
 
 const Principal = () => {
     return(
@@ -46,7 +49,9 @@ const Principal = () => {
           <Route path="/minhadelta/minhaclinicaveterinaria" element={<MinhaClinicaVeterinaria />}/> 
           <Route path="/minhadelta/minhaclinicaodontologiaveterinaria" element={<MinhaOndontoVeterinaria />}/>
           <Route path="/minhadelta/minhaclinicahospitalar" element={<MinhaClinicaHospitalar />}/> 
-                 
+          <Route path="/minhadelta/calibracoes" element={<Calibracoes />}/> 
+          <Route path="/minhadelta/duvidas" element={<Duvidas />}/> 
+          <Route path="/minhadelta/assistencia" element={<Assistencia />}/>      
       </Routes>
         
       </main>

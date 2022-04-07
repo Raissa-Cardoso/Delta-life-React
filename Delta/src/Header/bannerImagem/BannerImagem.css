@@ -23,6 +23,7 @@ header{
     height: 60vh;
     width: 100vw;
     filter: brightness(42%);
+    object-fit: cover;
 }
 .agrupar{
     box-sizing: border-box;

@@ -69,7 +69,7 @@ export default function Boletos(props){
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="2"></td>
+                                <td colSpan="2"></td>
                                 <td>Total: R$62000</td>
                                 <td></td>
                             </tr> 
