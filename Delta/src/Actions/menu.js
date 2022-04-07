@@ -1,5 +1,5 @@
 export default function clicou(url){    
-    if(url.indexOf("minhadelta")===-1){                       
+    //if(url.indexOf("minhadelta")===-1){                       
         const links=document.querySelectorAll(`.menu a`)          
         for(let i=0;i<links.length;i++){            
             let link=links[i]
@@ -20,7 +20,7 @@ export default function clicou(url){
             const newMenu=document.querySelector(`.menu a[href='${url}']`)
             newMenu.classList.add('selected')           
         }
-    }else{                 
+    /*}else{                 
         document.querySelector(`.menu a[href='/login']`).classList.add('selected') 
         const linksMinhaDelta=document.querySelectorAll(`.menuMinhaDelta a`)
         const newMinhaDelta=document.querySelector(`.menuMinhaDelta a[href='${url}']`)       
@@ -34,5 +34,5 @@ export default function clicou(url){
         newMinhaDelta.classList.add('selecionado') 
         
           
-    }
+    }*/
 }

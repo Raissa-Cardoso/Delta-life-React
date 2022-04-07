@@ -5,7 +5,7 @@ import MenuMinhaDelta from "./MenuMinhaDelta";
 export default function Calibracoes(props){    
     return (
         <main className="calibracoes">                        
-            <div className="divMenuMinhaDelta">< MenuMinhaDelta/></div>             
+            <div className="divMenuMinhaDelta">< MenuMinhaDelta url="calibracoes"/></div>             
             <div className="calibracoesComTitulo">
                 <h1>Período:</h1>
                 <div className="datas">

@@ -6,7 +6,7 @@ import MenuMinhaDelta from "./MenuMinhaDelta";
 export default function MinhaClinica(props){    
     return (
         <main className="minhaClinica">                        
-            <div className="divMenuMinhaDelta"><MenuMinhaDelta/></div> 
+            <div className="divMenuMinhaDelta"><MenuMinhaDelta url="minhaClinica"/></div> 
             <div className="divMinhaClinica">                
                 <h1>Escolha qual pacote deseja adquirir</h1>
                 <div className="opçoesClinica">

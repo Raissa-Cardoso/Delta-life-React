@@ -7,7 +7,7 @@ import Kanban from "./Kanban"
 export default function MeuHistorico(props){    
     return (
         <main className="meuHistorico">                        
-            <div className="divMenuMinhaDelta">< MenuMinhaDelta/></div> 
+            <div className="divMenuMinhaDelta">< MenuMinhaDelta url="meuHistorico"/></div> 
             <div className="historicoPedidos">
                 <div className="pedidoAtual">
                     <div className="dadosPedidoAtual">

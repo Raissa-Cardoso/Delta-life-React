@@ -5,7 +5,7 @@ import MenuMinhaDelta from "./MenuMinhaDelta";
 export default function Duvidas(props){    
     return (
         <main className="duvidas">                        
-            <div className="divMenuMinhaDelta"><MenuMinhaDelta/></div>
+            <div className="divMenuMinhaDelta"><MenuMinhaDelta url="duvidas"/></div>
             <div className="divDuvidas">
                 <div className="pesquisaDuvidas">
                     <h1>Encontre mais soluções</h1>

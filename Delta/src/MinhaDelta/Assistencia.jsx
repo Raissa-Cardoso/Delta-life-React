@@ -5,7 +5,7 @@ import MenuMinhaDelta from "./MenuMinhaDelta";
 export default function Assistencia(props){    
     return (
         <main className="assistencia">                        
-            <div className="divMenuMinhaDelta"><MenuMinhaDelta/> </div>
+            <div className="divMenuMinhaDelta"><MenuMinhaDelta url="assistencia"/> </div>
             <div className="divAssistencia">
                 <div className="divAssistenciaTitulo">
                     <h1>Suporte Técnico</h1>                                           
