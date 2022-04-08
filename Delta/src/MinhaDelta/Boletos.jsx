@@ -5,7 +5,7 @@ import MenuMinhaDelta from "./MenuMinhaDelta";
 export default function Boletos(props){    
     return (
         <main className="boletos">                        
-            <div className="divMenuMinhaDelta">< MenuMinhaDelta/></div>             
+            <div className="divMenuMinhaDelta">< MenuMinhaDelta url="boletos"/></div>             
             <div className="datasComTitulo">
                 <h1>Período:</h1>
                 <div className="datas">

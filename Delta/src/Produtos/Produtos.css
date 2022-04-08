@@ -28,7 +28,7 @@
     text-align: justify;
     width: 70%;
     align-self: center;
-    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;         
+    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;            
 }
 .DL1000Textos p{
     margin:0;
@@ -85,12 +85,14 @@
     align-self: center;
     text-align: left;
     width: 70%;    
+    
 }
 .duvidas input{
     width: 80%;
     height: 4vh;
     margin-right: 1vw;
     border-radius: 1vh;
+    
 }
 .duvidas button{
     height: 5vh;

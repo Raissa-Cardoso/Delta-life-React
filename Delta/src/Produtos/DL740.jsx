@@ -31,16 +31,21 @@ export default function DL740(props){
                         <li>Equipamento com pedestal, disponível nas opções em maleta e de bancada</li>  
                     </ul>
                     <div className="duvidas">
-                        <h2 id="duvidas">Dúvidas frequentes</h2>
-                        <input list="listaDuvidas"/>                    
-                            <datalist id="listaDuvidas">
-                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
-                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
-                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
-                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
-                                <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
-                            </datalist>
-                        <button>OK</button>
+                       
+                            <h2>Dúvidas frequentes</h2>
+                        
+                        
+                            <input list="listaDuvidas"/>                    
+                                <datalist id="listaDuvidas">
+                                    <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                    <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                    <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                    <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                    <option value="Lorem ipsum dolor sit amet, consectetur adipisicing elit. "/>
+                                </datalist>
+                            <button>OK</button>
+                        
+                        
                     </div>    
                 </div>
                 <div className="fotoDL1000">
