@@ -81,26 +81,32 @@
     align-self: center;
     object-fit: contain;
 }
-.duvidas{    
+.duvidasProduto{    
     align-self: center;
     text-align: left;
-    width: 70%;    
-    
+    width: 70%;   
+
 }
-.duvidas input{
+.duvidasProduto{    
+    width: 80%;
+    height: 4vh;
+    margin-right: 1vw;
+    border-radius: 1vh;
+}
+.duvidasProduto input{
     width: 80%;
     height: 4vh;
     margin-right: 1vw;
     border-radius: 1vh;
     
 }
-.duvidas button{
+.duvidasProduto button{
     height: 5vh;
     border-radius: 1vh;
     background-color: #3048a1; 
     color: #fff;
     border: none;
 }
-.duvidas button:hover{
+.duvidasProduto button:hover{
     background-color: #3a58c5;
 }

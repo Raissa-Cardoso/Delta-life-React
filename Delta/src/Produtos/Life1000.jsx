@@ -32,7 +32,7 @@ export default function Life1000(props){
                         <li>Possibilita a programação de aferições da PANI periodicamente</li>
                         <li>Possibilita o ajuste dos parâmetros dos alarmes conforme cada paciente</li>
                     </ul>
-                    <div className="duvidas">
+                    <div className="duvidasProduto">  
                         <h2 id="duvidas">Dúvidas frequentes</h2>
                         <input list="listaDuvidas"/>                    
                             <datalist id="listaDuvidas">

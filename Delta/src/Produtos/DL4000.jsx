@@ -25,7 +25,7 @@ export default function DL4000(props){
                         <li>Diminui a necessidade do uso do centro cirúrgico em exames e procedimentos simples</li>
                          
                     </ul>
-                    <div className="duvidas">
+                    <div className="duvidasProduto">  
                         <h2 id="duvidas">Dúvidas frequentes</h2>
                         <input list="listaDuvidas"/>                    
                             <datalist id="listaDuvidas">

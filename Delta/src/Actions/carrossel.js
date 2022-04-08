@@ -3,7 +3,7 @@ window.onload=function(e){
     const frases = document.querySelectorAll("[slider] h2")       
     const slides= Array.from(elementos)
     const conjuntoFrases= Array.from(frases)    
-    exibirSlide(slides,slides[0], conjuntoFrases, conjuntoFrases[0])
+    exibirSlide(slides,slides[0], conjuntoFrases, conjuntoFrases[0])    
 }
 function exibirSlide(slides,slide, frases, frase){
     slide.style.display="block"
@@ -14,12 +14,14 @@ function exibirSlide(slides,slide, frases, frase){
     slide.style.left=`${inicio}px`
     mover(slide,frase, inicio,fim,5,()=>{
         slide.style.display="none"
-        frase.style.display="none"
-        exibirSlide(slides,getProximo(slides,slide), frases,getProximo(frases,frase) )
+        frase.style.display="none"        
+        exibirSlide(slides,getProximo(slides,slide), frases,getProximo(frases,frase))
     })
 }
+
 function getProximo(lista,atual){
     const i=lista.indexOf(atual)+1
+    
     return i<lista.length?lista[i]:lista[0]
 }
 function mover(elem,frase, inicio, fim, passo, callback){
@@ -32,3 +34,4 @@ function mover(elem,frase, inicio, fim, passo, callback){
         callback()
     }
 }
+

@@ -32,7 +32,7 @@ export default function DL1000(props){
                         <li>Geração de laudo eletrônico de ECG para envio ao cliente</li>
                         <li>Detector de respiração</li>
                     </ul>
-                    <div className="duvidas">
+                    <div className="duvidasProduto">  
                         <h2 id="duvidas">Dúvidas frequentes</h2>
                         <input list="listaDuvidas"/>                    
                             <datalist id="listaDuvidas">

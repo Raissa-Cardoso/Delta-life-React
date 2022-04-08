@@ -24,6 +24,11 @@ import DL4000 from "../Produtos/DL4000";
 import Calibracoes from "../MinhaDelta/Calibracoes";
 import Assistencia from "../MinhaDelta/Assistencia";
 import Duvidas from "../MinhaDelta/Duvidas";
+import VejaMais0 from "../VejaMais0";
+import VejaMaisHospitalar from "../VejaMais/VejaMaisHospitalar";
+import VejaMaisVeterinario from "../VejaMais/VejaMaisVeterinario";
+import VejaMaisLaudos from "../VejaMais/VejaMaisLaudos";
+import VejaMaisManutencao from "../VejaMais/VejaMaisManutencao";
 
 const Principal = () => {
     return(
@@ -51,7 +56,12 @@ const Principal = () => {
           <Route path="/minhadelta/minhaclinicahospitalar" element={<MinhaClinicaHospitalar />}/> 
           <Route path="/minhadelta/calibracoes" element={<Calibracoes />}/> 
           <Route path="/minhadelta/duvidas" element={<Duvidas />}/> 
-          <Route path="/minhadelta/assistencia" element={<Assistencia />}/>      
+          <Route path="/minhadelta/assistencia" element={<Assistencia />}/>    
+          <Route path="/vejamais0" element={<VejaMais0 />}/>   
+          <Route path="/vejamais/hospitalar" element={<VejaMaisHospitalar />}/> 
+          <Route path="/vejamais/veterinario" element={<VejaMaisVeterinario />}/> 
+          <Route path="/vejamais/laudos" element={<VejaMaisLaudos />}/> 
+          <Route path="/vejamais/manutencao" element={<VejaMaisManutencao />}/> 
       </Routes>
         
       </main>
