@@ -14,21 +14,18 @@
     margin: 0 0 0 10vh; 
     height: 4vh;
     padding: 0;
-    font-size: 1.2rem;
-          
+    font-size: 1.2rem;          
 }
 .datasComTitulo{    
     display: flex;
     width: 100%;  
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
 }
 .datas{
     margin-top:3vh;
     display: flex;
     width: 80%;
-    height: 5vh;
-       
+    height: 5vh;       
 }
 .datas p{
     margin: 0 2vw;

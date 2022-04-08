@@ -29,10 +29,7 @@ export default function clicou(url){
             if(linkMinhaDelta.classList.contains('selecionado')){
                 linkMinhaDelta.classList.remove('selecionado')                                             
             }                                    
-        }
-        
-        newMinhaDelta.classList.add('selecionado') 
-        
-          
+        }        
+        newMinhaDelta.classList.add('selecionado')          
     }
 }
