@@ -3,7 +3,7 @@ import '../Linhas/Linhas.css';
 import {Link} from "react-router-dom";
 
 const VentLife = require('../assets/hosp3.3.jpeg');
-const Life1000 = require('../assets/hosp4.3.jpeg');
+const Life1000 = require('../assets/Life1000.jpeg');
 const Term = require('../assets/termometro.png');
 
 export default function LinhaHospitalar(props){
@@ -17,7 +17,7 @@ export default function LinhaHospitalar(props){
                     <h3>Ventilador Pulmonar Mecânico </h3> 
                 </div>                
                 <div className="linhasProduto">
-                    <Link to="/life1000" >
+                    <Link to="/produtos/life1000" onClick={()=>props.produto("Life1000")}>
                         <img src={Life1000}  alt="Life1000"/>
                         <h2>Life1000</h2>
                         <h3>Monitor Multiparamétrico</h3> 

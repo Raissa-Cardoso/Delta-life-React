@@ -3,7 +3,7 @@ import './MeusPedidos.css';
 import MenuMinhaDelta from "./MenuMinhaDelta";
 
 import Kanban from "./Kanban"
-const DL1000 = require('../assets/vet1.jpeg');
+const DL1000 = require('../assets/DL1000.jpeg');
 
 export default function MeusPedidos(props){    
     return (

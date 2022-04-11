@@ -1,7 +1,6 @@
 import './index.css'
 import {React,useState} from 'react'
-import {BrowserRouter as Router, Link} from 'react-router-dom';
-
+import {BrowserRouter as Router} from 'react-router-dom';
 import Header from './Header/bannerImagem/BannerImagem'
 import Logo from './Header/Logo/Logo'
 import Busca from './Header/Busca/Busca'
@@ -40,7 +39,7 @@ export default function App() {
                 <Menu/>                                  
                 <BannerTexto botaoCarrossel={`/vejamais/${imagemApp}`}/>            
             </Header>        
-            <Main/>
+            <Main />
             <Footer/>
         </Router>        
        

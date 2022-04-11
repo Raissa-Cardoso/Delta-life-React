@@ -1,8 +1,8 @@
-import {React, useState} from "react";
+import React from "react";
 
 
 import './BannerImagem.css';
-//import '../../Actions/carrossel.js';
+
 
 const bannerFundo1=require('../../assets/bannerHospitalar.png');
 const bannerFundo2=require('../../assets/bannerVeterinario.png');

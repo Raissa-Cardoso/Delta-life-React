@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 import clicou from'../../Actions/menu.js'
 
-const linha1000 = require('../../assets/vet1.jpeg');
+const linha1000 = require('../../assets/DL1000.jpeg');
 
 export default function Menu(props){     
     
@@ -37,8 +37,8 @@ export default function Menu(props){
                                 </div>
                             </div>                             
                             <div className="demonstrativo"  >
-                                <Link to="/DL1000" id="demonstrativo">
-                                    <img src={linha1000}  alt="DL1000-Monitor Multiparametros Vet"/>
+                                <Link to="/produtos/dl1000">
+                                    <img src={linha1000}  />
                                 </Link>
                             </div>                             
                         </div>
