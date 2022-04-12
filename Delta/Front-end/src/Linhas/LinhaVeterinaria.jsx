@@ -15,21 +15,21 @@ export default function LinhaVeterinaria(props){
             <h1>Linha Veterinária</h1>           
             <div className="linhasProdutos">
                 <div className="linhasProduto">
-                    <Link to="/produtos/dl1000" onClick={()=>props.produto("DL1000")} >
+                    <Link to="/produtos/DL1000" onClick={()=>props.produto("DL1000")} >
                         <img src={DL1000}  alt={props.produto}/>
                         <h2>DL1000</h2>
                         <h3>Monitor multiparamétrico veterinário (touch screen) </h3> 
                     </Link>
                 </div>
                 <div className="linhasProduto">
-                <Link to="/produtos/dl4000" onClick={()=>props.produto("DL4000")} >
+                <Link to="/produtos/DL4000" onClick={()=>props.produto("DL4000")} >
                         <img src={DL4000}  alt={props.produto}/>  
                         <h2>DL4000</h2>
                         <h3>Foco 24 LEDs de pedestal</h3>  
                     </Link>   
                 </div>
                 <div className="linhasProduto">
-                <Link to="/produtos/dl740" onClick={()=>props.produto("DL740")} >
+                <Link to="/produtos/DL740" onClick={()=>props.produto("DL740")} >
                     <img src={DL740}  alt="DL740"/>
                     <h2>DL740</h2>
                     <h3>Aparelho de anestesia inalatória com ventilação na maleta </h3> 

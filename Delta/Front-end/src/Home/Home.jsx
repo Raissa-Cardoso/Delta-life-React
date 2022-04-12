@@ -14,21 +14,21 @@ export default function Home(props){
             <h1 id="maisVendidos">Mais Vendidos</h1>
             <main className="principal">            
                 <div className="produto">
-                    <Link to="/produtos/dl1000" onClick={()=>props.produto("DL1000")}>
+                    <Link to="/produtos/DL1000" onClick={()=>props.produto("DL1000")}>
                         <img src={linha1000}  alt="DL1000"/>  
                         <h2>DL1000</h2>
                         <h3>Monitor multiparamétrico veterinário (touch screen) </h3> 
                     </Link>                 
                 </div>                 
                 <div className="produto">
-                    <Link to="/produtos/dl740" onClick={()=>props.produto("DL740")}>
+                    <Link to="/produtos/DL740" onClick={()=>props.produto("DL740")}>
                         <img src={linha700}  alt="DL740"/>
                         <h2>DL740</h2>
                         <h3>Aparelho de anestesia inalatória veterinário com ventilação com pedestal</h3>
                     </Link>
                 </div>
                 <div className="produto">
-                    <Link to="/produtos/life1000" onClick={()=>props.produto("Life1000")}>
+                    <Link to="/produtos/Life1000" onClick={()=>props.produto("Life1000")}>
                     <img src={hosp1000}  alt="Life 1000"/>
                     <h2>Life 1000</h2>
                     <h3>Monitor multiparamétrico médico-hospitalar humano</h3>

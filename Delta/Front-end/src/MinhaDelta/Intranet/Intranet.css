@@ -1,0 +1,15 @@
+.HomeIntranet{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;      
+}
+.divMenuHomeIntranet{
+    margin-left: 10vh;
+    width: 20vw;      
+    border-radius: 1vh;
+}
+.HomeIntranet h1{
+    margin-left: 20vw;
+}

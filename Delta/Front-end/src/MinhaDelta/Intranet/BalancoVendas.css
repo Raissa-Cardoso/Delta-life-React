@@ -1,0 +1,79 @@
+.BalancoVendas{
+    flex:1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;      
+}
+.divMenuIntranet{
+    margin-left: 10vh;
+    width: 20vw;      
+    border-radius: 1vh;
+}
+.BalancoVendas h1{ 
+    margin: 0 0 0 10vh; 
+    height: 4vh;
+    padding: 0;
+    font-size: 1.2rem;          
+}
+.datasBalancoComTitulo{    
+    display: flex;
+    width: 100%;  
+    flex-wrap: wrap;    
+}
+.datasBalanco{
+    margin:3vh 0;
+    display: flex;
+    width: 80%;
+    height: 5vh;          
+}
+.datasBalanco p{
+    margin: 0 2vw;
+    align-self: flex-end;
+}
+.datasBalanco button{
+    margin-left: 2vw;
+    border-radius: 1vh;
+    background-color: #3048a1; 
+    color: #fff;  
+    font-size: 0.9rem;
+    border: none;
+}
+.datasBalanco button:hover{
+    background-color: #3a58c5;
+}
+.datasBalanco input{
+    border-radius: 1vh;
+}
+.balancoGrafico{
+    border: solid 1px #cdcdcd;   
+    width: 100%;
+    margin: 0 10vh;
+    height: 80%;
+    padding: 2vh;
+    box-sizing: border-box;
+    border-radius: 1vh; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+.balancoGrafico .coluna{
+    background-color: rgb(56, 56, 206);
+    border: none;
+    height: 20vh;
+    width: 4vw;
+}
+.balancoGrafico .coluna:nth-child(even){
+    background-color: rgb(32, 32, 92);
+    height: 35vh;
+}
+.balancoGrafico .coluna:nth-child(3){    
+    height: 15vh;
+}
+.balancoGrafico .coluna:nth-child(2){    
+    height: 25vh;
+}
+.balancoGrafico .coluna:nth-child(4){    
+    height: 30vh;
+}

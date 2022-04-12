@@ -5,16 +5,24 @@ import {Link} from 'react-router-dom';
 
 export default function Login(props){
     let [login,setLogin]=useState("")
-    let caminho="/minhadelta"
+    let [caminho,setCaminho]=useState("")      
     function loginDigitado(e){
-        setLogin(e.target.value)
+        setLogin(e.target.value)        
     }
+    function teste(){        
+        if(login==="1"){
+            setCaminho("/intranet")
+        }else{
+            setCaminho("/minhadelta")
+        }        
+    }
+    
       
     return (
         <main className="loginCompleto">
             <div className="login">
                 <p>Login</p>
-                <input id="login" value={login} type="text" onChange={loginDigitado}/>
+                <input id="login" value={login} type="text" onChange={loginDigitado} onBlur={teste}/>
                 <p>Email</p>
                 <input type="text"/>
                 <Link to={caminho} >
@@ -22,8 +30,10 @@ export default function Login(props){
                 </Link>                
             </div>
             <div className="novoCadastro">
-                <p>Não possui cadastro?</p>                
-                <button>Cadastre-se aqui</button>                
+                <p>Não possui cadastro?</p>
+                <Link to="/cadastroLogin" >                
+                    <button>Cadastre-se aqui</button>  
+                </Link>              
             </div>     
         </main>
     )

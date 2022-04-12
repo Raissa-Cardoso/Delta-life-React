@@ -17,7 +17,7 @@ export default function LinhaHospitalar(props){
                     <h3>Ventilador Pulmonar Mecânico </h3> 
                 </div>                
                 <div className="linhasProduto">
-                    <Link to="/produtos/life1000" onClick={()=>props.produto("Life1000")}>
+                    <Link to="/produtos/Life1000" onClick={()=>props.produto("Life1000")}>
                         <img src={Life1000}  alt="Life1000"/>
                         <h2>Life1000</h2>
                         <h3>Monitor Multiparamétrico</h3> 

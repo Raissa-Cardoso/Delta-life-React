@@ -11,6 +11,7 @@ import Footer from './Footer/Footer'
 
 export default function App() {
     let [imagemApp,setImagem]=useState("")
+    const [produtoApp, setProduto]=useState("")  
     switch (imagemApp) {
         case 0:
             imagemApp="hospitalar"
@@ -30,16 +31,21 @@ export default function App() {
     function mudouImagem(imagem){        
        setImagem(imagem)
     }
+    
+    function mudarProduto(produto){
+        setProduto(produto)
+    }
+  
     return (
       <div className="App">
         <Router>
             <Header imagem={mudouImagem}>            
                 <Logo/>
                 <Busca/>             
-                <Menu/>                                  
+                <Menu produto={mudarProduto}/>                                  
                 <BannerTexto botaoCarrossel={`/vejamais/${imagemApp}`}/>            
             </Header>        
-            <Main />
+            <Main produtoApp={produtoApp}/>
             <Footer/>
         </Router>        
        

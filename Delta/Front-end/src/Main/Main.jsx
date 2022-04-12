@@ -25,15 +25,21 @@ import VejaMaisVeterinario from "../VejaMais/VejaMaisVeterinario";
 import VejaMaisLaudos from "../VejaMais/VejaMaisLaudos";
 import VejaMaisManutencao from "../VejaMais/VejaMaisManutencao";
 import Produtos from "../Produtos/Produtos";
-import MinhaDeltaIntranet from "../MinhaDelta/MinhaDeltaIntranet";
+import HomeIntranet from "../MinhaDelta/Intranet/HomeIntranet";
+import BalancoVendas from "../MinhaDelta/Intranet/BalancoVendas";
+import HistoricoAcessos from "../MinhaDelta/Intranet/HistoricoAcessos";
+import CadastrarProdutos from "../MinhaDelta/Intranet/CadastrarProdutos";
+import CadastroLogin from "../CadastroLogin/CadastroLogin";
 
 const Principal = (props) => {  
-  const [produtoMain, setProduto]=useState("")  
-  function mudarProduto(produto){
-    setProduto(produto)
+  let [produtoMain, setProduto]=useState("")
+  if(props.produtoApp){
+    produtoMain=props.produtoApp
   }
   
-   
+  function mudarProduto(produto){
+    setProduto(produto)
+  }   
     return(
       <main className='Main'>
         <Routes>
@@ -43,13 +49,10 @@ const Principal = (props) => {
           <Route path="/assinaturas" element={<Assinaturas />}/>
           <Route path="/contato" element={<Contato />}/>
           <Route path="/login" element={<Login />}/>
-          <Route path="/produtos/dl1000" element={<Produtos produto="DL1000"/>}/>
-          <Route path="/produtos/dl740" element={<Produtos produto={produtoMain}/>}/> 
-          <Route path="/produtos/life1000" element={<Produtos produto={produtoMain}/>}/>
-          <Route path="/produtos/dl4000" element={<Produtos produto={produtoMain}/>}/>
+          <Route path="/cadastroLogin" element={<CadastroLogin />}/>
+          <Route path={`/produtos/${produtoMain}`} element={<Produtos produto={produtoMain}/>}/>         
           <Route path="/sobre" element={<Sobre />}/>
-          <Route path="/minhadelta" element={<MinhaDelta />}/>
-          <Route path="/intranet" element={<MinhaDeltaIntranet />}/>
+          <Route path="/minhadelta" element={<MinhaDelta />}/>          
           <Route path="/minhadelta/meuspedidos" element={<MeusPedidos />}/>
           <Route path="/minhadelta/boletos" element={<Boletos />}/>
           <Route path="/minhadelta/meuhistorico" element={<MeuHistorico />}/>
@@ -59,7 +62,11 @@ const Principal = (props) => {
           <Route path="/minhadelta/minhaclinicahospitalar" element={<MinhaClinicaHospitalar produto={mudarProduto}/>}/> 
           <Route path="/minhadelta/calibracoes" element={<Calibracoes />}/> 
           <Route path="/minhadelta/duvidas" element={<Duvidas />}/> 
-          <Route path="/minhadelta/assistencia" element={<Assistencia />}/>  
+          <Route path="/minhadelta/assistencia" element={<Assistencia />}/>
+          <Route path="/intranet" element={<HomeIntranet />}/>
+          <Route path="/intranet/cadastrarprodutos" element={<CadastrarProdutos />}/>  
+          <Route path="/intranet/historicoacessos" element={<HistoricoAcessos />}/>  
+          <Route path="/intranet/balancovendas" element={<BalancoVendas />}/>  
           <Route path="/vejamais/hospitalar" element={<VejaMaisHospitalar />}/> 
           <Route path="/vejamais/veterinario" element={<VejaMaisVeterinario />}/> 
           <Route path="/vejamais/laudos" element={<VejaMaisLaudos />}/> 
@@ -72,4 +79,4 @@ const Principal = (props) => {
   
   export default Principal;
 
-  //path={`/produtos/${produtoMain}`}
+  

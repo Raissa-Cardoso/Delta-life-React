@@ -1,0 +1,29 @@
+.menuMinhaDelta{
+    width: 20vw;
+    border: solid 1px #ccc;
+    display: flex;
+    justify-content: center;
+    border-radius: 1vh;
+}
+.menuMinhaDelta ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 70%;       
+}
+.menuMinhaDelta li{         
+    line-height: 1.8; 
+    margin: 1vh;    
+    display: flex;           
+}
+.menuMinhaDelta a,  .imagemLinks  a{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 100%;     
+}
+
+.menuMinhaDelta a.selecionado, .menuMinhaDelta li:hover{
+    background-color: #3a58c5; 
+    border-radius: 1vh;         
+}

@@ -38,7 +38,7 @@ export default function Menu(props){
                             </div>                             
                             <div className="demonstrativo"  >
                                 <Link to="/produtos/dl1000">
-                                    <img src={linha1000}  />
+                                    <img src={linha1000}  onClick={()=>props.produto("DL1000")}/>
                                 </Link>
                             </div>                             
                         </div>
