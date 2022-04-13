@@ -2,8 +2,7 @@ import React from "react";
 import './Produtos.css';
 import produtosDados from "./ProdutosDados.js"
 
-export default function Produtos(props){   
-    console.log(props.produto)     
+export default function Produtos(props){           
     const produto=produtosDados.filter(produto=>{ return produto.titulo===props.produto})
     const produtoTitulo=produto.map(produto=>{
         return(

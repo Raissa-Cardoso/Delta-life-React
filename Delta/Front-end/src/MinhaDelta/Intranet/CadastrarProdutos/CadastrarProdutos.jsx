@@ -57,8 +57,12 @@ export default function CadastrarProdutos(props){
                         <div className="opFocos">
                             <input type="radio" id="opFocoProcedimento" name="opFoco" checked/>                        
                             <label htmlFor="opFocoProcedimento" >Não é um foco</label>
-                        </div>                        
-                    </div>                                                   
+                        </div>                                               
+                    </div>    
+                    <div className="opMaisVendidos">
+                        <input type="radio" id="opMaisVendidos" name="opMaisVendidos"/>                        
+                        <label htmlFor="opMaisVendidos">Adicionar como Mais Vendidos</label>
+                    </div>                                                
             </div>
             
         </main>
