@@ -1,6 +1,6 @@
 import "./MenuMinhaDelta.css"
 import React from "react";
-import './MeusPedidos';
+import '../MeusPedidos/MeusPedidos';
 import {Link} from 'react-router-dom'
 
 export default function MenuMinhaDelta(props){      

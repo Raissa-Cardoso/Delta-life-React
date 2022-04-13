@@ -1,9 +1,9 @@
 import React from "react";
 import './MinhaOdontoVeterinaria.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../../MenuMinhaDelta/MenuMinhaDelta";
 import {Link} from "react-router-dom";
 
-const dl740 = require('../assets/DL740.jpeg');
+const dl740 = require('../../../../../src/assets/DL740.jpeg');
 
 export default function MinhaOndontoVeterinaria(props){    
     return (

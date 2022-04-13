@@ -1,8 +1,8 @@
 import React from "react";
 import './MeuHistorico.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../MenuMinhaDelta/MenuMinhaDelta";
 
-import Kanban from "./Kanban"
+import Kanban from "../Kanban/Kanban"
 
 export default function MeuHistorico(props){    
     return (

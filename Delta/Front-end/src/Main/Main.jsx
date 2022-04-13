@@ -9,37 +9,34 @@ import Assinaturas from "../Assinaturas/Assinaturas"
 import Contato from '../Contato/Contato'
 import Login from "../Login/Login"
 import Sobre from "../Sobre/Sobre";
-import MinhaDelta from "../MinhaDelta/MinhaDelta";
-import MeusPedidos from "../MinhaDelta/MeusPedidos";
-import Boletos from "../MinhaDelta/Boletos";
-import MeuHistorico from "../MinhaDelta/MeuHIstorico";
-import MinhaClinica from "../MinhaDelta/MinhaClinica";
-import MinhaClinicaVeterinaria from "../MinhaDelta/MinhaClinicaVeterinaria";
-import MinhaOndontoVeterinaria from "../MinhaDelta/MinhaOdontoVeterinaria";
-import MinhaClinicaHospitalar from "../MinhaDelta/MinhaClinicaHospitalar";
-import Calibracoes from "../MinhaDelta/Calibracoes";
-import Assistencia from "../MinhaDelta/Assistencia";
-import Duvidas from "../MinhaDelta/Duvidas";
+import MinhaDelta from "../MinhaDelta/MinhaDeltaCliente/HomeMinhaDelta/MinhaDelta";
+import MeusPedidos from "../MinhaDelta/MinhaDeltaCliente/MeusPedidos/MeusPedidos";
+import Boletos from "../MinhaDelta/MinhaDeltaCliente/Boletos/Boletos";
+import MeuHistorico from "../MinhaDelta/MinhaDeltaCliente/MeuHistorico/MeuHIstorico";
+import MinhaClinica from "../MinhaDelta/MinhaDeltaCliente/MinhaClinica/HomeMinhaClinica/MinhaClinica";
+import MinhaClinicaVeterinaria from "../MinhaDelta/MinhaDeltaCliente/MinhaClinica/MinhaClinicaVeterinaria/MinhaClinicaVeterinaria";
+import MinhaOndontoVeterinaria from "../MinhaDelta/MinhaDeltaCliente/MinhaClinica/MinhaOdontoVeterinaria/MinhaOdontoVeterinaria";
+import MinhaClinicaHospitalar from "../MinhaDelta/MinhaDeltaCliente/MinhaClinica/MinhaClinicaHospitalar/MinhaClinicaHospitalar";
+import Calibracoes from "../MinhaDelta/MinhaDeltaCliente/Calibracoes/Calibracoes";
+import Assistencia from "../MinhaDelta/MinhaDeltaCliente/Assistencia/Assistencia";
+import Duvidas from "../MinhaDelta/MinhaDeltaCliente/Duvidas/Duvidas";
 import VejaMaisHospitalar from "../VejaMais/VejaMaisHospitalar";
 import VejaMaisVeterinario from "../VejaMais/VejaMaisVeterinario";
 import VejaMaisLaudos from "../VejaMais/VejaMaisLaudos";
 import VejaMaisManutencao from "../VejaMais/VejaMaisManutencao";
 import Produtos from "../Produtos/Produtos";
-import HomeIntranet from "../MinhaDelta/Intranet/HomeIntranet";
-import BalancoVendas from "../MinhaDelta/Intranet/BalancoVendas";
-import HistoricoAcessos from "../MinhaDelta/Intranet/HistoricoAcessos";
-import CadastrarProdutos from "../MinhaDelta/Intranet/CadastrarProdutos";
+import HomeIntranet from "../MinhaDelta/Intranet/HomeIntranet/HomeIntranet";
+import BalancoVendas from "../MinhaDelta/Intranet/BalancoVendas/BalancoVendas";
+import HistoricoAcessos from "../MinhaDelta/Intranet/HistoricoAcessos/HistoricoAcessos";
+import CadastrarProdutos from "../MinhaDelta/Intranet/CadastrarProdutos/CadastrarProdutos";
 import CadastroLogin from "../CadastroLogin/CadastroLogin";
 
 const Principal = (props) => {  
-  let [produtoMain, setProduto]=useState("")
-  if(props.produtoApp){
-    produtoMain=props.produtoApp
-  }
-  
+  let [produtoMain, setProduto]=useState("DL1000")   
   function mudarProduto(produto){
-    setProduto(produto)
-  }   
+    setProduto(produto)    
+  } 
+   
     return(
       <main className='Main'>
         <Routes>
@@ -50,7 +47,8 @@ const Principal = (props) => {
           <Route path="/contato" element={<Contato />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/cadastroLogin" element={<CadastroLogin />}/>
-          <Route path={`/produtos/${produtoMain}`} element={<Produtos produto={produtoMain}/>}/>         
+          <Route path={`/produtos/${produtoMain}`} element={<Produtos produto={produtoMain}/>}/> 
+          <Route path={`/produtos/${props.produtoApp}`} element={<Produtos produto={props.produtoApp}/>}/>         
           <Route path="/sobre" element={<Sobre />}/>
           <Route path="/minhadelta" element={<MinhaDelta />}/>          
           <Route path="/minhadelta/meuspedidos" element={<MeusPedidos />}/>

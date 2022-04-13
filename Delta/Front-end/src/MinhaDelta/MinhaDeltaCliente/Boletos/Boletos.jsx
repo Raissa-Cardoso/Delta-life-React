@@ -1,6 +1,6 @@
 import React from "react";
 import './Boletos.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../MenuMinhaDelta/MenuMinhaDelta";
 
 export default function Boletos(props){    
     return (

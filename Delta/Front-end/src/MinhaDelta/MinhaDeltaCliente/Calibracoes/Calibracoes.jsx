@@ -1,6 +1,6 @@
 import React from "react";
 import './Calibracoes.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../MenuMinhaDelta/MenuMinhaDelta";
 
 export default function Calibracoes(props){    
     return (

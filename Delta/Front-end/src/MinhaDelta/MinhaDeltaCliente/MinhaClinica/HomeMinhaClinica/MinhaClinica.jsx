@@ -1,7 +1,7 @@
 import React from "react";
 import './MinhaClinica.css';
 import {Link} from "react-router-dom";
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../../MenuMinhaDelta/MenuMinhaDelta";
 
 export default function MinhaClinica(props){    
     return (

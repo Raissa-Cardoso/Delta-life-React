@@ -1,11 +1,11 @@
 import React from "react";
 import './MinhaClinicaVeterinaria.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../../MenuMinhaDelta/MenuMinhaDelta";
 import {Link} from "react-router-dom";
 
-const dl740 = require('../assets/DL740.jpeg');
-const dl1000 = require('../assets/DL1000.jpeg');
-const dl4000 = require('../assets/DL4000.jpeg');
+const dl740 = require('../../../../../src/assets/DL740.jpeg');
+const dl1000 = require('../../../../../src/assets/DL1000.jpeg');
+const dl4000 = require('../../../../../src/assets/DL4000.jpeg');
 
 export default function MinhaClinicaVeterinaria(props){    
     return (

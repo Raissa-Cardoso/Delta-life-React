@@ -1,6 +1,6 @@
 import React from "react";
 import './MinhaDelta.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../MenuMinhaDelta/MenuMinhaDelta";
 
 export default function MinhaDelta(props){    
     return (

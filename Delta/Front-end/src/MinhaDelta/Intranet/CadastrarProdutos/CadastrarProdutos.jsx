@@ -1,6 +1,6 @@
 import React from "react";
 import './CadastrarProdutos.css';
-import MenuIntranet from "./MenuIntranet";
+import MenuIntranet from "../MenuIntranet/MenuIntranet";
 
 export default function CadastrarProdutos(props){    
     return (
@@ -33,7 +33,32 @@ export default function CadastrarProdutos(props){
                     <div className="divBotaoCadastroProdutos">
                         <button>Carregar arquivo...</button>
                     </div>                                      
-                </div>                       
+                </div> 
+                <div className="opcoesUsosFocos">
+                    <div className="opçãoUsosFocos"> 
+                        <div className="opUsos">
+                            <input type="radio" id="opUsoVet" name="opUso" checked/>                        
+                            <label htmlFor="opUsoVet">Uso exclusivo veterinário</label> 
+                        </div>                                        
+                        <div className="opUsos">                             
+                            <input type="radio" id="opUsoHosp" name="opUso"/>
+                            <label htmlFor="opUsoHosp">Uso exclusivo hospitalar</label>                        </div> 
+                        </div>
+                    </div>
+                    <div className="opçãoUsosFocos"> 
+                        <div className="opFocos">                   
+                            <input type="radio" id="opFocoCirurgico" name="opFoco"/>
+                            <label htmlFor="opFocoCirurgico">Foco cirúrgico</label>
+                        </div>
+                        <div className="opFocos">                                                        
+                            <input type="radio" id="opFocoProcedimento" name="opFoco"/>                        
+                            <label htmlFor="opFocoProcedimento">Foco Procedimento</label>
+                        </div>
+                        <div className="opFocos">
+                            <input type="radio" id="opFocoProcedimento" name="opFoco" checked/>                        
+                            <label htmlFor="opFocoProcedimento" >Não é um foco</label>
+                        </div>                        
+                    </div>                                                   
             </div>
             
         </main>

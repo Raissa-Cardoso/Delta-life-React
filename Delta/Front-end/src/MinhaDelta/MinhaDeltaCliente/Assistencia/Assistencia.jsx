@@ -1,6 +1,6 @@
 import React from "react";
 import './Assistencia.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../MenuMinhaDelta/MenuMinhaDelta";
 
 export default function Assistencia(props){    
     return (

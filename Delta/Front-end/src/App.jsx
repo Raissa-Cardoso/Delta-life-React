@@ -35,6 +35,8 @@ export default function App() {
     function mudarProduto(produto){
         setProduto(produto)
     }
+
+    console.log("produtoAPP "+produtoApp)
   
     return (
       <div className="App">

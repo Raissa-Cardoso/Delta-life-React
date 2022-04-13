@@ -1,9 +1,9 @@
 import React from "react";
 import './MeusPedidos.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../MenuMinhaDelta/MenuMinhaDelta";
 
-import Kanban from "./Kanban"
-const DL1000 = require('../assets/DL1000.jpeg');
+import Kanban from "../Kanban/Kanban"
+const DL1000 = require('../../../assets/DL1000.jpeg');
 
 export default function MeusPedidos(props){    
     return (

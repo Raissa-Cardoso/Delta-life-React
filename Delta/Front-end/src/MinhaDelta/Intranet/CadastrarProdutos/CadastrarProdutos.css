@@ -24,7 +24,7 @@
 }
 .divCadastrarProdutos h2{
     font-size: 1.2rem;
-    width: 20vw;    
+    width: 25vw;    
 }
 .TituloProduto input, .SubtituloProduto input{
     margin: 0;         
@@ -58,3 +58,16 @@
 .InserirImagemProduto button:hover{
     background-color: #3a58c5;
 }
+.opcoesUsosFocos{
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.opçãoUsosFocos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;     
+}
+.opUsos, .opFocos{
+    padding-right:  4vw;  
+}
+

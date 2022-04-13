@@ -1,6 +1,6 @@
 import React from "react";
 import './BalancoVendas.css';
-import MenuIntranet from "./MenuIntranet";
+import MenuIntranet from "../MenuIntranet/MenuIntranet";
 
 export default function BalancoVendas(props){  
      

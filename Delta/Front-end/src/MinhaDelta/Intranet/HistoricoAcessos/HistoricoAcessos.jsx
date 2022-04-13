@@ -1,6 +1,6 @@
 import React from "react";
 import './HistoricoAcessos.css';
-import MenuIntranet from "./MenuIntranet";
+import MenuIntranet from "../MenuIntranet/MenuIntranet";
 
 export default function HistoricoAcessos(props){  
      

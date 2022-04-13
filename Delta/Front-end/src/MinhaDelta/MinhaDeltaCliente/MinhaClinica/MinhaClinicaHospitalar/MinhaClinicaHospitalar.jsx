@@ -1,9 +1,9 @@
 import React from "react";
 import './MinhaClinicaHospitalar.css';
-import MenuMinhaDelta from "./MenuMinhaDelta";
+import MenuMinhaDelta from "../../MenuMinhaDelta/MenuMinhaDelta";
 import {Link} from "react-router-dom";
 
-const life1000 = require('../assets/Life1000.jpeg');
+const life1000 = require('../../../../../src/assets/Life1000.jpeg');
 
 export default function MinhaClinicaHospitalar(props){    
     return (

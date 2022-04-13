@@ -1,6 +1,6 @@
 import React from "react";
-import './Intranet.css';
-import MenuIntranet from "./MenuIntranet";
+import './HomeIntranet.css';
+import MenuIntranet from "../MenuIntranet/MenuIntranet";
 
 export default function HomeIntranet(props){    
     return (
