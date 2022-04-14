@@ -22,9 +22,9 @@ export default function Login(props){
         <main className="loginCompleto">
             <div className="login">
                 <p>Login</p>
-                <input id="login" value={login} type="text" onChange={loginDigitado} onBlur={teste}/>
-                <p>Email</p>
-                <input type="text"/>
+                <input id="login" value={login} type="email" onChange={loginDigitado} onBlur={teste}/>
+                <p>Senha</p>
+                <input type="password"/>
                 <Link to={caminho} >
                     <button>Entrar</button>
                 </Link>                
