@@ -1,7 +1,8 @@
 .main{
     display: flex;
     flex-direction: column;
-    align-items: center;       
+    align-items: center;
+    margin-bottom: 10vh;       
 }
 #maisVendidos{
     text-align: center;

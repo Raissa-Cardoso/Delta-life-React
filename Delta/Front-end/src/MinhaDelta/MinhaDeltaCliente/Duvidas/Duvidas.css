@@ -3,7 +3,8 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    padding-top: 10vh;      
+    padding-top: 10vh;   
+    margin-bottom: 20vh;    
 }
 .divMenuMinhaDelta{
     margin-left: 10vh;

@@ -1,5 +1,5 @@
 .rodape{ 
-    margin-top: 10vh;
+    margin-top: 0;
     background-color: #e1ebeb;    
     color: black;
     align-self: flex-end;    
@@ -20,7 +20,7 @@
 .logoMarca img{
     border-radius: 100%;
     height: 5vh;
-    width: 3vw;
+    width: 2.5vw;
 }
 .logoMarca p{    
     font-size: 0.8em;

@@ -3,6 +3,7 @@
     color: rgb(61, 59, 59);
     display: flex;
     flex-direction: column;
+    margin-bottom: 10vh;
 }
 .assinaturasComTexto h1{
     font-size: 1.5rem;

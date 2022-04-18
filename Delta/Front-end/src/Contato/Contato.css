@@ -1,3 +1,6 @@
+.contatoVendedores{
+    margin-bottom: 10vh;
+}
 .vendedores{    
     color: rgb(61, 59, 59);
     display: flex;

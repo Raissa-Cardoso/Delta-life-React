@@ -40,7 +40,7 @@ export default function Sobre(props){
                         tecnologia no desenvolvimento de novos equipamentos médicos.</h2>
                 </div>
                 <div className="box3"><img src={deltalife}  alt="Delta Life"/></div>
-                <div className="box4">
+               <div className="box4">
                     <h1>Valores</h1>
                         <ul>
                             <li>Satisfação do Cliente</li>
@@ -51,7 +51,7 @@ export default function Sobre(props){
                         </ul>                    
                 </div>
                 <div className="box5">
-                <h1>Visão</h1>
+                    <h1>Visão</h1>
                     <h2>Desenvolver novas tecnologias para auxiliar médicos na busca pela excelência do 
                         bem-estar e qualidade de vida do ser humano. Ser reconhecida em âmbito nacional como 
                         uma das principais empresas em desenvolvimento de equipamentos médicos com alta 

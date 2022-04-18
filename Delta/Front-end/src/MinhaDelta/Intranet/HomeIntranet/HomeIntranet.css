@@ -3,7 +3,8 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    padding-top: 10vh;      
+    padding-top: 10vh;  
+    margin-bottom: 20vh;    
 }
 .divMenuHomeIntranet{
     margin-left: 10vh;
