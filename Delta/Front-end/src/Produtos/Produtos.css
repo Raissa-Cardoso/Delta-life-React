@@ -1,13 +1,13 @@
-.DL1000{
+.produtos{
     margin-bottom: 20vh;
 }
-.DL1000ComTexto{    
+.produtoComTexto{    
     color: rgb(61, 59, 59);
     display: flex;
     flex-direction: row; 
     /*justify-content: center;             */
 }
-.DL1000Textos{
+.produtoTextos{
     display: flex;
     flex-direction: column;    
     width: 50%;
@@ -15,7 +15,7 @@
     box-sizing: border-box;      
     padding: 4vw;         
 }
-.DL1000Textos h1{ 
+.produtoTextos h1{ 
     padding: 0;
     margin: 0;
     width: 70%;  
@@ -24,7 +24,7 @@
     text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;
     align-self: center;    
 }
-.DL1000Textos h2{    
+.produtoTextos h2{    
     padding: 0;
     margin-top: 0;
     font-size: 1.2rem;
@@ -33,7 +33,7 @@
     align-self: center;
     text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;            
 }
-.DL1000Textos p{
+.produtoTextos p{
     margin:0;
     padding: 0;
     text-align: justify;
@@ -42,7 +42,7 @@
     color: red;
     font-weight: bold;
 }
-.DL1000Textos h3{    
+.produtoTextos h3{    
     font-size: 1.1rem;
     text-align: justify;
     width: 70%;
@@ -50,7 +50,7 @@
     line-height: 1.4;
     font-weight: 100; 
 }
-.DL1000Textos ul{
+.produtoTextos ul{
     font-size: 1.1rem;
     text-align: justify;
     width: 70%;
@@ -65,7 +65,7 @@
     width: 50%;
     height:60vh;;
 }
-.fotoDL1000{
+.fotoProduto{
     position: absolute;
     align-self: flex-start; 
     width: 25vw;
@@ -73,11 +73,10 @@
     background-color: #fff;
     display: flex;
     justify-content: center; 
-    border: solid 1px #f1ecec;  
-    /*margin: 4vh 0 0 12vw; */
+    border: solid 1px #f1ecec;      
     margin: 4vh 0 0 45vw;
 }
-.DL1000 img{
+.produtos img{
     width: 15vw;
     height: 25vh;    
     border-radius: 1.5vh;

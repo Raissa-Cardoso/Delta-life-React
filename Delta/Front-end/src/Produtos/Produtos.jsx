@@ -17,9 +17,9 @@ class Produtos extends Component{
         const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto});        
         return(          
             
-            <main className="DL1000">            
-                <div className="DL1000ComTexto">
-                    <div className="DL1000Textos">
+            <main className="produtos">            
+                <div className="produtoComTexto">
+                    <div className="produtoTextos">
                     {produto.map(produto=>(
                         <h1 key={produto._id}>
                             {produto.titulo}
@@ -83,7 +83,7 @@ class Produtos extends Component{
                         <button>OK</button>
                     </div>                 
                     </div>
-                    <div className="fotoDL1000">
+                    <div className="fotoProduto">
                         <img src={require(`../assets/${this.props.produto}.jpeg`)}  alt={this.props.produto}/> 
                     </div> 
                     <div className="fundoFoto">
