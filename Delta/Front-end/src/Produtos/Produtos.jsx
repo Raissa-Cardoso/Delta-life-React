@@ -14,7 +14,8 @@ class Produtos extends Component{
     }
     render(){
         const {produtos}=this.state;
-        const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto});        
+        const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto}); 
+              
         return(          
             
             <main className="produtos">            
@@ -57,6 +58,7 @@ class Produtos extends Component{
                             {produto.descricao}
                         </h3>
                     ))}
+                    
                     <ul>
                         {produto.map(produto=>(
                             produto.caracteristicas.map((caracteristica,index)=>(

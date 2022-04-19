@@ -30,12 +30,19 @@ import BalancoVendas from "../MinhaDelta/Intranet/BalancoVendas/BalancoVendas";
 import HistoricoAcessos from "../MinhaDelta/Intranet/HistoricoAcessos/HistoricoAcessos";
 import CadastrarProdutos from "../MinhaDelta/Intranet/CadastrarProdutos/CadastrarProdutos";
 import CadastroLogin from "../CadastroLogin/CadastroLogin";
+import AlterarDeletarProduto from "../MinhaDelta/Intranet/AlterarDeletarProduto/AlterarDeletarProduto";
+import ProdutoAlteradoDeletado from "../MinhaDelta/Intranet/AlterarDeletarProduto/ProdutoAlteradoDeletado";
+
 
 const Principal = (props) => {  
   let [produtoMain, setProduto]=useState("DL1000")   
+  let [produtoAlterar, setProdutoAlterar]=useState("")  
   function mudarProduto(produto){
     setProduto(produto)    
   } 
+  function alterar(produto){
+    setProdutoAlterar(produto)
+  }  
    
     return(
       <main className='Main'>
@@ -63,6 +70,8 @@ const Principal = (props) => {
           <Route path="/minhadelta/assistencia" element={<Assistencia />}/>
           <Route path="/intranet" element={<HomeIntranet />}/>
           <Route path="/intranet/cadastrarprodutos" element={<CadastrarProdutos />}/>  
+          <Route path="/intranet/alterarproduto" element={<AlterarDeletarProduto alterar={alterar}/>}/> 
+          <Route path={`/intranet/alterardeletarproduto/${produtoAlterar}`} element={<ProdutoAlteradoDeletado produto={produtoAlterar}/>}/>          
           <Route path="/intranet/historicoacessos" element={<HistoricoAcessos />}/>  
           <Route path="/intranet/balancovendas" element={<BalancoVendas />}/>  
           <Route path="/vejamais/hospitalar" element={<VejaMaisHospitalar />}/> 

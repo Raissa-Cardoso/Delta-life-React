@@ -3,7 +3,7 @@ import React from "react";
 import {Link} from 'react-router-dom'
 
 export default function MenuIntranet(props){      
-    let home, cadastroProdutos, historicoAcessos, balancoVendas=""  
+    let home, cadastroProdutos, historicoAcessos, balancoVendas,alterarProduto=""  
     
     switch (props.url) {
         case "cadastroProdutos":
@@ -14,7 +14,10 @@ export default function MenuIntranet(props){
             break;
         case "balancoVendas":
             balancoVendas="selecionado"
-            break;        
+            break; 
+        case "alterarProduto":
+            alterarProduto="selecionado"
+            break;       
         default:
             home="selecionado"
             break;
@@ -25,8 +28,10 @@ export default function MenuIntranet(props){
                 <ul>
                     <li><Link className={home} to="/intranet">Home</Link></li>
                     <li><Link className={cadastroProdutos} to="/intranet/cadastrarprodutos">Cadastrar Produtos</Link></li>
+                    <li><Link className={alterarProduto} to="/intranet/alterarproduto" >Alterar/Deletar Produto</Link></li>                     
                     <li><Link className={historicoAcessos} to="/intranet/historicoacessos">Histórico de acessos</Link>  </li>                       
-                    <li><Link className={balancoVendas} to="/intranet/balancovendas" >Balanço de vendas</Link></li>                     
+                    <li><Link className={balancoVendas} to="/intranet/balancovendas" >Balanço de vendas</Link></li>   
+                                     
                 </ul>
             </nav> 
     )
