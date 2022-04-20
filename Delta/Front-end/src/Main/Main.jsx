@@ -71,7 +71,7 @@ const Principal = (props) => {
           <Route path="/intranet" element={<HomeIntranet />}/>
           <Route path="/intranet/cadastrarprodutos" element={<CadastrarProdutos />}/>  
           <Route path="/intranet/alterarproduto" element={<AlterarDeletarProduto alterar={alterar}/>}/> 
-          <Route path={`/intranet/alterardeletarproduto/${produtoAlterar}`} element={<ProdutoAlteradoDeletado produto={produtoAlterar}/>}/>          
+          <Route path={`/intranet/alterardeletarproduto/${produtoAlterar.indexOf(" ")!==-1?produtoAlterar.replace(" ","%20"):produtoAlterar}`} element={<ProdutoAlteradoDeletado produto={produtoAlterar}/>}/>          
           <Route path="/intranet/historicoacessos" element={<HistoricoAcessos />}/>  
           <Route path="/intranet/balancovendas" element={<BalancoVendas />}/>  
           <Route path="/vejamais/hospitalar" element={<VejaMaisHospitalar />}/> 

@@ -37,6 +37,7 @@
     resize: none;
     width: 40vw;    
     height: 30vh;
+    resize: none;  
 }
 .BotoesAlterarDeletar{
     margin-left: 10vw; 

@@ -15,8 +15,8 @@ class AlterarDeletarProduto extends Component{
         this.setState({produtos:response.data})        
     }
     render(){
-        const {produtos}=this.state;        
-              
+        const {produtos}=this.state;               
+        
         return(          
             <main className="alterarProdutos">                        
                 <div className="divMenuIntranet"><MenuIntranet url="alterarProduto"/></div>
@@ -24,7 +24,7 @@ class AlterarDeletarProduto extends Component{
                     
                         {produtos.map(produto=>( 
                             <Link to={`/intranet/alterardeletarproduto/${produto.titulo}`} onClick={()=>this.props.alterar(`${produto.titulo}`)}>                       
-                                <li key={produto._id}>                                
+                                <li key={produto.titulo}>                                                                    
                                     {produto.titulo}
                                 </li>
                             </Link> 
