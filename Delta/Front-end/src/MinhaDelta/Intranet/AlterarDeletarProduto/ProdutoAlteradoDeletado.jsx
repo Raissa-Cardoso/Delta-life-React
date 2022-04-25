@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import {Link,Route} from 'react-router-dom'
 import './ProdutoAlteradoDeletado.css';
 import MenuIntranet from "../MenuIntranet/MenuIntranet";
 import api from "../../../api.js";
-import AlterarDeletarProduto from "./AlterarDeletarProduto";
+
 
 class ProdutoAlteradoDeletado extends Component{   
 state={

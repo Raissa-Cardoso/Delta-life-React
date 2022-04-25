@@ -20,8 +20,9 @@ class AlterarDeletarProduto extends Component{
         return(          
             <main className="alterarProdutos">                        
                 <div className="divMenuIntranet"><MenuIntranet url="alterarProduto"/></div>
-                <ul>
-                    
+                <div className="listagem">
+                    <ul>
+                        
                         {produtos.map((produto,index)=>( 
                             <Link to={`/intranet/alterardeletarproduto/${produto.titulo}`} onClick={()=>this.props.alterar(`${produto.titulo}`)}>                       
                                 <li key={index}>                                                                    
@@ -29,8 +30,11 @@ class AlterarDeletarProduto extends Component{
                                 </li>
                             </Link> 
                         ))}  
-                                         
-                </ul>                                
+                                        
+                    </ul> 
+
+                </div>
+                                               
             </main>
         )
 

@@ -72,7 +72,7 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 6;
-    background: linear-gradient(#20306d, #2b3350);
+    background: linear-gradient(#20306d, #2b3350);   
 }
 .box2 {   
     padding: 8vh 0 0vh 5vh;  

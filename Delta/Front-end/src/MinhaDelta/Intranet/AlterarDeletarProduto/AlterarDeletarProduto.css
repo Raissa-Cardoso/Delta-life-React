@@ -11,14 +11,26 @@
     width: 20vw;      
     border-radius: 1vh;
 }
+.listagem ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    flex-wrap: wrap;    
+}
 .alterarProdutos ul{    
-    list-style-type: none;
+    list-style-type: none;  
 }
 .alterarProdutos ul a, .alterarProdutos ul a:visited{
     text-decoration: none;
     color: black;
 }
 .alterarProdutos li{
-    line-height: 1.5;
+    line-height: 1.5;    
+}
+.listagem li{
+   margin-left: 3vw;
+   line-height: 1.7;
 }
 
