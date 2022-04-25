@@ -1,45 +1,53 @@
 import React, { Component } from "react";
+import {Link,Route} from 'react-router-dom'
 import './ProdutoAlteradoDeletado.css';
 import MenuIntranet from "../MenuIntranet/MenuIntranet";
 import api from "../../../api.js";
+import AlterarDeletarProduto from "./AlterarDeletarProduto";
 
 class ProdutoAlteradoDeletado extends Component{   
-    
 state={
-    produtos:[]
+    produto:[],
+    titulo:"",
+    subtitulo:"",
+    descricao:"",
+    caracteristicas:""
 }
-
-async componentDidMount(){
-    const response=await api.get("/");        
-    this.setState({produtos:response.data})        
+async componentDidMount(){    
+    const response=await api.get(`/produto/${this.props.produto}`);           
+    this.setState({produto:response.data})  
+    this.setState({titulo:response.data.titulo})  
+    this.setState({subtitulo:response.data.subtitulo})       
+    this.setState({descricao:response.data.descricao})
+    this.setState({caracteristicas:response.data.caracteristicas})
 }
+handleChange(){        
+    let tituloAlterar = document.getElementById("titulo").value;  
+    if(tituloAlterar)this.setState({titulo:tituloAlterar})    
+    let subtituloAlterar = document.getElementById("subtitulo").value;  
+    if(subtituloAlterar)this.setState({subtitulo:subtituloAlterar}) 
+    let descricaoAlterar = document.getElementById("descricao").value;  
+    if(descricaoAlterar)this.setState({descricao:descricaoAlterar}) 
+    let caracteristicasAlterar = document.getElementById("caracteristicas").value;  
+    if(caracteristicasAlterar)this.setState({caracteristicas:caracteristicasAlterar})  
+}     
+    
 render(){    
-    const {produtos}=this.state;
-    const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto}); 
-    
-    /*function escreverInput() {
-        let titulo = document.getElementById("titulo").value;
-        this.setState({tituloAlterar:titulo})        
-        let subTitulo = document.getElementById("subtitulo").value;
-        this.setState({subtituloAlterar:subTitulo}) 
-        let descricao = document.getElementById("descricao").value;
-        this.setState({descricaoAlterar:descricao})  
-                     
-        this.setState({caracteristicasAlterar:"caracteristica1"})    
-        console.log("alterados: " + tituloAlterar + subTituloAlterar + descricaoAlterar + caracteristicasAlterar)   
-    }*/
-    
-    function deletar() {
-        produto.map(produto=>{        
-            api.delete(`/produto/${produto._id}`)
-            alert(`Produto: ${produto.titulo} foi deletado`)
-        })
+    const {produto,titulo,subtitulo,descricao,caracteristicas}=this.state;     
+   
+    function deletar() {               
+        api.delete(`/produto/${produto._id}`)
+        alert(`Produto: ${produto.titulo} foi deletado`)  
+        window.open("/intranet/alterarproduto",'_self');      
     }
-    function alterar(){        
-        produto.map(produto=>{        
-            api.put(`/produto/${produto._id}`)
-            alert(`Produto: ${produto.titulo} foi alterado`)
-        })
+    function alterar(){    
+        api.put(`/produto/${produto._id}`,{            
+            titulo: `${titulo}`,
+            subtitulo:`${subtitulo}`,
+            descricao:`${descricao}`,           
+            caracteristicas:`${caracteristicas}`})
+        alert(`Produto: ${produto.titulo} foi alterado`)
+        window.open("/intranet/alterarproduto",'_self');  
     }
           
     return(          
@@ -48,62 +56,66 @@ render(){
             <div className="divProdutoAlteradoDeletado">  
                 <div className="tituloAlterar">
                     <h1>Título:</h1>              
-                    {produto.map(produto=>(                        
-                        <input key={produto._id}
+                                           
+                        <input key={produto._id} id="titulo"
                             placeholder={produto.titulo}
-                            /> ))}
+                            onBlur={()=>this.handleChange()}                                                        
+                            /> 
                 </div>
                 <div className="subTituloAlterar">
                    <h2>Subtítulo:</h2> 
-                   {produto.map(produto=>(                        
-                        <input key={produto._id}
+                                         
+                        <input key={produto._id} id="subtitulo"
                             placeholder={produto.subtitulo}
-                            /> ))}
+                            onBlur={()=>this.handleChange()}
+                            /> 
                 </div>
                 <div className="especificidadeAlterar">
                     <p><strong>Especificidade:</strong></p>
                                     
-                    {produto.map(produto=>(                        
-                        produto.isVet?                                                       
+                                           
+                        {produto.isVet?                                                       
                             <input key={produto._id}
                             placeholder="uso veterinário"
                             />:""
-                    ))}                                                   
-                    {produto.map(produto=>(                        
+                        }                                                  
+                    {                       
                         produto.isHosp?                                                       
                             <input key={produto._id}
                             placeholder="uso hospitalar humano"
                             />:""
-                    ))}                                                  
-                    {produto.map(produto=>(                        
+                   }                                                  
+                    {                       
                         produto.focoCirurgico?                                                       
                             <input key={produto._id}
                             placeholder="foco cirúrgico"
                             />:""
-                    ))}                                                  
-                    {produto.map(produto=>(                        
+                    }                                                  
+                    {                       
                         produto.focoProcedimento?                            
                             <input key={produto._id}
                             placeholder="foco procedimento"
                             />:""
-                    ))}
+                    }
                 </div>
                 <div className="descricaoeAlterar">
                     <h2>Descrição:</h2>
-                    {produto.map(produto=>(
+                    
                         <textarea key={produto._id} rows="10" cols="40" id="descricao"
                           placeholder={produto.descricao}
+                          onBlur={()=>this.handleChange()}
                          />
-                    ))}
+                    
                 </div>
                 <div className="caracteristicasAlterar">
                     <h2>Características:</h2>
-                    {produto.map(produto=>
-                    (                       
-                        <textarea key={produto._id} rows="10" cols="40" id="descricao"
+                    
+                                           
+                        <textarea key={produto._id} rows="10" cols="40" id="caracteristicas"
                          placeholder={produto.caracteristicas}
+                         onBlur={()=>this.handleChange()}
                          />                        
-                    ))}
+                    
                 </div>              
                 <div className="BotoesAlterarDeletar">
                     <div className="divBotaoAlterarProduto">

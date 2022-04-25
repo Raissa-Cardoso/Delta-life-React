@@ -22,9 +22,9 @@ class AlterarDeletarProduto extends Component{
                 <div className="divMenuIntranet"><MenuIntranet url="alterarProduto"/></div>
                 <ul>
                     
-                        {produtos.map(produto=>( 
+                        {produtos.map((produto,index)=>( 
                             <Link to={`/intranet/alterardeletarproduto/${produto.titulo}`} onClick={()=>this.props.alterar(`${produto.titulo}`)}>                       
-                                <li key={produto.titulo}>                                                                    
+                                <li key={index}>                                                                    
                                     {produto.titulo}
                                 </li>
                             </Link> 

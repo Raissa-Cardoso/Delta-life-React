@@ -102,8 +102,8 @@ app.get('/', (req,res)=>{
 }); 
 
 app.get('/produto/:id', (req,res)=>{        
-    Produto.findOne({_id:req.params.id}).then((artigo)=>{
-        return res.json(artigo)
+    Produto.findOne({titulo:req.params.id}).then((produto)=>{
+        return res.json(produto)
     }).catch((erro)=>{
         return res.status(400).json({
             error:true,

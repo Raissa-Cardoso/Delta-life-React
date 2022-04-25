@@ -30,6 +30,7 @@ export default function CadastrarProdutos(props){
         }).then(response=>alert(`Os dados: ${JSON.stringify(response.data)} foram cadastrados`))        
           .catch(erro=>console.log(erro)) 
         alert(`Produto: ${tituloAlterado} foi cadastrado`)
+        window.open("/intranet/cadastrarprodutos",'_self');  
         
     }   
 

@@ -26,11 +26,11 @@ export default function MenuIntranet(props){
     return (
             <nav className="menuMinhaDelta">                
                 <ul>
-                    <li><Link className={home} to="/intranet">Home</Link></li>
-                    <li><Link className={cadastroProdutos} to="/intranet/cadastrarprodutos">Cadastrar Produtos</Link></li>
-                    <li><Link className={alterarProduto} to="/intranet/alterarproduto" >Alterar/Deletar Produto</Link></li>                     
-                    <li><Link className={historicoAcessos} to="/intranet/historicoacessos">Histórico de acessos</Link>  </li>                       
-                    <li><Link className={balancoVendas} to="/intranet/balancovendas" >Balanço de vendas</Link></li>   
+                    <li key="home"><Link className={home} to="/intranet">Home</Link></li>
+                    <li key="cadastrar"><Link className={cadastroProdutos} to="/intranet/cadastrarprodutos">Cadastrar Produtos</Link></li>
+                    <li key="alterar"><Link className={alterarProduto} to="/intranet/alterarproduto" >Alterar/Deletar Produto</Link></li>                     
+                    <li key="historico"><Link className={historicoAcessos} to="/intranet/historicoacessos">Histórico de acessos</Link>  </li>                       
+                    <li key="balanco"><Link className={balancoVendas} to="/intranet/balancovendas" >Balanço de vendas</Link></li>   
                                      
                 </ul>
             </nav> 
