@@ -5,9 +5,9 @@ import {Link} from "react-router-dom";
 const DL1000=require(`../assets/DL1000.jpeg`)
 const DL4000=require(`../assets/DL4000.jpeg`)
 const DL740=require(`../assets/DL740.jpeg`)
-const DL330 = require('../assets/vet4.jpeg');
-const DL300 = require('../assets/vet6.jpeg');
-const ECG = require('../assets/ecgsite_6.jpg');
+const DL330=require('../assets/vet4.jpeg');
+const DL300=require('../assets/vet6.jpeg');
+const ECG=require('../assets/ecgsite_6.jpg');
 
 export default function LinhaVeterinaria(props){
     return (
