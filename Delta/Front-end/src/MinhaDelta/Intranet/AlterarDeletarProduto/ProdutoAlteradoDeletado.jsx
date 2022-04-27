@@ -10,7 +10,7 @@ state={
     titulo:"",
     subtitulo:"",
     descricao:"",
-    caracteristicas:""
+    caracteristicas:[]
 }
 async componentDidMount(){    
     const response=await api.get(`/produto/${this.props.produto}`);           
@@ -27,8 +27,10 @@ handleChange(){
     if(subtituloAlterar)this.setState({subtitulo:subtituloAlterar}) 
     let descricaoAlterar = document.getElementById("descricao").value;  
     if(descricaoAlterar)this.setState({descricao:descricaoAlterar}) 
-    let caracteristicasAlterar = document.getElementById("caracteristicas").value;  
-    if(caracteristicasAlterar)this.setState({caracteristicas:caracteristicasAlterar})  
+    let caracteristicasAlterar=document.getElementById("caracteristicas").value;                
+    let caracteristicasAlterarArray=((caracteristicasAlterar.indexOf("\n")!==-1)||(caracteristicasAlterar.indexOf("\r")!==-1))?caracteristicasAlterar.split("\n"):caracteristicasAlterar 
+    
+    if(caracteristicasAlterarArray)this.setState({caracteristicas:caracteristicasAlterarArray})  
 }     
     
 render(){    
@@ -44,7 +46,8 @@ render(){
             titulo: `${titulo}`,
             subtitulo:`${subtitulo}`,
             descricao:`${descricao}`,           
-            caracteristicas:`${caracteristicas}`})
+            caracteristicas:caracteristicas.map(caracteristica=>{if(caracteristica!==""||caracteristica!==null) return caracteristica})
+        })
         alert(`Produto: ${produto.titulo} foi alterado`)
         window.open("/intranet/alterarproduto",'_self');  
     }
@@ -107,9 +110,8 @@ render(){
                     
                 </div>
                 <div className="caracteristicasAlterar">
-                    <h2>Características:</h2>
-                    
-                                           
+                    <h2>Características:</h2>                    
+                                          
                         <textarea key={produto._id} rows="10" cols="40" id="caracteristicas"
                          placeholder={produto.caracteristicas}
                          onBlur={()=>this.handleChange()}

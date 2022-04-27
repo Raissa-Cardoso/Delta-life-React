@@ -29,10 +29,10 @@ const Produto=new mongoose.Schema({
         type:String,
         required:true
     },
-    caracteristicas:[{
-        type:String,
+    caracteristicas:{
+        type:Array,
         required:true
-    }]
+    }
 },
 {
     timestamps:true

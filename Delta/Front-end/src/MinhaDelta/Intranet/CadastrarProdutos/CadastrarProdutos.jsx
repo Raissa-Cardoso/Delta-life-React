@@ -7,26 +7,27 @@ export default function CadastrarProdutos(props){
     const [tituloAlterado, setTitulo] = useState("");
     const [subTituloAlterado, setSubTitulo] = useState("");
     const [descricaoAlterada, setDescricao] = useState("");
-    const [caracteristicasAlteradas, setCaracteristicas] = useState(""); 
-    function escreverInput() {
+    const [caracteristicasAlteradas, setCaracteristicas] = useState([]); 
+    function escreverInput() {        
         let titulo = document.getElementById("titulo").value;            
         setTitulo(titulo) 
         let subTitulo = document.getElementById("subtitulo").value;
         setSubTitulo(subTitulo)
         let descricao = document.getElementById("descricao").value;
         setDescricao(descricao)  
-        //let caracteristicas=document.getElementById("caracteristicas").value; 
-        //let caracteristicasArray=caracteristicas.split(",")             
-        setCaracteristicas("caracteristicas1")     
+        let caracteristicas=document.getElementById("caracteristicas").value;                
+        let caracteristicasArray=((caracteristicas.indexOf("\n")!==-1)||(caracteristicas.indexOf("\r")!==-1))?caracteristicas.split("\n"):caracteristicas 
+        setCaracteristicas(caracteristicasArray)                   
     }
-    function cadastrar(){            
-         
-        console.log("alterados: " + tituloAlterado + subTituloAlterado + descricaoAlterada + caracteristicasAlteradas)
+    function cadastrar(){         
+        
         api.post('/produto',{            
             titulo: `${tituloAlterado}`,
             subtitulo:`${subTituloAlterado}`,
-            descricao:`${descricaoAlterada}`,           
-            caracteristicas:`${caracteristicasAlteradas}`            
+            isVet:true,
+            descricao:`${descricaoAlterada}`,
+            caracteristicas:caracteristicasAlteradas.map((caracteristica)=>{if(caracteristica!==""||caracteristica!==null) return caracteristica})            
+                       
         }).then(response=>alert(`Os dados: ${JSON.stringify(response.data)} foram cadastrados`))        
           .catch(erro=>console.log(erro)) 
         alert(`Produto: ${tituloAlterado} foi cadastrado`)
@@ -53,7 +54,7 @@ export default function CadastrarProdutos(props){
                 </div> 
                 <div className="CaracteristicasProduto">
                     <h2>Características do produto</h2>
-                    <textarea rows="10" cols="40" id="caracteristicas" placeholder="Digite as características do  produto separadas por vírgulas"></textarea>                  
+                    <textarea rows="10" cols="40" id="caracteristicas" placeholder="Digite as características do  produto (uma característica em cada linha)" onBlur={()=>escreverInput()}></textarea>                  
                 </div> 
                 <div className="DuvidasProduto">
                     <h2>Dúvidas frequentes sobre o produto</h2>

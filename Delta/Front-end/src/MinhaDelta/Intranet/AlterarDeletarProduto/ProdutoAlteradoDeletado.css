@@ -19,7 +19,8 @@
 .tituloAlterar, .subTituloAlterar, .especificidadeAlterar, .descricaoeAlterar, .caracteristicasAlterar{
     display: flex;
     flex-direction: row;        
-    margin:1vh 0;   
+    margin:1vh 0;    
+    width: 60vw;  
 }
 .tituloAlterar h1, .subTituloAlterar h2, .especificidadeAlterar p,  .descricaoeAlterar h2, .caracteristicasAlterar h2{
     padding: 0;
@@ -28,16 +29,15 @@
     font-weight: bold; 
     text-align: justify;
     line-height: 1.5;
-    width: 10vw;        
+    width: 15vw;        
 }
 .tituloAlterar input, .subTituloAlterar input, .especificidadeAlterar input{   
     flex-grow: 1;  
 }
-.descricaoeAlterar textarea, .caracteristicasAlterar textarea{
+.descricaoeAlterar textarea, .caracteristicasAlterar textarea{    
     resize: none;
-    width: 40vw;    
-    height: 30vh;
-    resize: none;  
+    width: 45vw;    
+    height: 30vh;           
 }
 .BotoesAlterarDeletar{
     margin-left: 10vw; 
