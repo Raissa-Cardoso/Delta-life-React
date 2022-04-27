@@ -58,11 +58,13 @@
     width: 30vw;
     height: 5vh; 
 }
-.InserirImagemProduto button{
-    align-self: flex-start;
-    height: 4vh;
-    width: 10vw;
-    font-size: 0.9rem;
+input[type="file"] { 
+    display: none;
+}
+.InserirImagemProduto label{
+    align-self: flex-start;    
+    font-size: 1rem;
+    padding: 1vh;
 }
 .divBotaoCadastrarProdutos button{
     align-self: center;
@@ -70,13 +72,13 @@
     width: 10vw;
     font-size: 1rem;
 }
-.InserirImagemProduto button, .divBotaoCadastrarProdutos button{    
+.InserirImagemProduto label, .divBotaoCadastrarProdutos button{    
     border-radius: 1vh;
     background-color: #3048a1; 
     color: #fff;    
     border: none;   
 }
-.InserirImagemProduto button:hover, .divBotaoCadastrarProdutos button:hover{
+.InserirImagemProduto label:hover, .divBotaoCadastrarProdutos button:hover{
     background-color: #3a58c5;
 }
 .opcoesUsosFocos{

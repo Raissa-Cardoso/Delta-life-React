@@ -13,10 +13,6 @@ const Produto=new mongoose.Schema({
         type:Boolean,
         required:false
     },
-    isHosp:{
-        type:Boolean,
-        required:false
-    },
     focoCirurgico:{
         type:Boolean,
         required:false

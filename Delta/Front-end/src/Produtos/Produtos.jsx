@@ -33,14 +33,8 @@ class Produtos extends Component{
                         produto.isVet?                                                       
                             <p key={produto._id}>
                                 uso veterinário
-                            </p> :<p key={produto._id}></p>
-                    ))}
-                    {produto.map(produto=>(                        
-                        produto.isHosp?                                                       
-                            <p key={produto._id}>
-                                uso hospitalar humano
-                            </p> :<p key={produto._id}></p>
-                    ))}
+                            </p> :<p key={produto._id}>uso hospitalar humano</p>
+                    ))}                    
                     {produto.map(produto=>(                        
                         produto.focoCirurgico?                                                       
                             <p key={produto._id}>

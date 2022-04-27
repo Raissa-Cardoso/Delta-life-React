@@ -37,7 +37,8 @@
 .descricaoeAlterar textarea, .caracteristicasAlterar textarea{    
     resize: none;
     width: 45vw;    
-    height: 30vh;           
+    height: 30vh;
+    line-height: 1.5;           
 }
 .BotoesAlterarDeletar{
     margin-left: 10vw; 

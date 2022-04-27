@@ -76,17 +76,13 @@ render(){
                     <p><strong>Especificidade:</strong></p>
                                     
                                            
-                        {produto.isVet?                                                       
+                        {produto.isVet===true?                                                       
                             <input key={produto._id}
                             placeholder="uso veterinário"
-                            />:""
-                        }                                                  
-                    {                       
-                        produto.isHosp?                                                       
-                            <input key={produto._id}
+                            />:<input key={produto._id}
                             placeholder="uso hospitalar humano"
-                            />:""
-                   }                                                  
+                            />
+                        }                                                                                                                     
                     {                       
                         produto.focoCirurgico?                                                       
                             <input key={produto._id}

@@ -8,6 +8,7 @@ export default function CadastrarProdutos(props){
     const [subTituloAlterado, setSubTitulo] = useState("");
     const [descricaoAlterada, setDescricao] = useState("");
     const [caracteristicasAlteradas, setCaracteristicas] = useState([]); 
+    const [isVetAlterado,setIsVet]=useState(true)
     function escreverInput() {        
         let titulo = document.getElementById("titulo").value;            
         setTitulo(titulo) 
@@ -17,14 +18,22 @@ export default function CadastrarProdutos(props){
         setDescricao(descricao)  
         let caracteristicas=document.getElementById("caracteristicas").value;                
         let caracteristicasArray=((caracteristicas.indexOf("\n")!==-1)||(caracteristicas.indexOf("\r")!==-1))?caracteristicas.split("\n"):caracteristicas 
-        setCaracteristicas(caracteristicasArray)                   
+        setCaracteristicas(caracteristicasArray)                           
     }
+    function optar(){
+        let opcao=document.querySelector('input[name="opUso"]:checked').value
+        setIsVet(opcao==="isVet"?true:false)        
+    }
+    function carregarImagem(){
+        
+    }
+   
     function cadastrar(){         
         
         api.post('/produto',{            
             titulo: `${tituloAlterado}`,
             subtitulo:`${subTituloAlterado}`,
-            isVet:true,
+            isVet:`${isVetAlterado}`,
             descricao:`${descricaoAlterada}`,
             caracteristicas:caracteristicasAlteradas.map((caracteristica)=>{if(caracteristica!==""||caracteristica!==null) return caracteristica})            
                        
@@ -63,17 +72,18 @@ export default function CadastrarProdutos(props){
                 <div className="InserirImagemProduto">
                     <h2>Inserir imagem do produto</h2>
                     <div className="divBotaoCarregarImagemProduto">
-                        <button>Carregar arquivo...</button>
+                        <label htmlFor="carregarArquivo" onClick={()=>carregarImagem()}>Carregar arquivo...</label>
+                        <input type="file" id="carregarArquivo" name="carregarArquivo"></input>                        
                     </div>                                      
                 </div> 
                 <div className="opcoesUsosFocos">
                     <div className="opçãoUsosFocos"> 
                         <div className="opUsos">
-                            <input type="radio" id="opUsoVet" name="opUso" defaultChecked/>                        
+                            <input type="radio" id="opUsoVet" name="opUso" value="isVet" onClick={()=>optar()}/>
                             <label htmlFor="opUsoVet">Uso exclusivo veterinário</label> 
                         </div>                                        
                         <div className="opUsos">                             
-                            <input type="radio" id="opUsoHosp" name="opUso"/>
+                            <input type="radio" id="opUsoHosp" name="opUso" value="isHosp" onClick={()=>optar()}/>
                             <label htmlFor="opUsoHosp">Uso exclusivo hospitalar</label>                        </div> 
                         </div>
                     </div>
