@@ -16,24 +16,17 @@ class LinhaHospitalar extends Component{
     }
     render(){
         const {produtos}=this.state;
-        const produto=produtos.filter(produto=>{return produto.isVet===false}); 
-        let produtoArray=[] 
-        let i=2    
-        for(let i=0;i<10;i++){
-            produtoArray=[produto[i],produto[i+1],produto[i+2]]
-            console.log(produtoArray)
-        }                   
+        const produto=produtos.filter(produto=>{return produto.isVet===false});                           
         return (
             <main className="linhaVeterinaria">
                 <h1>Linha Veterinária</h1>           
                 <div className="linhasProdutos">                    
                     <div className="linhasProduto">                        
-                        {produto.map((produto,index)=>(                                                                                 
+                        {produto.map(produto=>(                                                                                 
                             <Link to={`/produtos/${produto.titulo}`} onClick={()=>this.props.produto(produto.titulo)} >                                
                                 <img src={require(`../assets/${produto.titulo}.jpeg`)}  alt={produto.titulo}/>
                                 <h2>{produto.titulo}</h2>
-                                <h3>{produto.subtitulo} </h3>                                
-                                {console.log(index)} 
+                                <h3>{produto.subtitulo} </h3>                                                                 
                             </Link>                               
                             
                         ))}                          

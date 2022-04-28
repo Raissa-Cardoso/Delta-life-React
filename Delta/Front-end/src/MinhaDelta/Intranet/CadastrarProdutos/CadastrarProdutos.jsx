@@ -26,8 +26,8 @@ export default function CadastrarProdutos(props){
         setIsVet(opcao==="isVet"?true:false)        
     }
     function carregarImagem(){
-        let imagemArquivo=document.getElementById("carregarArquivo").value.replace("C:\\fakepath\\","../assets/" );         setImagemCarregar(imagemArquivo)
-                        
+        let imagemArquivo=document.getElementById("carregarArquivo").value.replace("C:\\fakepath\\","../assets/" );        
+        setImagemCarregar(imagemArquivo)                        
     }
    
     function cadastrar(){         

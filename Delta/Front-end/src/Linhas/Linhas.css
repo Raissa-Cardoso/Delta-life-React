@@ -47,7 +47,7 @@
     height: 30vh;
     object-fit: contain;
     box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110); 
-    background-color: rgb(247,247,247); 
+    background-color: rgb(247,247,247);   
 }
 .linhasProduto img:hover{
     transform: scale(1.1);  
