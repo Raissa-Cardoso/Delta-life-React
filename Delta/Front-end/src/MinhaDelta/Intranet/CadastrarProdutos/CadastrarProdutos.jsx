@@ -9,6 +9,7 @@ export default function CadastrarProdutos(props){
     const [descricaoAlterada, setDescricao] = useState("");
     const [caracteristicasAlteradas, setCaracteristicas] = useState([]); 
     const [isVetAlterado,setIsVet]=useState(true)
+    const [imagemCarregar,setImagemCarregar]=useState("")
     function escreverInput() {        
         let titulo = document.getElementById("titulo").value;            
         setTitulo(titulo) 
@@ -25,7 +26,8 @@ export default function CadastrarProdutos(props){
         setIsVet(opcao==="isVet"?true:false)        
     }
     function carregarImagem(){
-        
+        let imagemArquivo=document.getElementById("carregarArquivo").value.replace("C:\\fakepath\\","../assets/" );         setImagemCarregar(imagemArquivo)
+                        
     }
    
     function cadastrar(){         
@@ -35,7 +37,8 @@ export default function CadastrarProdutos(props){
             subtitulo:`${subTituloAlterado}`,
             isVet:`${isVetAlterado}`,
             descricao:`${descricaoAlterada}`,
-            caracteristicas:caracteristicasAlteradas.map((caracteristica)=>{if(caracteristica!==""||caracteristica!==null) return caracteristica})            
+            caracteristicas:caracteristicasAlteradas.map((caracteristica)=>{if(caracteristica!==""||caracteristica!==null) return caracteristica}),
+            imagem:`${imagemCarregar}`
                        
         }).then(response=>alert(`Os dados: ${JSON.stringify(response.data)} foram cadastrados`))        
           .catch(erro=>console.log(erro)) 
@@ -71,10 +74,9 @@ export default function CadastrarProdutos(props){
                 </div> 
                 <div className="InserirImagemProduto">
                     <h2>Inserir imagem do produto</h2>
-                    <div className="divBotaoCarregarImagemProduto">
-                        <label htmlFor="carregarArquivo" onClick={()=>carregarImagem()}>Carregar arquivo...</label>
-                        <input type="file" id="carregarArquivo" name="carregarArquivo"></input>                        
-                    </div>                                      
+                    <div className="divBotaoCarregarImagemProduto">                      
+                        <input type="file" id="carregarArquivo" name="carregarArquivo" value="" onChange={()=>carregarImagem()}></input>                                          
+                        <label htmlFor="carregarArquivo" >Carregar arquivo...</label>                                            </div>                                      
                 </div> 
                 <div className="opcoesUsosFocos">
                     <div className="opçãoUsosFocos"> 
@@ -82,7 +84,7 @@ export default function CadastrarProdutos(props){
                             <input type="radio" id="opUsoVet" name="opUso" value="isVet" onClick={()=>optar()}/>
                             <label htmlFor="opUsoVet">Uso exclusivo veterinário</label> 
                         </div>                                        
-                        <div className="opUsos">                             
+                        <div className="opUsos">                                                     
                             <input type="radio" id="opUsoHosp" name="opUso" value="isHosp" onClick={()=>optar()}/>
                             <label htmlFor="opUsoHosp">Uso exclusivo hospitalar</label>                        </div> 
                         </div>

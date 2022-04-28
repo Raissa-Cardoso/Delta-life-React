@@ -19,22 +19,26 @@
     color: #233469;
     text-decoration: none;
 }
-.linhasProdutos{  
-    
+.linhasProdutos{      
     display: flex;
     flex-direction: row;  
     flex-wrap: wrap;    
     justify-content: space-around; 
-    width: 75%;       
+    width: 100%;       
     height: 100%;     
     box-sizing: border-box;    
-    align-items: flex-start;
+    align-items: center;    
+
 }
 .linhasProduto{ 
-    width: 20vw; 
+    width: 90%;        
     border-radius: 0 4vw 0 2vw;
     margin-bottom: 10vh; 
-    align-self: flex-start;    
+    align-self: center;
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;   
 }
 
 .linhasProduto img{
@@ -58,4 +62,5 @@
     font-size: 1rem;
     padding-left: 2vh;
     width: 22vw;
+    margin-bottom: 5vh;
 }

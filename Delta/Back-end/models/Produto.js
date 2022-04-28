@@ -28,6 +28,10 @@ const Produto=new mongoose.Schema({
     caracteristicas:{
         type:Array,
         required:true
+    },
+    imagem:{
+        type:String,
+        required:false
     }
 },
 {

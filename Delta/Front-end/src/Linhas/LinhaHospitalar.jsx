@@ -1,34 +1,54 @@
-import React from "react";
+import React, { Component } from "react";
 import '../Linhas/Linhas.css';
 import {Link} from "react-router-dom";
+import api from "../api";
 
-const VentLife = require('../assets/hosp3.3.jpeg');
-const Life1000 = require('../assets/Life1000.jpeg');
-const Term = require('../assets/termometro.png');
 
-export default function LinhaHospitalar(props){
-    return (
-        <main className="linhaHospitalar">
-            <h1>Linha Hospitalar</h1>           
-            <div className="linhasProdutos">                
-                <div className="linhasProduto">
-                    <img src={VentLife}  alt="VentLife"/>
-                    <h2>Vent Life</h2>
-                    <h3>Ventilador Pulmonar Mecânico </h3> 
-                </div>                
-                <div className="linhasProduto">
-                    <Link to="/produtos/Life1000" onClick={()=>props.produto("Life1000")}>
-                        <img src={Life1000}  alt="Life1000"/>
-                        <h2>Life1000</h2>
-                        <h3>Monitor Multiparamétrico</h3> 
-                    </Link>                
+class LinhaHospitalar extends Component{
+    
+    state={
+        produtos:[]
+    }
+
+    async componentDidMount(){
+        const response=await api.get("/");        
+        this.setState({produtos:response.data})        
+    }
+    render(){
+        const {produtos}=this.state;
+        const produto=produtos.filter(produto=>{return produto.isVet===false}); 
+        let produtoArray=[] 
+        let i=2    
+        for(let i=0;i<10;i++){
+            produtoArray=[produto[i],produto[i+1],produto[i+2]]
+            console.log(produtoArray)
+        }                   
+        return (
+            <main className="linhaVeterinaria">
+                <h1>Linha Veterinária</h1>           
+                <div className="linhasProdutos">                    
+                    <div className="linhasProduto">                        
+                        {produto.map((produto,index)=>(                                                                                 
+                            <Link to={`/produtos/${produto.titulo}`} onClick={()=>this.props.produto(produto.titulo)} >                                
+                                <img src={require(`../assets/${produto.titulo}.jpeg`)}  alt={produto.titulo}/>
+                                <h2>{produto.titulo}</h2>
+                                <h3>{produto.subtitulo} </h3>                                
+                                {console.log(index)} 
+                            </Link>                               
+                            
+                        ))}                          
+
+                    </div>                    
                 </div>
-                <div className="linhasProduto">
-                    <img src={Term}  alt="Termometro"/>
-                    <h2>INCOTERM TCI300</h2>
-                    <h3>Termômetro Clínico Infravermelho</h3> 
-                </div>
-            </div>
-        </main>
-    )
+            </main>
+        )              
+        
+
+        
+    }
+    
 }
+
+export default LinhaHospitalar;
+
+
