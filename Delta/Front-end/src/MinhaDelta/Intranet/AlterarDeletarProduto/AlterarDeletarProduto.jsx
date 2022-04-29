@@ -15,7 +15,7 @@ class AlterarDeletarProduto extends Component{
         this.setState({produtos:response.data})        
     }
     render(){
-        const {produtos}=this.state;               
+        const {produtos}=this.state; 
         
         return(          
             <main className="alterarProdutos">                        
@@ -32,7 +32,7 @@ class AlterarDeletarProduto extends Component{
                         ))}  
                                         
                     </ul> 
-
+                    
                 </div>
                                                
             </main>
