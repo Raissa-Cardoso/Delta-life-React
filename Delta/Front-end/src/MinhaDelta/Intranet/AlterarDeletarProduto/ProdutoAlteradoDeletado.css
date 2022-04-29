@@ -16,29 +16,54 @@
     flex-direction: column;     
     padding-left: 5vw;     
 }
-.tituloAlterar, .subTituloAlterar, .especificidadeAlterar, .descricaoeAlterar, .caracteristicasAlterar{
+.tituloAlterar, .subTituloAlterar, .especificidadeAlterar, .descricaoeAlterar, .caracteristicasAlterar, .DuvidasProdutoAlterar, .InserirImagemProdutoAlterar{
     display: flex;
     flex-direction: row;        
-    margin:1vh 0;    
-    width: 60vw;  
+    margin:1vh 0;         
 }
-.tituloAlterar h1, .subTituloAlterar h2, .especificidadeAlterar p,  .descricaoeAlterar h2, .caracteristicasAlterar h2{
+.tituloAlterar h1, .subTituloAlterar h2, .especificidadeAlterar p,  .descricaoeAlterar h2, .caracteristicasAlterar h2, .DuvidasProdutoAlterar h2, .InserirImagemProdutoAlterar h2{
     padding: 0;
     margin: 0; 
     font-size: 1.2rem;
     font-weight: bold; 
     text-align: justify;
     line-height: 1.5;
-    width: 15vw;        
+    width: 25vw;        
 }
 .tituloAlterar input, .subTituloAlterar input, .especificidadeAlterar input{   
-    flex-grow: 1;  
+    width: 40vw;
+    height: 5vh; 
 }
-.descricaoeAlterar textarea, .caracteristicasAlterar textarea{    
+.descricaoeAlterar textarea, .caracteristicasAlterar textarea, .DuvidasProdutoAlterar  textarea{    
     resize: none;
-    width: 45vw;    
+    width: 40vw;
     height: 30vh;
     line-height: 1.5;           
+}
+.divBotaoCarregarImagemProdutoAlterar{    
+    width: 30vw;
+    height: 5vh;
+    display: flex; 
+    flex-direction: row;    
+}
+.divBotaoCarregarImagemProdutoAlterar p{ 
+    margin-left: 5vh;
+    align-self: center;
+}
+input[type="file"] { 
+    display: none;
+}
+.InserirImagemProdutoAlterar label{
+    align-self: flex-start;    
+    font-size: 1rem;
+    padding: 1vh;
+    border-radius: 1vh;
+    background-color: #3048a1; 
+    color: #fff;    
+    border: none; 
+}
+.InserirImagemProdutoAlterar label:hover{
+    background-color: #3a58c5;
 }
 .BotoesAlterarDeletar{
     margin-left: 10vw; 

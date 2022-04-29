@@ -14,7 +14,7 @@ export default function CadastrarProdutos(props){
         let titulo = document.getElementById("titulo").value;            
         setTitulo(titulo) 
         let subTitulo = document.getElementById("subtitulo").value;
-        setSubTitulo(subTitulo)
+        if(subTitulo)setSubTitulo(subTitulo)
         let descricao = document.getElementById("descricao").value;
         setDescricao(descricao)  
         let caracteristicas=document.getElementById("caracteristicas").value;                
@@ -76,12 +76,13 @@ export default function CadastrarProdutos(props){
                     <h2>Inserir imagem do produto</h2>
                     <div className="divBotaoCarregarImagemProduto">                      
                         <input type="file" id="carregarArquivo" name="carregarArquivo" value="" onChange={()=>carregarImagem()}></input>                                          
-                        <label htmlFor="carregarArquivo" >Carregar arquivo...</label>                                            </div>                                      
+                        <label htmlFor="carregarArquivo" >Carregar arquivo...</label>                                            
+                        <p>{imagemCarregar.replace("../assets/","")}</p>                                                                                        </div>                                      
                 </div> 
                 <div className="opcoesUsosFocos">
                     <div className="opçãoUsosFocos"> 
                         <div className="opUsos">
-                            <input type="radio" id="opUsoVet" name="opUso" value="isVet" onClick={()=>optar()}/>
+                            <input type="radio" id="opUsoVet" name="opUso" value="isVet" defaultChecked/>
                             <label htmlFor="opUsoVet">Uso exclusivo veterinário</label> 
                         </div>                                        
                         <div className="opUsos">                                                     

@@ -56,7 +56,13 @@
 }
 .InserirImagemProduto .divBotaoCarregarImagemProduto{    
     width: 30vw;
-    height: 5vh; 
+    height: 5vh;
+    display: flex; 
+    flex-direction: row;    
+}
+.divBotaoCarregarImagemProduto p{ 
+    margin-left: 5vh;
+    align-self: center;
 }
 input[type="file"] { 
     display: none;

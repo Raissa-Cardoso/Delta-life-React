@@ -7,7 +7,7 @@ const Produto=new mongoose.Schema({
     },
     subtitulo:{
         type:String,
-        required:true
+        required:false
     },
     isVet:{
         type:Boolean,

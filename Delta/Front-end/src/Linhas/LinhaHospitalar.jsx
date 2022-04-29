@@ -18,8 +18,8 @@ class LinhaHospitalar extends Component{
         const {produtos}=this.state;
         const produto=produtos.filter(produto=>{return produto.isVet===false});                           
         return (
-            <main className="linhaVeterinaria">
-                <h1>Linha Veterinária</h1>           
+            <main className="linhaHospitalar">
+                <h1>Linha Hospitalar</h1>           
                 <div className="linhasProdutos">                    
                     <div className="linhasProduto">                        
                         {produto.map(produto=>(                                                                                 

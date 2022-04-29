@@ -53,8 +53,8 @@ const Principal = (props) => {
           <Route path="/assinaturas" element={<Assinaturas />}/>
           <Route path="/contato" element={<Contato />}/>
           <Route path="/login" element={<Login />}/>
-          <Route path="/cadastroLogin" element={<CadastroLogin />}/>
-          <Route path={`/produtos/${produtoMain}`} element={<Produtos produto={produtoMain}/>}/> 
+          <Route path="/cadastroLogin" element={<CadastroLogin />}/>          
+          <Route path={`/produtos/${produtoMain.indexOf(" ")!==-1?produtoMain.replaceAll(" ","%20"):produtoMain}`}element={<Produtos produto={produtoMain}/>}/> 
           <Route path={`/produtos/${props.produtoApp}`} element={<Produtos produto={props.produtoApp}/>}/>         
           <Route path="/sobre" element={<Sobre />}/>
           <Route path="/minhadelta" element={<MinhaDelta />}/>          
@@ -71,7 +71,7 @@ const Principal = (props) => {
           <Route path="/intranet" element={<HomeIntranet />}/>
           <Route path="/intranet/cadastrarprodutos" element={<CadastrarProdutos />}/>  
           <Route path="/intranet/alterarproduto" element={<AlterarDeletarProduto alterar={alterar}/>}/> 
-          <Route path={`/intranet/alterardeletarproduto/${produtoAlterar.indexOf(" ")!==-1?produtoAlterar.replace(" ","%20"):produtoAlterar}`} element={<ProdutoAlteradoDeletado produto={produtoAlterar}/>}/>          
+          <Route path={`/intranet/alterardeletarproduto/${produtoAlterar.indexOf(" ")!==-1?produtoAlterar.replaceAll(" ","%20"):produtoAlterar}`} element={<ProdutoAlteradoDeletado produto={produtoAlterar}/>}/>          
           <Route path="/intranet/historicoacessos" element={<HistoricoAcessos />}/>  
           <Route path="/intranet/balancovendas" element={<BalancoVendas />}/>  
           <Route path="/vejamais/hospitalar" element={<VejaMaisHospitalar />}/> 

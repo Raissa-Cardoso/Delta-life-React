@@ -10,7 +10,9 @@ state={
     titulo:"",
     subtitulo:"",
     descricao:"",
-    caracteristicas:[]
+    caracteristicas:[],
+    isVet:"true",
+    imagem:""
 }
 async componentDidMount(){    
     const response=await api.get(`/produto/${this.props.produto}`);           
@@ -19,6 +21,8 @@ async componentDidMount(){
     this.setState({subtitulo:response.data.subtitulo})       
     this.setState({descricao:response.data.descricao})
     this.setState({caracteristicas:response.data.caracteristicas})
+    this.setState({isVet:response.data.isVet})
+    this.setState({imagem:response.data.imagem})    
 }
 handleChange(){        
     let tituloAlterar = document.getElementById("titulo").value;  
@@ -28,28 +32,41 @@ handleChange(){
     let descricaoAlterar = document.getElementById("descricao").value;  
     if(descricaoAlterar)this.setState({descricao:descricaoAlterar}) 
     let caracteristicasAlterar=document.getElementById("caracteristicas").value;                
-    let caracteristicasAlterarArray=((caracteristicasAlterar.indexOf("\n")!==-1)||(caracteristicasAlterar.indexOf("\r")!==-1))?caracteristicasAlterar.split("\n"):caracteristicasAlterar 
+    let caracteristicasAlterarArray=((caracteristicasAlterar.indexOf("\n")!==-1)||(caracteristicasAlterar.indexOf("\r")!==-1))?caracteristicasAlterar.split("\n"):caracteristicasAlterar     
+    if(caracteristicasAlterarArray)this.setState({caracteristicas:caracteristicasAlterarArray})
+    let opcao=document.querySelector('input[name="opUso"]:checked').value==="isVet"?true:false  
+    this.setState({isVet:opcao})       
+    //let imagemAlterada=document.getElementById("imagemAlterar").value.replace("C:\\fakepath\\","../assets/" );        
+    //console.log(imagemAlterada) 
+    //this.setState({imagem:imagemAlterada}) 
     
-    if(caracteristicasAlterarArray)this.setState({caracteristicas:caracteristicasAlterarArray})  
 }     
     
 render(){    
-    const {produto,titulo,subtitulo,descricao,caracteristicas}=this.state;     
-   
+    const {produto,titulo,subtitulo,descricao,caracteristicas,isVet,imagem}=this.state;     
+    
     function deletar() {               
         api.delete(`/produto/${produto._id}`)
         alert(`Produto: ${produto.titulo} foi deletado`)  
         window.open("/intranet/alterarproduto",'_self');      
     }
-    function alterar(){    
+    function alterar(){ 
+        console.log(isVet)    
         api.put(`/produto/${produto._id}`,{            
             titulo: `${titulo}`,
             subtitulo:`${subtitulo}`,
             descricao:`${descricao}`,           
-            caracteristicas:caracteristicas.map(caracteristica=>{if(caracteristica!==""||caracteristica!==null) return caracteristica})
+            caracteristicas:caracteristicas.map(caracteristica=>{if(caracteristica!==""||caracteristica!==null) return caracteristica}),
+            isVet:`${isVet}`,
+            imagem:`${imagem}`
         })
         alert(`Produto: ${produto.titulo} foi alterado`)
         window.open("/intranet/alterarproduto",'_self');  
+    } 
+    
+    function carregarImagem(){
+        let imagemArquivo=document.getElementById("imagemAlterar").value.replace("C:\\fakepath\\","../assets/" );        
+        console.log(imagemArquivo)                               
     }
           
     return(          
@@ -113,7 +130,48 @@ render(){
                          onBlur={()=>this.handleChange()}
                          />                        
                     
-                </div>              
+                </div> 
+                <div className="DuvidasProdutoAlterar">
+                    <h2>Dúvidas frequentes sobre o produto:</h2>
+                    <textarea rows="10" cols="40" placeholder="Digite as dúvidas frequentes do  produto"></textarea>                  
+                </div> 
+                <div className="InserirImagemProdutoAlterar">
+                    <h2>Inserir imagem do produto:</h2>
+                    <div className="divBotaoCarregarImagemProdutoAlterar">                      
+                        <input type="file" id="imagemAlterar" name="imagemAlterar" onChange={()=>carregarImagem()}></input>                                          
+                        <label htmlFor="imagemAlterar" >Carregar arquivo...</label>                                            
+                        <p>{imagem.replace("../assets/","")}</p>                                                                                        </div>                                      
+                </div> 
+                <div className="opcoesUsosFocos">
+                    <div className="opçãoUsosFocos"> 
+                        <div className="opUsos">
+                        {produto.isVet===true? 
+                            <input type="radio" id="opUsoVet" name="opUso" value="isVet" onClick={()=>this.handleChange()} defaultChecked/>
+                            :<input type="radio" id="opUsoVet" name="opUso" value="isVet" onClick={()=>this.handleChange()}/>}
+                            <label htmlFor="opUsoVet">Uso exclusivo veterinário</label> 
+                        
+                        </div>                                        
+                        <div className="opUsos"> 
+                            {produto.isVet===false?                                                     
+                            <input type="radio" id="opUsoHosp" name="opUso" value="isHosp" onClick={()=>this.handleChange()} defaultChecked/>
+                            :<input type="radio" id="opUsoHosp" name="opUso" value="isHosp" onClick={()=>this.handleChange()}/>}
+                            <label htmlFor="opUsoHosp">Uso exclusivo hospitalar</label>                        </div> 
+                        </div>
+                    </div>
+                    <div className="opçãoUsosFocos"> 
+                        <div className="opFocos">                   
+                            <input type="radio" id="opFocoCirurgico" name="opFoco"/>
+                            <label htmlFor="opFocoCirurgico">Foco cirúrgico</label>
+                        </div>
+                        <div className="opFocos">                                                        
+                            <input type="radio" id="opFocoProcedimento" name="opFoco"/>                        
+                            <label htmlFor="opFocoProcedimento">Foco Procedimento</label>
+                        </div>
+                        <div className="opFocos">
+                            <input type="radio" id="opFocoProcedimento" name="opFoco" defaultChecked/>                        
+                            <label htmlFor="opFocoProcedimento" >Não é um foco</label>
+                        </div>                                               
+                    </div>                
                 <div className="BotoesAlterarDeletar">
                     <div className="divBotaoAlterarProduto">
                         <button onClick={()=>alterar()}>Alterar</button>
