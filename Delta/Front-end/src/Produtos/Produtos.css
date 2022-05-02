@@ -33,6 +33,10 @@
     align-self: center;
     text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ;            
 }
+#caracteristicaTitulo{    
+    margin-top: 3vh;
+    margin-bottom: 0;
+}
 .produtoTextos p{
     margin:0;
     padding: 0;

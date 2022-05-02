@@ -60,7 +60,7 @@ class Produtos extends Component{
                                 </h3>
                             ))  
                         ))}                       
-                       
+                    <h2 id="caracteristicaTitulo">Características</h2>  
                     <ul>
                         {produto.map(produto=>(
                             produto.caracteristicas.map((caracteristica,index)=>(
