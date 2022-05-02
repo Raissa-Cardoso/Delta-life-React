@@ -14,8 +14,10 @@ class Produtos extends Component{
     }
     render(){
         const {produtos}=this.state;
-        const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto}); 
-              
+        const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto});         
+        const produtoDescricao=produto.map(produto=>produto.descricao.split("\n"))
+        console.log(produtoDescricao)
+
         return(          
             
             <main className="produtos">            
@@ -29,7 +31,7 @@ class Produtos extends Component{
                             produto.subtitulo?
                             <h2 key={produto._id}>
                                 {produto.subtitulo}
-                            </h2>:"") )
+                            </h2>: <h2></h2>) )
                             }
                         {produto.map(produto=>(                        
                             produto.isVet?                                                       
@@ -48,14 +50,17 @@ class Produtos extends Component{
                                 <p key={produto._id}>
                                     Foco Procedimento
                                 </p> :<p key={produto._id}></p>
-                        ))}
-                        {produto.map(produto=>(
-                            <h3 key={produto._id}>
-                                    {produto.descricao}
-                            </h3>                           
-    
-                        ))}
-                    
+                        ))} 
+                        {produtoDescricao.map(produto=>(
+                            produto.map((descricao,index)=>(
+                                descricao===""?
+                                <br/>:
+                                <h3 key={index}>
+                                    {descricao}
+                                </h3>
+                            ))  
+                        ))}                       
+                       
                     <ul>
                         {produto.map(produto=>(
                             produto.caracteristicas.map((caracteristica,index)=>(

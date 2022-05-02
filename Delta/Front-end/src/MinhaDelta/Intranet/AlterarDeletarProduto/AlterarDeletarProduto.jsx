@@ -15,20 +15,38 @@ class AlterarDeletarProduto extends Component{
         this.setState({produtos:response.data})        
     }
     render(){
-        const {produtos}=this.state; 
+        const {produtos}=this.state;         
         
-        return(          
+        return( 
+            
             <main className="alterarProdutos">                        
                 <div className="divMenuIntranet"><MenuIntranet url="alterarProduto"/></div>
                 <div className="listagem">
+                    <h2>Produtos veterinários</h2>
                     <ul>
-                        
+                        {produtos.map((produto,index)=>(                            
+                            produto.isVet? 
+                            <div className="produtosVet">
+                                <Link to={`/intranet/alterardeletarproduto/${produto.titulo}`} onClick={()=>this.props.alterar(`${produto.titulo}`)}>                       
+                                    <li key={index}>                                                                    
+                                        {produto.titulo}                                    
+                                    </li>
+                                </Link>
+                            </div>:""
+                        ))} 
+                    </ul> 
+                    <h2>Produtos humanos</h2>
+                    <ul>
                         {produtos.map((produto,index)=>( 
-                            <Link to={`/intranet/alterardeletarproduto/${produto.titulo}`} onClick={()=>this.props.alterar(`${produto.titulo}`)}>                       
-                                <li key={index}>                                                                    
-                                    {produto.titulo}
-                                </li>
-                            </Link> 
+                            !produto.isVet? 
+                            <div className="produtosHosp">
+                             <Link to={`/intranet/alterardeletarproduto/${produto.titulo}`} onClick={()=>this.props.alterar(`${produto.titulo}`)}>                       
+                                 <li key={index}>                                                                    
+                                     {produto.titulo}                                    
+                                 </li>
+                             </Link>
+                         </div>  :""                             
+  
                         ))}  
                                         
                     </ul> 

@@ -37,7 +37,7 @@ import ProdutoAlteradoDeletado from "../MinhaDelta/Intranet/AlterarDeletarProdut
 const Principal = (props) => {  
   let [produtoMain, setProduto]=useState("DL1000")   
   let [produtoAlterar, setProdutoAlterar]=useState("")  
-  function mudarProduto(produto){
+  function mudarProduto(produto){    
     setProduto(produto)    
   } 
   function alterar(produto){
@@ -54,7 +54,7 @@ const Principal = (props) => {
           <Route path="/contato" element={<Contato />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/cadastroLogin" element={<CadastroLogin />}/>          
-          <Route path={`/produtos/${produtoMain.indexOf(" ")!==-1?produtoMain.replaceAll(" ","%20"):produtoMain}`}element={<Produtos produto={produtoMain}/>}/> 
+          <Route path={`/produtos/${encodeURIComponent(produtoMain)}`}element={<Produtos produto={produtoMain}/>}/> 
           <Route path={`/produtos/${props.produtoApp}`} element={<Produtos produto={props.produtoApp}/>}/>         
           <Route path="/sobre" element={<Sobre />}/>
           <Route path="/minhadelta" element={<MinhaDelta />}/>          
@@ -71,7 +71,7 @@ const Principal = (props) => {
           <Route path="/intranet" element={<HomeIntranet />}/>
           <Route path="/intranet/cadastrarprodutos" element={<CadastrarProdutos />}/>  
           <Route path="/intranet/alterarproduto" element={<AlterarDeletarProduto alterar={alterar}/>}/> 
-          <Route path={`/intranet/alterardeletarproduto/${produtoAlterar.indexOf(" ")!==-1?produtoAlterar.replaceAll(" ","%20"):produtoAlterar}`} element={<ProdutoAlteradoDeletado produto={produtoAlterar}/>}/>          
+          <Route path={`/intranet/alterardeletarproduto/${encodeURIComponent(produtoAlterar)}`} element={<ProdutoAlteradoDeletado produto={produtoAlterar}/>}/>          
           <Route path="/intranet/historicoacessos" element={<HistoricoAcessos />}/>  
           <Route path="/intranet/balancovendas" element={<BalancoVendas />}/>  
           <Route path="/vejamais/hospitalar" element={<VejaMaisHospitalar />}/> 

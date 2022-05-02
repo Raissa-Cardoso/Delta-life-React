@@ -11,23 +11,29 @@
     width: 20vw;      
     border-radius: 1vh;
 }
+.listagem h2{
+    margin-top:0;
+    margin-left: 3vw;    
+    font-size: 1.2rem;
+}
 .listagem ul{
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 50vh;    
+    height: 30vh;    
     flex-wrap: wrap;    
 }
 .listagem ul{    
-    list-style-type: none;  
+    list-style-type: none; 
+    margin-bottom: 3vh; 
 }
 .listagem ul a, .listagem ul a:visited{
     text-decoration: none;
     color: black;
 }
 .listagem li{
-   margin-left: 5vw;
+   margin-left: 3vw;   
    line-height: 1.7;
 }
 

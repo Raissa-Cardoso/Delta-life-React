@@ -19,7 +19,8 @@ export default function CadastrarProdutos(props){
         setDescricao(descricao)  
         let caracteristicas=document.getElementById("caracteristicas").value;                
         let caracteristicasArray=((caracteristicas.indexOf("\n")!==-1)||(caracteristicas.indexOf("\r")!==-1))?caracteristicas.split("\n"):caracteristicas 
-        setCaracteristicas(caracteristicasArray)                           
+        setCaracteristicas(caracteristicasArray) 
+                                
     }
     function optar(){
         let opcao=document.querySelector('input[name="opUso"]:checked').value
@@ -30,14 +31,14 @@ export default function CadastrarProdutos(props){
         setImagemCarregar(imagemArquivo)                        
     }
    
-    function cadastrar(){         
+    function cadastrar(){                   
         
         api.post('/produto',{            
             titulo: `${tituloAlterado}`,
             subtitulo:`${subTituloAlterado}`,
             isVet:`${isVetAlterado}`,
             descricao:`${descricaoAlterada}`,
-            caracteristicas:caracteristicasAlteradas.map((caracteristica)=>{if(caracteristica!==""||caracteristica!==null) return caracteristica}),
+            caracteristicas: typeof caracteristicasAlteradas!=="string"?caracteristicasAlteradas.map((caracteristica)=>{if(caracteristica!==""||caracteristica!==null) return caracteristica}):caracteristicasAlteradas,
             imagem:`${imagemCarregar}`
                        
         }).then(response=>alert(`Os dados: ${JSON.stringify(response.data)} foram cadastrados`))        
