@@ -9,14 +9,16 @@ class Produtos extends Component{
     }
 
     async componentDidMount(){
-        const response=await api.get("/");        
-        this.setState({produtos:response.data})        
+        const response=await api.get(`/`);        
+        this.setState({produtos:response.data})             
     }
     render(){
-        const {produtos}=this.state;
+        const {produtos}=this.state;        
         const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto});         
-        const produtoDescricao=produto.map(produto=>produto.descricao.split("\n"))
-        console.log(produtoDescricao)
+        const produtoDescricao=produto.map(produto=>produto.descricao.split("\n"))  
+        const produtoImagem= `${produto.map(produto=>produto.imagem)[0]}`
+        //const produtoImagem2=require(produtoImagem)
+        //console.log(produtoImagem)
 
         return(          
             
@@ -85,7 +87,9 @@ class Produtos extends Component{
                     </div>                 
                     </div>
                     <div className="fotoProduto">
+                        {}
                         <img src={require(`../assets/${this.props.produto}.jpeg`)}  alt={this.props.produto}/> 
+                        
                     </div> 
                     <div className="fundoFoto">
                     </div>        
