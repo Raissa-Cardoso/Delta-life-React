@@ -16,10 +16,10 @@ class Produtos extends Component{
         const {produtos}=this.state;        
         const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto});         
         const produtoDescricao=produto.map(produto=>produto.descricao.split("\n"))  
-        const produtoImagem= `${produto.map(produto=>produto.imagem)[0]}`
-        //const produtoImagem2=require(produtoImagem)
+        //const produtoImagem= `${produto.map(produto=>produto.imagem)[0]}`
+        //const produtoImagem2=produtoImagem!=="undefined"?require(`${produtoImagem}`):""        
         //console.log(produtoImagem)
-
+        
         return(          
             
             <main className="produtos">            
@@ -87,8 +87,11 @@ class Produtos extends Component{
                     </div>                 
                     </div>
                     <div className="fotoProduto">
-                        {}
-                        <img src={require(`../assets/${this.props.produto}.jpeg`)}  alt={this.props.produto}/> 
+                        {produto.map(produto=>(                           
+
+                           <img src={require(`../assets/${produto.imagem.split("../assets/")[1].split(".jpeg")[0]}.jpeg`)}  alt={produto.imagem} />
+                       
+                        ))}
                         
                     </div> 
                     <div className="fundoFoto">

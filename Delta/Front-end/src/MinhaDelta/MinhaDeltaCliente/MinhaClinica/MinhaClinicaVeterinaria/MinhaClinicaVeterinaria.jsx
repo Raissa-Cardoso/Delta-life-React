@@ -3,9 +3,9 @@ import './MinhaClinicaVeterinaria.css';
 import MenuMinhaDelta from "../../MenuMinhaDelta/MenuMinhaDelta";
 import {Link} from "react-router-dom";
 
-const dl740 = require('../../../../../src/assets/DL740.jpeg');
+const dl740 = require('../../../../../src/assets/DL740 Pedestal.jpeg');
 const dl1000 = require('../../../../../src/assets/DL1000.jpeg');
-const dl4000 = require('../../../../../src/assets/DL4000.jpeg');
+
 
 export default function MinhaClinicaVeterinaria(props){    
     return (
@@ -20,19 +20,13 @@ export default function MinhaClinicaVeterinaria(props){
                     </Link>  
                 </div>
                 <div className="produtoMinhaClinicaVet">
-                    <Link to="/produtos/DL740" onClick={()=>props.produto("DL740")} >
+                    <Link to="/produtos/DL740 Pedestal" onClick={()=>props.produto("DL740 Pedestal")} >
                         <img src={dl740}  alt="DL740"/>
                         <h2>DL740</h2>
                         <h3>Aparelho de anestesia inalatória veterinário com ventilação com pedestal</h3>
                     </Link>             
                 </div>
-                <div className="produtoMinhaClinicaVet">
-                    <Link to="/produtos/DL4000" onClick={()=>props.produto("DL4000")} >
-                        <img src={dl4000}  alt="DL4000"/>  
-                        <h2>DL4000</h2>
-                        <h3>Foco 24 LEDs de pedestal</h3>  
-                    </Link>  
-                </div>
+               
             </div>
         </main>
     )

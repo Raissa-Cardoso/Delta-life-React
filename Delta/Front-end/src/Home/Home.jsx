@@ -2,7 +2,7 @@ import React from "react";
 import './Home.css';
 import {Link} from 'react-router-dom'
 
-const linha700 = require('../assets/DL740.jpeg');
+const linha700 = require('../assets/DL740 Pedestal.jpeg');
 const hosp1000 = require('../assets/Life1000.jpeg');
 const linha1000 = require('../assets/DL1000.jpeg');
 const sobre= require("../assets/producao.png");
@@ -21,9 +21,9 @@ export default function Home(props){
                     </Link>                 
                 </div>                 
                 <div className="produto">
-                    <Link to="/produtos/DL740" onClick={()=>props.produto("DL740")}>
+                    <Link to="/produtos/DL740 Pedestal" onClick={()=>props.produto("DL740 Pedestal")}>
                         <img src={linha700}  alt="DL740"/>
-                        <h2>DL740</h2>
+                        <h2>DL740 Pedestal</h2>
                         <h3>Aparelho de anestesia inalatória veterinário com ventilação com pedestal</h3>
                     </Link>
                 </div>
