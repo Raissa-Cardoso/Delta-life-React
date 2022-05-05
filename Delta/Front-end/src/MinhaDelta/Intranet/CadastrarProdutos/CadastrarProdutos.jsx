@@ -81,6 +81,7 @@ export default function CadastrarProdutos(props){
                         <p>{imagemCarregar.replace("../assets/","")}</p>                                                                                        </div>                                      
                 </div> 
                 <div className="opcoesUsosFocos">
+                    <h2 className="opcoesUsosFocosTitulo">Usos</h2>
                     <div className="opçãoUsosFocos"> 
                         <div className="opUsos">
                             <input type="radio" id="opUsoVet" name="opUso" value="isVet" defaultChecked/>
@@ -91,6 +92,18 @@ export default function CadastrarProdutos(props){
                             <label htmlFor="opUsoHosp">Uso exclusivo hospitalar</label>                        </div> 
                         </div>
                     </div>
+                    <h2 className="opcoesUsosFocosTitulo">Ultrassom</h2>
+                    <div className="opçãoUsosFocos">                         
+                        <div className="opUltrassom">                   
+                            <input type="radio" id="opUltrassomComLed" name="opUltrassomComLed"/>
+                            <label htmlFor="opUltrassomComLed">Com LED</label>
+                        </div>
+                        <div className="opUltrassom">                   
+                            <input type="radio" id="opUltrassomSemLed" name="opUltrassomSemLed"/>
+                            <label htmlFor="opUltrassomSemLed">Sem LED</label>
+                        </div>
+                    </div>
+                    <h2 className="opcoesUsosFocosTitulo">Focos</h2>
                     <div className="opçãoUsosFocos"> 
                         <div className="opFocos">                   
                             <input type="radio" id="opFocoCirurgico" name="opFoco"/>
@@ -100,15 +113,106 @@ export default function CadastrarProdutos(props){
                             <input type="radio" id="opFocoProcedimento" name="opFoco"/>                        
                             <label htmlFor="opFocoProcedimento">Foco Procedimento</label>
                         </div>
-                        <div className="opFocos">
-                            <input type="radio" id="opFocoProcedimento" name="opFoco" defaultChecked/>                        
-                            <label htmlFor="opFocoProcedimento" >Não é um foco</label>
-                        </div>                                               
-                    </div>    
-                    <div className="opMaisVendidos">
-                        <input type="radio" id="opMaisVendidos" name="opMaisVendidos"/>                        
-                        <label htmlFor="opMaisVendidos">Adicionar como Mais Vendidos</label>
-                    </div> 
+                        <div className="opFocosPosição">                   
+                            <input type="radio" id="opFocoParede" name="opFocoParede"/>
+                            <label htmlFor="opFocoParede">Parede</label>
+                        </div>
+                        <div className="opFocosPosição">                                                        
+                            <input type="radio" id="opFocoPedestal" name="opFocoPedestal"/>                        
+                            <label htmlFor="opFocoPedestal">Pedestal</label>
+                        </div>
+                        <div className="opFocosPosição">                                                        
+                            <input type="radio" id="opFocoTeto" name="opFocoTeto"/>                        
+                            <label htmlFor="opFocoTeto">Teto</label>
+                        </div>
+                        <div className="opFocosOutros">                                                        
+                            <input type="radio" id="opFocoBateria" name="opFocoBateria"/>                        
+                            <label htmlFor="opFocoBateria">Com bateria</label>
+                        </div>
+                        <div className="opFocosOutros">                                                        
+                            <input type="radio" id="opFocoDuplo" name="opFocoDuplo"/>                        
+                            <label htmlFor="opFocoDuplo">Foco duplo</label>
+                        </div>
+                        <div className="opFocosLeds">                                                        
+                            <input type="radio" id="opFoco6" name="opFoco6"/>                        
+                            <label htmlFor="opFoco6">6 LEDS</label>
+                        </div>
+                        <div className="opFocosLeds">                                                        
+                            <input type="radio" id="opFoco12" name="opFoco12"/>                        
+                            <label htmlFor="opFoco12">12 LEDS</label>
+                        </div>
+                        <div className="opFocosLeds">                                                        
+                            <input type="radio" id="opFoco24" name="opFoco24"/>                        
+                            <label htmlFor="opFoco24">24 LEDS</label>
+                        </div>
+                    </div>
+                    <h2 className="opcoesUsosFocosTitulo">Ventilação e Anestesia</h2>
+                    <div className="opçãoUsosFocos">                         
+                        <div className="opVentAnestesiaPosição">                   
+                            <input type="radio" id="opVentAnestesiaBancada" name="opVentAnestesiaBancada"/>
+                            <label htmlFor="opVentAnestesiaBancada">Bancada</label>
+                        </div>
+                        <div className="opVentAnestesiaPosição">                   
+                            <input type="radio" id="opVentAnestesiaMaleta" name="opVentAnestesiaMaleta"/>
+                            <label htmlFor="opVentAnestesiaMaleta">Maleta</label>
+                        </div>
+                        <div className="opVentAnestesiaPosição">                   
+                            <input type="radio" id="opVentAnestesiaPedestal" name="opVentAnestesiaPedestal"/>
+                            <label htmlFor="opVentAnestesiaPedestal">Pedestal</label>
+                        </div>
+                        <div className="opVentAnestesiaPosição">                   
+                            <input type="radio" id="opVentAnestesiaMovel" name="opVentAnestesiaMovel"/>
+                            <label htmlFor="opVentAnestesiaMovel">Móvel</label>
+                        </div>
+                        <div className="opVentAnestesia">                   
+                            <input type="radio" id="opVentAnestesiaComVent" name="opVentAnestesiaComVent"/>
+                            <label htmlFor="opVentAnestesiaComVent">Com ventilação</label>
+                        </div>
+                        <div className="opVentAnestesia">                   
+                            <input type="radio" id="opVentAnestesiaSemVent" name="opVentAnestesiaSemVent"/>
+                            <label htmlFor="opVentAnestesiaSemVent">Sem ventilação</label>
+                        </div>
+                    </div>
+                    <h2 className="opcoesUsosFocosTitulo">Bisturi</h2>
+                    <div className="opçãoUsosFocos">
+                        <div className="opBisturi">                   
+                            <input type="radio" id="opBisturiCorte" name="opBisturiCorte"/>
+                            <label htmlFor="opBisturiCorte">Corte</label>
+                        </div>
+                        <div className="opBisturi">                   
+                            <input type="radio" id="opBisturiBipolar" name="opBisturiBipolar"/>
+                            <label htmlFor="opBisturiBipolar">Bipolar de coagulação</label>
+                        </div>
+                        <div className="opBisturi">                   
+                            <input type="radio" id="opBisturiCorteCoag" name="opBisturiCorteCoag"/>
+                            <label htmlFor="opBisturiCorteCoag">Corte e coagulação</label>
+                        </div>
+                        <div className="opBisturi"/>                
+                            
+                    </div>
+                    <h2 className="opcoesUsosFocosTitulo">Monitoramento</h2>
+                    <div className="opçãoUsosFocos">
+                        <div className="opMonitoramento">                   
+                            <input type="radio" id="opMonitoramentoTouch" name="opMonitoramentoTouch"/>
+                            <label htmlFor="opMonitoramentoTouch">Touch screen</label>
+                        </div>
+                        <div className="opMonitoramento">                   
+                            <input type="radio" id="opMonitoramentoUSB" name="opMonitoramentoUSB"/>
+                            <label htmlFor="opMonitoramentoUSB">USB</label>
+                        </div>
+                        <div className="opMonitoramento">                   
+                            <input type="radio" id="opMonitoramentoPressao" name="opMonitoramentoPressao"/>
+                            <label htmlFor="opMonitoramentoPressao">Pressão invasiva</label>
+                        </div>
+                        <div className="opMonitoramento">                   
+                            <input type="radio" id="opMonitoramentoCapnografia" name="opMonitoramentoCapnografia"/>
+                            <label htmlFor="opMonitoramentoCapnografia">Capnografia</label>
+                        </div>
+                    </div>
+                                                                    
+                       
+                    
+                    
                     <div className="divBotaoCadastrarProdutos">
                         <button onClick={()=>cadastrar()}>Cadastrar</button>
                     </div>                                                 

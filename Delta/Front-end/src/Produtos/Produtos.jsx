@@ -15,10 +15,7 @@ class Produtos extends Component{
     render(){
         const {produtos}=this.state;        
         const produto=produtos.filter(produto=>{ return produto.titulo===this.props.produto});         
-        const produtoDescricao=produto.map(produto=>produto.descricao.split("\n"))  
-        //const produtoImagem= `${produto.map(produto=>produto.imagem)[0]}`
-        //const produtoImagem2=produtoImagem!=="undefined"?require(`${produtoImagem}`):""        
-        //console.log(produtoImagem)
+        const produtoDescricao=produto.map(produto=>produto.descricao.split("\n"))         
         
         return(          
             

@@ -15,8 +15,9 @@ class AlterarDeletarProduto extends Component{
         this.setState({produtos:response.data})        
     }
     render(){
-        const {produtos}=this.state;         
-        
+        const {produtos}=this.state; 
+        const produtosVet= produtos.filter(produto=> produto.isVet).map(produto=>produto.titulo).sort()
+        const produtosHosp= produtos.filter(produto=> !produto.isVet).map(produto=>produto.titulo).sort()        
         return( 
             
             <main className="alterarProdutos">                        
@@ -24,28 +25,28 @@ class AlterarDeletarProduto extends Component{
                 <div className="listagem">
                     <h2>Produtos veterinários</h2>
                     <ul>
-                        {produtos.map((produto,index)=>(                            
-                            produto.isVet? 
+                        {produtosVet.map((produto,index)=>(                          
+                           
                             <div className="produtosVet">
-                                <Link to={`/intranet/alterardeletarproduto/${produto.titulo}`} onClick={()=>this.props.alterar(`${produto.titulo}`)}>                       
+                                <Link to={`/intranet/alterardeletarproduto/${produto}`} onClick={()=>this.props.alterar(`${produto}`)}>                       
                                     <li key={index}>                                                                    
-                                        {produto.titulo}                                    
+                                        {produto}                                    
                                     </li>
                                 </Link>
-                            </div>:""
+                            </div>
                         ))} 
                     </ul> 
                     <h2>Produtos humanos</h2>
                     <ul>
-                        {produtos.map((produto,index)=>( 
-                            !produto.isVet? 
+                        {produtosHosp.map((produto,index)=>( 
+                            
                             <div className="produtosHosp">
-                             <Link to={`/intranet/alterardeletarproduto/${produto.titulo}`} onClick={()=>this.props.alterar(`${produto.titulo}`)}>                       
+                             <Link to={`/intranet/alterardeletarproduto/${produto}`} onClick={()=>this.props.alterar(`${produto}`)}>                       
                                  <li key={index}>                                                                    
-                                     {produto.titulo}                                    
+                                     {produto}                                    
                                  </li>
                              </Link>
-                         </div>  :""                             
+                         </div>                             
   
                         ))}  
                                         

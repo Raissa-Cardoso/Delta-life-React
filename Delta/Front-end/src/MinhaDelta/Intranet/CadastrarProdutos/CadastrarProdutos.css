@@ -91,14 +91,29 @@ input[type="file"] {
     display: flex;
     flex-direction: column;
 }
-.opçãoUsosFocos, .opMaisVendidos{
+.opcoesUsosFocosTitulo{
+    margin: 0;
+}
+.opçãoUsosFocos{
     display: flex;
     flex-direction: row;
     align-items: center;        
     font-size: 1.1rem;
-    line-height: 1.5;      
+    line-height: 1.5; 
+    width: 60vw;
+    flex-wrap: wrap;
+    border: solid 1px rgb(211, 210, 210);
+    border-radius: 1.5vh;
+    padding: 2vh;
+    margin-bottom: 3vh;
+    justify-content: space-around;
+       
 }
-.opUsos,.opFocos, .opMaisVendidos{
-    padding-right:  6vw;  
+.opçãoUsosFocos div{    
+    padding: 1vh;
 }
+.opUsos, .opUltrassom, .opFocos,  .opFocosOutros, .opVentAnestesia, .opMonitoramento,.opFocosPosição, .opFocosLeds, .opVentAnestesiaPosição, .opBisturi{       
+    width: 22vw; 
+}
+
 
