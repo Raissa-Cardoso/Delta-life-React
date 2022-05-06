@@ -14,9 +14,16 @@
 .divProdutoAlteradoDeletado{
     display: flex;
     flex-direction: column;     
-    padding-left: 5vw;     
+    padding-left: 5vw; 
+    margin: 0;    
 }
-.tituloAlterar, .subTituloAlterar, .especificidadeAlterar, .descricaoeAlterar, .caracteristicasAlterar, .DuvidasProdutoAlterar, .InserirImagemProdutoAlterar{
+
+.caracteristicasAlterar, .descricaoeAlterar{
+    display: flex;
+    flex-direction: row;
+    margin: 0;       
+}
+.tituloAlterar, .subTituloAlterar, .especificidadeAlterar,  .DuvidasProdutoAlterar, .InserirImagemProdutoAlterar{
     display: flex;
     flex-direction: row;        
     margin:1vh 0;         
@@ -39,11 +46,21 @@
     width: 40vw;
     height: 5vh; 
 }
-.descricaoeAlterar textarea, .caracteristicasAlterar textarea, .DuvidasProdutoAlterar  textarea{    
+.caracteristicasAlterar textarea{
     resize: none;
     width: 40vw;
     height: 30vh;
-    line-height: 1.5;           
+    line-height: 1.5; 
+    margin: 0;         
+    align-self: flex-start;
+}
+.descricaoeAlterar textarea,  .DuvidasProdutoAlterar  textarea{    
+    resize: none;
+    width: 40vw;
+    height: 30vh;
+    line-height: 1.5;     
+    margin: 0;    
+    align-self: flex-end;;     
 }
 .InserirImagemProdutoAlterar{
     margin: 4vh 0; 

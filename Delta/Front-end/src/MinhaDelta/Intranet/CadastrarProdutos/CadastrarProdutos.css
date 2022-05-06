@@ -21,29 +21,46 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5vh;
+    
 }
 .divCadastrarProdutos h2{
     font-size: 1.2rem;
     width: 25vw; 
-    font-weight: normal;   
+    font-weight: normal;  
+    
 }
-.TituloProduto input, .SubtituloProduto input{
-    margin: 0;         
+.TituloProduto input, .SubtituloProduto input{         
     width: 30vw;
     height: 5vh;    
     border-radius: 1.5vh;  
     box-sizing: border-box; 
-    padding: 2vh;    
+    padding: 2vh;
+    margin-bottom: 2vh;
+    border:solid 0.5px #000;        
 }
-.DescricaoProduto textarea, .CaracteristicasProduto textarea, .DuvidasProduto textarea{
-    margin: 0; 
+.DescricaoProduto textarea{
+    margin-top: 2vh;
+    padding: 2vh; 
+    width: 30vw;
+    height: 30vh;    
+    border-radius: 1.5vh; 
+    box-sizing: border-box; 
+    resize: none;
+}
+.DescricaoProduto h2{
+    margin-top: 4vh;
+}
+.CaracteristicasProduto h2{
+    margin-top: 8vh;
+}
+.CaracteristicasProduto textarea, .DuvidasProduto textarea{
     padding: 2vh;    
     width: 30vw;
     height: 30vh;    
     border-radius: 1.5vh;  
     box-sizing: border-box; 
-    resize: none;  
+    resize: none;    
+    margin-bottom: 6vh;
 }
 .divBotaoCadastrarProdutos{
     width:100%;
@@ -53,6 +70,9 @@
     justify-content: flex-end;
     align-items: center;
     
+}
+.InserirImagemProduto{
+    margin-bottom: 2vh;
 }
 .InserirImagemProduto .divBotaoCarregarImagemProduto{    
     width: 30vw;
