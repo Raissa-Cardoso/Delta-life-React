@@ -1,0 +1,108 @@
+.linhaVeterinaria{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 100%;     
+    width: 100%; 
+}
+.linhaVeterinaria h1{
+    text-align: center;    
+    padding: 4vh 0;
+    font-size: 1.8rem;
+    text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ; 
+}
+.linhaVeterinaria, .linhaVeterinaria a, .linhaVeterinaria a:visited{
+    color:#235327;
+    text-decoration: none;
+}
+.linhasProdutosVet{      
+    display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap; 
+    width: 100%;    
+    box-sizing: border-box;     
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 10vh;  
+
+}
+.linhasProdutoVet{    
+    width: 90%;        
+    border-radius: 0 4vw 0 2vw;    
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: wrap;      
+}
+  
+.linhasProdutoVet img{
+    border-radius: 0 4vw 0 2vw; 
+    width: 20vw;
+    height: 30vh;
+    object-fit: contain;
+    box-shadow: 1vh 0.5vh 0.5vh rgb(110, 110, 110); 
+    background-color: rgb(247,247,247);   
+}
+.linhasProdutoVet img:hover{
+    transform: scale(1.1);  
+}
+.familiaVetTitulo{
+    font-size: 1.3rem;  
+    width: 100%;     
+    margin: 5vh 0 0.5vh 0;         
+}
+.linhasProdutoVet .fa-angle-left{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    align-self: center;
+    padding: 2vh;
+    position: absolute;
+}
+.linhasProdutoVet .fa-angle-right{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    align-self: center;
+    padding: 2vh;
+    position: absolute;
+    right: 10%;
+}
+.direita{
+    right: 0;
+}
+.ultrassom h2, .focos h2, .ventilaçãoAnestesia h2, .bisturi h2, .monitoramentoVet h2, .bombaSeringaVet h2, .outrosVet h2{
+    font-size: 1.2rem;    
+    margin: 0;
+    padding: 3vh 2vh 2vh 2vh; 
+}    
+.linhasProdutoVet h3{
+    margin:0;
+    font-size: 1rem;
+    padding-left: 2vh;
+    width: 22vw;
+    margin-bottom: 5vh;
+}
+.focos,.ventilaçãoAnestesia, .bisturi,.monitoramentoVet,.bombaSeringaVet, .outrosVet{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px #ccc;
+    border-radius: 1.5vh;
+    height: 46vh; 
+    padding: 2vh; 
+    box-sizing: border-box;
+    width: 95%;
+    overflow: hidden;
+}
+.ultrassom{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px #ccc;
+    border-radius: 1.5vh;
+    height: 46vh; 
+    padding: 2vh; 
+    box-sizing: border-box;
+    width: 95%;
+    overflow: hidden;
+}
+
+

@@ -1,19 +1,15 @@
-.linhaVeterinaria, .linhaHospitalar{
+.linhaHospitalar{
     display: flex;
     flex-direction: column;
     align-items: center; 
     height: 100%;     
     width: 100%; 
 }
-.linhaVeterinaria h1, .linhaHospitalar h1{
+.linhaHospitalar h1{
     text-align: center;    
     padding: 4vh 0;
     font-size: 1.8rem;
     text-shadow: 1vh 0.5vh 0.5vh  rgb(207, 207, 207) ; 
-}
-.linhaVeterinaria, .linhaVeterinaria a, .linhaVeterinaria a:visited{
-    color:#235327;
-    text-decoration: none;
 }
 .linhaHospitalar, .linhaHospitalar a, .linhaHospitalar a:visited{
     color: #233469;

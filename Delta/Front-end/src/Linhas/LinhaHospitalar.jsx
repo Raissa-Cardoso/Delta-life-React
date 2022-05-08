@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import '../Linhas/Linhas.css';
+import '../Linhas/LinhaHospitalar.css';
 import {Link} from "react-router-dom";
 import api from "../api";
 
