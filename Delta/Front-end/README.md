@@ -5,4 +5,4 @@ O objetivo final é criar um site que atraía mais clientes para entrarem em con
 
 Tecnologias utilizadas até o momento: **React.js, HTML5, CSS3 e Javascript ES6.**
 
-Status do projeto: **em andamento**
+Status do projeto: **interrompido**
