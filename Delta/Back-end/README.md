@@ -6,4 +6,4 @@ O objetivo específico do projeto back-end é dar automonomia e flexibilidade pa
 
 Tecnologias utilizadas até o momento: **Node.js, Express.js, MongoDB, Mongoose, Axios, Cors**
 
-Status do projeto: **em andamento**
+Status do projeto: **interrompido**
